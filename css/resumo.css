@@ -45,3 +45,11 @@
 
 .resumo-acoes { display: grid; gap: 12px; }
 .resumo-acoes:empty { display: none; }
+.resumo-acoes h2 { font-size: 16px; margin-bottom: 4px; }
+.resumo-acoes p { color: var(--mid); font-size: 14px; margin-bottom: 12px; }
+
+/* Refazer a matéria */
+.refazer { padding: 16px; }
+.refazer-botoes { display: flex; flex-wrap: wrap; gap: 8px; }
+.refazer-confirma { background: var(--bad-bg); border-radius: var(--radius-sm); padding: 12px; margin-top: 4px; }
+.refazer-confirma p { color: var(--text); }
