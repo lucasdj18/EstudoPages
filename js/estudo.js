@@ -75,26 +75,40 @@
         ${t ? t.html(m, item) : '<p>Tipo de item desconhecido.</p>'}
       </main>
       <nav class="rodape-acoes" aria-label="Navegação"><div class="rodape-in">
-        <button class="btn icone-btn" data-acao="anterior" aria-label="Anterior" title="Anterior (←)"${k > 0 ? '' : ' disabled'}>←</button>
+        <button class="btn icone-btn" data-acao="anterior" aria-label="Item anterior" title="Item anterior (←)"${k > 0 ? '' : ' disabled'}>←</button>
+        <button class="btn icone-btn" data-acao="seguinte" aria-label="Item seguinte" title="Item seguinte (→)"${k < lista.length - 1 ? '' : ' disabled'}>→</button>
         <span id="principal"></span>
       </div></nav>`, `${m.materia} · item ${n}`);
     desenharPrincipal();
     if (mudouDeItem) scrollTo(0, 0);
   }
 
-  // Botão principal do rodapé: o tipo decide (Enviar resposta…); senão, Próximo / fim da matéria
-  function desenharPrincipal() {
-    const { m, item, lista } = atual;
+  // Pendente (M3): questão sem resposta, ou conteúdo que ainda tem questão sem resposta (as do mesmo tema, D9)
+  function pendente(m, item) {
+    const r = EP.progresso.ler(m.arquivo).respostas;
+    if (item.tipo === 'questao') return !r[item.id];
+    return m.questoes.some(q => q.tema === item.tema && !r[q.id]);
+  }
+  const tudoRespondido = m => { const r = EP.progresso.ler(m.arquivo).respostas; return m.questoes.every(q => r[q.id]); };
+
+  // Próximo pendente depois do item, dando a volta na lista; null se não houver
+  function proximoPendente(m, lista, item) {
     const k = lista.indexOf(item);
+    const ordem = [...lista.slice(k + 1), ...lista.slice(0, Math.max(k, 0))];
+    return ordem.find(i => pendente(m, i)) || null;
+  }
+
+  // Botão principal do rodapé (M3): o tipo decide (Enviar resposta); senão, Ver resumo se a matéria toda foi
+  // respondida, ou Próximo, que vai ao próximo item pendente
+  function desenharPrincipal() {
+    const { m, item } = atual;
     let b = tipos[item.tipo]?.principal?.(m, item);
-    if (!b) {
-      b = k < lista.length - 1 ? { rotulo: item.tipo === 'questao' ? 'Próxima →' : 'Próximo →', acao: 'proximo' }
-        : EP.resumo ? { rotulo: 'Ver resumo', acao: 'ver-resumo' } : { rotulo: 'Voltar às matérias', acao: 'sair' };
-    }
+    if (!b) b = tudoRespondido(m) ? { rotulo: 'Ver resumo', acao: 'ver-resumo' } : { rotulo: 'Próximo →', acao: 'proximo-pendente' };
     document.getElementById('principal').outerHTML =
       `<button class="btn primario" id="principal" data-acao="${b.acao}"${b.desativado ? ' disabled' : ''}>${esc(b.rotulo)}</button>`;
   }
 
+  // ← e →: item a item dentro do filtro
   function ir(delta) {
     if (!atual) return;
     const { m, item, lista } = atual;
@@ -102,8 +116,24 @@
     if (prox) EP.ir(`${m.chave}/${prox.pos + 1}`);
   }
 
+  // Próximo pendente: primeiro dentro do filtro; se o filtro já está todo respondido, na matéria (e o filtro sai)
+  function irParaPendente() {
+    if (!atual) return;
+    const { m, item, lista, cap, tema } = atual;
+    let destino = proximoPendente(m, lista, item);
+    if (!destino && (cap || tema)) {
+      destino = proximoPendente(m, m.itens, item);
+      if (destino) {
+        EP.progresso.filtrar(m.arquivo, '', '');
+        EP.toast(`${tema ? 'Tema' : 'Capítulo'} todo respondido: filtro removido`);
+      }
+    }
+    if (destino) EP.ir(`${m.chave}/${destino.pos + 1}`); else EP.ir(`${m.chave}/resumo`);
+  }
+
   EP.acoes.anterior = () => ir(-1);
-  EP.acoes.proximo = () => ir(1);
+  EP.acoes.seguinte = () => ir(1);
+  EP.acoes['proximo-pendente'] = irParaPendente;
   EP.acoes.sair = () => EP.ir('');
   EP.acoes['ver-resumo'] = () => EP.ir(`${atual.m.chave}/resumo`);
 
