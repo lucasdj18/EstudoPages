@@ -1,0 +1,25 @@
+/* Tela inicial: cards das matérias. */
+.inicio { max-width: 1040px; }
+.inicio .dica { color: var(--mid); font-size: 14px; margin: 0 0 16px; }
+.aviso { background: var(--bad-bg); color: var(--bad); border-radius: var(--radius-sm); padding: 10px 14px; font-size: 14px; margin-bottom: 16px; }
+.cards { display: grid; gap: 12px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr)); }
+.card { display: block; background: var(--surface); border-radius: var(--radius); box-shadow: var(--shadow); padding: 16px;
+  color: inherit; text-decoration: none; border: 1px solid transparent; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .card { border-color: var(--border); } }
+:root[data-theme="dark"] .card { border-color: var(--border); }
+a.card:hover { border-color: var(--accent); }
+.card.novo { opacity: .8; }
+.card-topo { display: flex; align-items: center; gap: 12px; }
+.sigla { flex-shrink: 0; width: 48px; height: 48px; border-radius: 14px; display: grid; place-items: center;
+  background: var(--accent); color: var(--on-accent); font-weight: 700; font-size: 14px; letter-spacing: .3px; }
+.card h2 { font-size: 16px; line-height: 1.25; font-weight: 600; }
+.card-meta { font-size: 12px; color: var(--mid); margin-top: 2px; }
+.card .progresso { margin: 14px 0 8px; }
+.card-numeros { display: flex; flex-wrap: wrap; gap: 4px 14px; font-size: 12px; color: var(--mid); }
+.card-numeros b { color: var(--text); }
+.card-numeros .n-ok b { color: var(--ok); } .card-numeros .n-bad b { color: var(--bad); }
+.card-cta { display: flex; justify-content: flex-end; margin-top: 14px; }
+.card-erro .sigla { background: var(--bad-bg); color: var(--bad); }
+.card-erro .card-meta { color: var(--bad); }
+.erros { margin: 12px 0 0 18px; font-size: 13px; color: var(--mid); }
+.erros li { margin: 2px 0; overflow-wrap: anywhere; }
