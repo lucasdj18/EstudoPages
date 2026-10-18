@@ -75,9 +75,9 @@
         ${t ? t.html(m, item) : '<p>Tipo de item desconhecido.</p>'}
       </main>
       <nav class="rodape-acoes" aria-label="Navegação"><div class="rodape-in">
-        <button class="btn icone-btn" data-acao="anterior" aria-label="Item anterior" title="Item anterior (←)"${k > 0 ? '' : ' disabled'}>←</button>
-        <button class="btn icone-btn" data-acao="seguinte" aria-label="Item seguinte" title="Item seguinte (→)"${k < lista.length - 1 ? '' : ' disabled'}>→</button>
+        <button class="btn icone-btn" data-acao="anterior" aria-label="Item anterior" title="Item anterior (←)">←</button>
         <span id="principal"></span>
+        <button class="btn icone-btn" data-acao="seguinte" aria-label="Item seguinte" title="Item seguinte (→)">→</button>
       </div></nav>`, `${m.materia} · item ${n}`);
     desenharPrincipal();
     if (mudouDeItem) scrollTo(0, 0);
@@ -100,20 +100,31 @@
 
   // Botão principal do rodapé (M3): o tipo decide (Enviar resposta); senão, Ver resumo se a matéria toda foi
   // respondida, ou Próximo, que vai ao próximo item pendente
+  // M5: com filtro, enquanto o próximo pendente estiver dentro dele, o botão leva o nome do filtro ("<tema> : Próximo →")
   function desenharPrincipal() {
-    const { m, item } = atual;
+    const { m, item, lista, cap, tema } = atual;
     let b = tipos[item.tipo]?.principal?.(m, item);
-    if (!b) b = tudoRespondido(m) ? { rotulo: 'Ver resumo', acao: 'ver-resumo' } : { rotulo: 'Próximo →', acao: 'proximo-pendente' };
-    document.getElementById('principal').outerHTML =
-      `<button class="btn primario" id="principal" data-acao="${b.acao}"${b.desativado ? ' disabled' : ''}>${esc(b.rotulo)}</button>`;
+    if (!b) {
+      b = tudoRespondido(m) ? { rotulo: 'Ver resumo', acao: 'ver-resumo' } : { rotulo: 'Próximo →', acao: 'proximo-pendente' };
+      if (b.acao === 'proximo-pendente' && (cap || tema) && proximoPendente(m, lista, item)) b.filtro = tema || cap;
+    }
+    const nome = b.filtro ? `<span class="principal-filtro">${esc(b.filtro)}</span><span aria-hidden="true">&nbsp;:</span> ` : '';
+    document.getElementById('principal').outerHTML = `<button class="btn primario" id="principal" data-acao="${b.acao}"${b.desativado ? ' disabled' : ''}${
+      b.filtro ? ` aria-label="${esc(b.filtro)}: ${esc(b.rotulo)}" title="${esc(b.filtro)}: ${esc(b.rotulo)}"` : ''}>${nome}<span>${esc(b.rotulo)}</span></button>`;
   }
 
-  // ← e →: item a item dentro do filtro
+  // ← e → (M5): item a item no filtro, nunca desativam. No limite do filtro passam ao item vizinho da matéria
+  // (o filtro sai); no começo/fim da matéria dão a volta
   function ir(delta) {
     if (!atual) return;
-    const { m, item, lista } = atual;
-    const prox = lista[lista.indexOf(item) + delta];
-    if (prox) EP.ir(`${m.chave}/${prox.pos + 1}`);
+    const { m, item, lista, cap, tema } = atual;
+    let prox = lista[lista.indexOf(item) + delta];
+    if (!prox) {
+      const n = m.itens.length;
+      prox = m.itens[(item.pos + delta + n) % n];
+      if ((cap || tema) && !lista.includes(prox)) { EP.progresso.filtrar(m.arquivo, '', ''); EP.toast('Saiu do filtro: filtro removido'); }
+    }
+    EP.ir(`${m.chave}/${prox.pos + 1}`);
   }
 
   // Próximo pendente: primeiro dentro do filtro; se o filtro já está todo respondido, na matéria (e o filtro sai)
@@ -125,7 +136,7 @@
       destino = proximoPendente(m, m.itens, item);
       if (destino) {
         EP.progresso.filtrar(m.arquivo, '', '');
-        EP.toast(`${tema ? 'Tema' : 'Capítulo'} todo respondido: filtro removido`);
+        EP.toast(`${tema || cap} completo: filtro removido`, { tipo: 'ok', centro: true });
       }
     }
     if (destino) EP.ir(`${m.chave}/${destino.pos + 1}`); else EP.ir(`${m.chave}/resumo`);

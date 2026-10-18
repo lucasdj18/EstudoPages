@@ -66,3 +66,5 @@ code { font-family: ui-monospace, 'Cascadia Code', Consolas, monospace; font-siz
 
 .toast { position: fixed; left: 50%; transform: translateX(-50%); bottom: max(16px, env(safe-area-inset-bottom)); z-index: 50;
   background: var(--text); color: var(--bg); padding: 10px 16px; border-radius: 99px; font-size: 14px; box-shadow: var(--shadow); max-width: calc(100% - 32px); }
+.toast-ok { background: var(--ok-bg); color: var(--ok); border: 1px solid var(--ok); font-weight: 600; text-align: center; }
+.toast-centro { top: 50%; bottom: auto; transform: translate(-50%, -50%); border-radius: var(--radius); padding: 14px 20px; }
