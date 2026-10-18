@@ -32,7 +32,7 @@
   EP.acoes['refazer-sim'] = el => {
     const m = EP.materia(caixa(el).dataset.materia);
     EP.progresso.limpar(m.arquivo);
-    EP.toast('Respostas apagadas: a matéria recomeça do zero');
+    EP.toast('Respostas apagadas: a matéria recomeça do zero', { tipo: 'ok' });
     EP.resumo.render(m);
   };
 })();

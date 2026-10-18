@@ -139,7 +139,7 @@
       b.filtro ? ` aria-label="${esc(b.filtro)}: ${esc(b.rotulo)}" title="${esc(b.filtro)}: ${esc(b.rotulo)}"` : ''}>${nome}<span>${esc(b.rotulo)}</span></button>`;
   }
 
-  const avisoOk = msg => EP.toast(msg, { tipo: 'ok', centro: true });
+  const avisoOk = msg => EP.toast(msg, { tipo: 'ok' });
 
   // ← e → (M5/M6): item a item no filtro, nunca desativam. No limite do tema, seguem no capítulo (o filtro sobe para
   // ele); no limite do capítulo, passam ao item vizinho da matéria (o filtro sai); no começo/fim da matéria dão a volta

@@ -49,7 +49,7 @@
     el.textContent = 'Carregando…';
     await EP.dados.lerMateria(m);
     render();
-    EP.toast(m.erros.length ? `${m.materia}: ainda com problema` : `${m.materia} carregada`);
+    EP.toast(m.erros.length ? `⚠ ${m.materia}: ainda com problema` : `${m.materia} carregada`, { tipo: m.erros.length ? 'erro' : 'ok' });
   };
 
   EP.inicio = { render };
