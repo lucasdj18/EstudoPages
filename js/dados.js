@@ -41,11 +41,22 @@
     return { itens, info, erros };
   }
 
+  // Limite de tempo por arquivo (M1): 15 s; ?tempo=<ms> troca o limite (usado pelos testes)
+  const TEMPO = Number(new URLSearchParams(location.search).get('tempo')) || 15000;
+
+  // O limite vale para a leitura inteira (cabeçalhos e conteúdo)
   async function lerJSON(url, nome) {
-    let r;
-    try { r = await fetch(url, { cache: 'no-cache' }); } catch { throw new Error(`não consegui baixar ${nome}`); }
-    if (!r.ok) throw new Error(`${nome} não foi encontrado (HTTP ${r.status})`);
-    try { return await r.json(); } catch { throw new Error(`${nome} não é um JSON válido`); }
+    const ctrl = new AbortController();
+    const relogio = setTimeout(() => ctrl.abort(), TEMPO);
+    const estourou = () => new Error(`${nome} não respondeu em ${Math.round(TEMPO / 1000)} s`);
+    try {
+      let r, texto;
+      try { r = await fetch(url, { cache: 'no-cache', signal: ctrl.signal }); }
+      catch (e) { throw e.name === 'AbortError' ? estourou() : new Error(`não consegui baixar ${nome}`); }
+      if (!r.ok) throw new Error(`${nome} não foi encontrado (HTTP ${r.status})`);
+      try { texto = await r.text(); } catch (e) { throw e.name === 'AbortError' ? estourou() : new Error(`não consegui baixar ${nome}`); }
+      try { return JSON.parse(texto); } catch { throw new Error(`${nome} não é um JSON válido`); }
+    } finally { clearTimeout(relogio); }
   }
 
   // Lê o índice e cada matéria. Erro no índice → exceção; erro numa matéria → a matéria volta com "erros".
