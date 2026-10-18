@@ -1,0 +1,27 @@
+/* Questão: alternativas em cartões, seleção, correção travada (D1/D3). */
+.enunciado { font-size: 16px; line-height: 1.6; margin-bottom: 16px; }
+.alts { list-style: none; display: grid; gap: 8px; }
+.alt { width: 100%; display: flex; align-items: flex-start; gap: 12px; text-align: left; min-height: 48px; padding: 12px;
+  background: var(--surface); border: 1.5px solid transparent; border-radius: var(--radius); box-shadow: var(--shadow); color: var(--text); }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .alt { border-color: var(--border); } }
+:root[data-theme="dark"] .alt { border-color: var(--border); }
+.alt:not(:disabled):hover { border-color: var(--accent); }
+.letra { flex-shrink: 0; width: 28px; height: 28px; border-radius: 50%; border: 1.5px solid var(--border); display: grid; place-items: center;
+  font-size: 13px; font-weight: 700; color: var(--mid); }
+.alt-texto { font-size: 15px; line-height: 1.45; padding-top: 3px; }
+.alt[aria-pressed="true"] { border-color: var(--accent); }
+.alt[aria-pressed="true"] .letra { background: var(--accent); border-color: var(--accent); color: var(--on-accent); }
+.alt:disabled { cursor: default; }
+.alt.certa { background: var(--ok-bg); border-color: var(--ok); box-shadow: none; }
+.alt.certa .letra { background: var(--ok); border-color: var(--ok); color: var(--bg); }
+.alt.errada { background: var(--bad-bg); border-color: var(--bad); box-shadow: none; }
+.alt.errada .letra { background: var(--bad); border-color: var(--bad); color: var(--bg); }
+.alt.apagada { opacity: .45; box-shadow: none; }
+.obs { margin: 8px 0 6px 40px; padding-left: 12px; border-left: 3px solid; font-size: 14px; line-height: 1.55; }
+.obs.ok { border-color: var(--ok); } .obs.bad { border-color: var(--bad); }
+.obs-rotulo { display: block; font-size: 12px; font-weight: 700; margin-bottom: 2px; }
+.obs.ok .obs-rotulo { color: var(--ok); } .obs.bad .obs-rotulo { color: var(--bad); }
+.veredito { margin-top: 16px; padding: 12px 16px; border-radius: var(--radius-sm); font-weight: 700; }
+.veredito.ok { background: var(--ok-bg); color: var(--ok); } .veredito.bad { background: var(--bad-bg); color: var(--bad); }
+.dica-teclado { margin-top: 14px; font-size: 13px; color: var(--mid); }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
