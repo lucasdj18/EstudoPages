@@ -13,27 +13,25 @@ Precisa ser servido por http (o navegador não deixa a página ler os JSONs aber
 ## Matérias
 
 Cada matéria é um JSON de estudo em `Estudos/`, gerado pela skill **Claude42** a partir dos PDFs de
-`Base/<matéria>/` (a pasta `Base/` fica fora do git). O Claude42 grava o JSON em `Estudos/` e acrescenta a matéria
-ao índice `Estudos/estudos.json`:
+`Base/<matéria>/` (a pasta `Base/` fica fora do git). O Claude42 grava o JSON em `Estudos/` e acrescenta o nome do
+arquivo ao índice `Estudos/estudos.json` (o GitHub Pages não deixa a página listar a pasta, por isso o índice):
 
 ```json
 {
   "estudos": [
-    { "arquivo": "LPS_estudo.json", "materia": "Linhas de Produtos de Software", "sigla": "LPS" }
+    "LPS_estudo.json"
   ]
 }
 ```
 
-- `arquivo`: o nome do JSON dentro de `Estudos/`.
-- `materia`: o nome que aparece no card.
-- `sigla` (opcional): aparece no quadrado do card; sem ela, a página usa as iniciais da matéria.
-
 ### Formato do JSON de estudo
 
-Uma lista em que cada item é um texto ou uma questão, na ordem em que devem ser estudados:
+Uma lista que começa com o item `info` (nome e sigla da matéria, que aparecem no card) e segue com os textos e as
+questões, na ordem em que devem ser estudados:
 
 ```json
 [
+  { "tipo": "info", "materia": "Linhas de Produtos de Software", "sigla": "LPS" },
   { "tipo": "materia", "tema": "…", "subtema": "…", "texto": "…" },
   { "tipo": "questao", "titulo": "…", "questao": "…",
     "alternativa_a": "…", "obs_a": "Errada: …",
@@ -42,7 +40,8 @@ Uma lista em que cada item é um texto ou uma questão, na ordem em que devem se
 ]
 ```
 
-As alternativas vão de `a` a `f` (as que existirem), cada uma com a sua `obs`, e só uma é a correta.
+As alternativas vão de `a` a `f` (as que existirem), cada uma com a sua `obs`, e só uma é a correta. Sem o item
+`info`, o card usa o nome do arquivo e as iniciais.
 
 ## Respostas
 
