@@ -18,6 +18,27 @@
     return { cap, tema };
   }
 
+  // Contagens em pílulas (M4, visual C do D10): conteúdos (só capítulo e Todos), pendentes, certas e erradas; zero não aparece
+  const ICONES = {
+    doc: '<path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/>',
+    q: '<circle cx="12" cy="12" r="9"/><path d="M9.6 9.3a2.5 2.5 0 0 1 4.8.9c0 1.7-2.4 2.2-2.4 3.6"/><path d="M12 17.2h.01"/>',
+    ok: '<path d="M5 12.5l4.5 4.5L19 7.5"/>',
+    bad: '<path d="M6.5 6.5l11 11M17.5 6.5l-11 11"/>',
+  };
+  const ROTULOS = { doc: ['conteúdo', 'conteúdos'], q: ['não respondida', 'não respondidas'], ok: ['certa', 'certas'], bad: ['errada', 'erradas'] };
+  function pilulas(m, cap, tema, comDoc) {
+    const r = EP.progresso.ler(m.arquivo).respostas;
+    const itens = visiveis(m, cap, tema);
+    const n = { doc: comDoc ? itens.filter(i => i.tipo === 'conteudo').length : 0, q: 0, ok: 0, bad: 0 };
+    for (const q of itens) {
+      if (q.tipo !== 'questao') continue;
+      const resp = r[q.id];
+      if (!resp) n.q++; else if (resp.escolhida === q.certa) n.ok++; else n.bad++;
+    }
+    return `<span class="pilulas">${Object.keys(n).filter(k => n[k] > 0).map(k =>
+      `<span class="pilula p-${k}" role="img" aria-label="${n[k]} ${ROTULOS[k][n[k] === 1 ? 0 : 1]}"><svg viewBox="0 0 24 24" aria-hidden="true">${ICONES[k]}</svg><span aria-hidden="true">${n[k]}</span></span>`).join('')}</span>`;
+  }
+
   // Filtro único (f6.4): botão que abre uma lista com "Todos", cada capítulo (negrito) e os seus temas (recuados)
   function filtroHtml(m, cap, tema) {
     const temFiltro = m.capitulos.length > 1 || m.temasDe(m.capitulos[0]).length > 1;
@@ -25,7 +46,7 @@
     const op = (c, t, classe, texto) => {
       const sel = c === cap && t === tema;
       return `<li><button type="button" role="option" class="filtro-op ${classe}" data-acao="escolher-filtro" data-cap="${esc(c)}" data-tema="${esc(t)}" aria-selected="${sel}">
-        <span>${texto}</span> <span class="filtro-n">${conta(m, c, t)}</span></button></li>`;
+        <span class="filtro-nome">${texto}</span> ${pilulas(m, c, t, !t)}</button></li>`;
     };
     const atualTexto = tema ? `${esc(cap)} · <b>${esc(tema)}</b>` : cap ? `<b>${esc(cap)}</b>` : 'Todos os capítulos';
     return `
@@ -108,7 +129,8 @@
       b = tudoRespondido(m) ? { rotulo: 'Ver resumo', acao: 'ver-resumo' } : { rotulo: 'Próximo →', acao: 'proximo-pendente' };
       if (b.acao === 'proximo-pendente' && (cap || tema) && proximoPendente(m, lista, item)) b.filtro = tema || cap;
     }
-    const nome = b.filtro ? `<span class="principal-filtro">${esc(b.filtro)}</span><span aria-hidden="true">&nbsp;:</span> ` : '';
+    // Espaços entre as partes: no flex não aparecem (vale o gap), mas o texto lido fica "<filtro> : Próximo →"
+    const nome = b.filtro ? `<span class="principal-filtro">${esc(b.filtro)}</span> <span aria-hidden="true">:</span> ` : '';
     document.getElementById('principal').outerHTML = `<button class="btn primario" id="principal" data-acao="${b.acao}"${b.desativado ? ' disabled' : ''}${
       b.filtro ? ` aria-label="${esc(b.filtro)}: ${esc(b.rotulo)}" title="${esc(b.filtro)}: ${esc(b.rotulo)}"` : ''}>${nome}<span>${esc(b.rotulo)}</span></button>`;
   }

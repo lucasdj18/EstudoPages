@@ -21,12 +21,18 @@
   border-radius: var(--radius) var(--radius) 0 0; padding: 8px 0 max(8px, env(safe-area-inset-bottom)); box-shadow: 0 -4px 24px rgba(10, 10, 30, .2); }
 .filtro-op { width: 100%; display: flex; align-items: center; gap: 12px; min-height: 44px; padding: 10px 16px; text-align: left;
   background: none; border: 0; color: var(--text); font-size: 15px; line-height: 1.35; }
-.filtro-op > span:first-child { flex: 1; min-width: 0; }
+.filtro-op > .filtro-nome { flex: 1; min-width: 0; }
+/* Pílulas de contagem (M4, visual C do D10) */
+.pilulas { display: flex; align-items: center; gap: 4px; flex-shrink: 0; font-size: 12px; }
+.pilula { display: inline-flex; align-items: center; gap: 3px; padding: 1px 7px; border-radius: 99px; line-height: 20px; white-space: nowrap;
+  font-weight: 600; font-variant-numeric: tabular-nums; background: var(--surface2); color: var(--mid); }
+.pilula svg { width: 12px; height: 12px; flex-shrink: 0; fill: none; stroke: currentColor; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; }
+.pilula.p-ok { background: var(--ok-bg); color: var(--ok); }
+.pilula.p-bad { background: var(--bad-bg); color: var(--bad); }
 .filtro-op:hover, .filtro-op:focus-visible { background: var(--surface2); outline: none; }
 .filtro-op[aria-selected="true"] { color: var(--accent); box-shadow: inset 3px 0 0 var(--accent); }
 .filtro-op.op-cap { border-top: 1px solid var(--border); margin-top: 4px; }
 .filtro-op.op-tema { padding-left: 32px; font-size: 14px; }
-.filtro-n { font-size: 12px; color: var(--mid); flex-shrink: 0; }
 /* No computador, o painel abre logo abaixo do botão */
 @media (min-width: 720px) {
   .filtro-painel { position: absolute; inset: auto 16px auto 16px; top: 100%; display: block; }
@@ -47,4 +53,5 @@
 .rodape-in .btn { flex: 1; min-width: 0; }
 .rodape-in .btn.primario { white-space: nowrap; }
 .principal-filtro { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-weight: 500; }
+.principal-filtro + span { margin-left: -3px; }
 .rodape-in .icone-btn { flex: 0 0 48px; padding: 0; font-size: 18px; }
