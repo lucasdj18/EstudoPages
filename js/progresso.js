@@ -57,5 +57,11 @@
       comecou: respondidas > 0 || p.posicao > 0 };
   }
 
-  EP.progresso = { disponivel, chave, ler, gravar, posicao, filtrarTema, resposta, responder, contagem };
+  // Refazer a matéria: apaga respostas, posição e filtro
+  function limpar(arquivo) {
+    delete memoria[arquivo];
+    try { localStorage.removeItem(chave(arquivo)); } catch { /* sem localStorage: só a memória */ }
+  }
+
+  EP.progresso = { disponivel, chave, ler, gravar, posicao, filtrarTema, resposta, responder, contagem, limpar };
 })();

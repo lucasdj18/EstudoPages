@@ -1,0 +1,56 @@
+/* Resumo da matéria. */
+.resumo { padding-top: 8px; }
+.card-base { background: var(--surface); border-radius: var(--radius); box-shadow: var(--shadow); border: 1px solid transparent; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .card-base { border-color: var(--border); } }
+:root[data-theme="dark"] .card-base { border-color: var(--border); }
+
+.placar { padding: 20px 16px 16px; }
+.placar-pct { display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap; margin-bottom: 12px; }
+.placar-pct b { font-size: 40px; line-height: 1; font-weight: 700; color: var(--accent); }
+.placar-pct span { color: var(--mid); font-size: 14px; }
+.placar-numeros { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 16px; }
+@media (min-width: 520px) { .placar-numeros { grid-template-columns: repeat(4, 1fr); } }
+.placar-numeros dt { font-size: 12px; color: var(--mid); }
+.placar-numeros dd { font-size: 22px; font-weight: 700; }
+.placar-numeros dd small { font-size: 14px; color: var(--mid); font-weight: 500; }
+.placar-numeros .n-ok dd, .placar-numeros .n-ok dt { color: var(--ok); }
+.placar-numeros .n-bad dd, .placar-numeros .n-bad dt { color: var(--bad); }
+
+.secao { margin-top: 24px; }
+.secao h2 { font-size: 17px; font-weight: 700; margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
+.conta { font-size: 12px; font-weight: 700; background: var(--surface2); color: var(--mid); border-radius: 99px; padding: 2px 9px; }
+.vazio { color: var(--mid); }
+
+.temas { list-style: none; padding: 4px 16px; }
+.tema { padding: 12px 0; border-bottom: 1px solid var(--border); }
+.tema:last-child { border-bottom: 0; }
+.tema-linha { display: flex; gap: 12px; align-items: baseline; justify-content: space-between; margin-bottom: 8px; }
+.tema-nome { font-weight: 600; font-size: 14px; min-width: 0; }
+.tema-num { font-size: 13px; color: var(--mid); white-space: nowrap; }
+.tema-det { font-size: 12px; color: var(--mid); margin-top: 6px; }
+
+.erradas { list-style: none; display: grid; gap: 12px; }
+.errada { padding: 16px; }
+.errada h3 { font-size: 16px; margin: 4px 0 6px; }
+.errada .enunciado { font-size: 15px; margin-bottom: 10px; }
+.errada .obs { margin: 10px 0 0; }
+.obs-alt { display: block; font-weight: 600; margin-bottom: 2px; }
+.obs-txt { display: block; color: var(--mid); }
+.errada .link { display: inline-block; margin-top: 8px; padding-left: 0; }
+
+.faltam { padding: 4px 16px; }
+.faltam summary { cursor: pointer; font-weight: 700; padding: 12px 0; display: flex; align-items: center; gap: 8px; min-height: 44px; }
+.faltam ol { margin: 0 0 12px 20px; display: grid; gap: 6px; font-size: 14px; }
+.faltam small { color: var(--mid); }
+
+.resumo-acoes { display: grid; gap: 12px; }
+.resumo-acoes:empty { display: none; }
+.resumo-acoes h2 { font-size: 16px; margin-bottom: 4px; }
+.resumo-acoes p { color: var(--mid); font-size: 14px; margin-bottom: 12px; }
+
+/* Refazer a matéria, exportar/importar */
+.refazer, .transferir { padding: 16px; }
+.inicio-rodape { display: flex; flex-wrap: wrap; justify-content: center; gap: 4px 16px; margin-top: 24px; font-size: 14px; }
+.refazer-botoes { display: flex; flex-wrap: wrap; gap: 8px; }
+.refazer-confirma { background: var(--bad-bg); border-radius: var(--radius-sm); padding: 12px; margin-top: 4px; }
+.refazer-confirma p { color: var(--text); }
