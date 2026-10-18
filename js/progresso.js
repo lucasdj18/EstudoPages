@@ -1,11 +1,11 @@
 /* Progresso de cada matéria no localStorage: uma chave por matéria, "estudopages:<arquivo>", em JSON.
-   { versao: 1, arquivo, posicao, tema, respostas: { <id da questão>: { escolhida, correta, acertou, em } } }
-   - posicao: índice (0 = primeiro) do último item visto; tema: filtro de tema escolhido ("" = todos).
+   { versao: 1, arquivo, posicao, capitulo, tema, respostas: { <id da questão>: { escolhida, correta, acertou, em } } }
+   - posicao: índice (0 = primeiro) do último item visto; capitulo e tema: o filtro escolhido ("" = todos).
    - A primeira resposta enviada de uma questão é a que vale (D3): responder() não sobrescreve.
    Sem localStorage (navegação privada, bloqueio), guarda em memória: funciona até fechar a página. */
 (() => {
   const chave = arquivo => 'estudopages:' + arquivo;
-  const vazio = arquivo => ({ versao: 1, arquivo, posicao: 0, tema: '', respostas: {} });
+  const vazio = arquivo => ({ versao: 1, arquivo, posicao: 0, capitulo: '', tema: '', respostas: {} });
   const memoria = {};
 
   const disponivel = (() => {
@@ -30,7 +30,8 @@
   function alterar(arquivo, fn) { const d = ler(arquivo); if (fn(d) !== false) gravar(arquivo, d); return d; }
 
   const posicao = (arquivo, pos) => alterar(arquivo, d => (d.posicao === pos ? false : (d.posicao = pos, true)));
-  const filtrarTema = (arquivo, tema) => alterar(arquivo, d => (d.tema === tema ? false : (d.tema = tema, true)));
+  const filtrar = (arquivo, capitulo, tema) =>
+    alterar(arquivo, d => (d.capitulo === capitulo && d.tema === tema ? false : (Object.assign(d, { capitulo, tema }), true)));
   const resposta = (arquivo, q) => ler(arquivo).respostas[q.id] || null;
 
   function responder(arquivo, q, letra) {
@@ -63,5 +64,5 @@
     try { localStorage.removeItem(chave(arquivo)); } catch { /* sem localStorage: só a memória */ }
   }
 
-  EP.progresso = { disponivel, chave, ler, gravar, posicao, filtrarTema, resposta, responder, contagem, limpar };
+  EP.progresso = { disponivel, chave, ler, gravar, posicao, filtrar, resposta, responder, contagem, limpar };
 })();

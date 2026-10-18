@@ -1,7 +1,9 @@
 /* Exportar e importar as respostas (.json). O arquivo é legível sozinho: traz a questão, a resposta e a correta.
    { formato: "estudopages-respostas", versao: 1, exportadoEm,
-     materias: [ { arquivo, materia, posicao, tema, resumo: { total, respondidas, acertos, erros },
-                   respostas: [ { id, tema, titulo, questao, escolhida, escolhidaTexto, correta, corretaTexto, acertou, em } ] } ] }
+     materias: [ { arquivo, materia, posicao, capitulo, tema, resumo: { total, respondidas, acertos, erros },
+                   respostas: [ { id, uuid, capitulo, tema, titulo, questao, escolhida, escolhidaTexto, correta, corretaTexto,
+                                  acertou, em } ] } ] }
+   (id = chave do progresso, pelo texto da questão; uuid = o id da questão no JSON de estudo)
    Importar só acrescenta: a resposta que já existe no navegador continua valendo (D3). */
 (() => {
   const FORMATO = 'estudopages-respostas';
@@ -14,11 +16,11 @@
         const p = EP.progresso.ler(m.arquivo), c = EP.progresso.contagem(m);
         const textoDe = (q, l) => q.alts.find(a => a.l === l)?.texto || '';
         return {
-          arquivo: m.arquivo, materia: m.materia, posicao: p.posicao, tema: p.tema,
+          arquivo: m.arquivo, materia: m.materia, posicao: p.posicao, capitulo: p.capitulo, tema: p.tema,
           resumo: { total: c.total, respondidas: c.respondidas, acertos: c.acertos, erros: c.erros },
           respostas: m.questoes.filter(q => p.respostas[q.id]).map(q => {
             const r = p.respostas[q.id];
-            return { id: q.id, tema: q.tema, titulo: q.titulo, questao: q.questao, escolhida: r.escolhida, escolhidaTexto: textoDe(q, r.escolhida),
+            return { id: q.id, uuid: q.uuid, capitulo: q.capitulo, tema: q.tema, titulo: q.titulo, questao: q.questao, escolhida: r.escolhida, escolhidaTexto: textoDe(q, r.escolhida),
               correta: q.certa, corretaTexto: textoDe(q, q.certa), acertou: r.escolhida === q.certa, em: r.em };
           }),
         };

@@ -1,15 +1,44 @@
 /* Tela de estudo: topo, faixa de progresso e filtro, conteúdo e barra de ações fixa no rodapé. */
 .estudo-topo { gap: 12px; }
 .estudo-topo > .icone:first-child { text-decoration: none; }
-.topo-titulo { min-width: 0; line-height: 1.2; }
-.topo-titulo b { font-size: 15px; font-weight: 600; }
+.topo-titulo { min-width: 0; flex: 1; line-height: 1.2; }
+.topo-titulo b { display: block; font-size: 15px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .topo-titulo small { display: block; color: var(--mid); font-size: 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 
-.estudo-faixa { max-width: var(--largura); margin: 0 auto; padding: 0 16px 8px; }
-.filtro { display: flex; align-items: center; gap: 10px; margin-top: 12px; font-size: 13px; color: var(--mid); }
-.filtro select { flex: 1; min-width: 0; min-height: 44px; padding: 8px 12px; border-radius: var(--radius-sm); border: 1px solid var(--border);
-  background: var(--surface); color: var(--text); font-size: 14px; }
+.estudo-faixa { max-width: var(--largura); margin: 0 auto; padding: 0 16px 8px; position: relative; }
 .filtro-pos { font-size: 12px; color: var(--mid); margin-top: 6px; }
+
+/* Filtro único (f6.4): botão + painel com capítulos (negrito) e temas (recuados) */
+.filtro { display: flex; align-items: center; gap: 10px; margin-top: 12px; font-size: 13px; color: var(--mid); }
+.filtro-botao { flex: 1; min-width: 0; min-height: 44px; display: flex; align-items: center; gap: 8px; padding: 8px 12px; text-align: left;
+  border-radius: var(--radius-sm); border: 1px solid var(--border); background: var(--surface); color: var(--text); font-size: 14px; }
+.filtro-botao > span:first-child { flex: 1; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.filtro-seta { width: 8px; height: 8px; border-right: 2px solid var(--mid); border-bottom: 2px solid var(--mid); transform: rotate(45deg); margin: -4px 4px 0 0; flex-shrink: 0; }
+.filtro-botao[aria-expanded="true"] { border-color: var(--accent); }
+.filtro-painel { position: fixed; inset: 0; z-index: 30; display: flex; align-items: flex-end; }
+.filtro-fundo { position: absolute; inset: 0; background: rgba(10, 10, 30, .4); }
+.filtro-lista { position: relative; list-style: none; width: 100%; max-height: 70vh; overflow-y: auto; background: var(--surface);
+  border-radius: var(--radius) var(--radius) 0 0; padding: 8px 0 max(8px, env(safe-area-inset-bottom)); box-shadow: 0 -4px 24px rgba(10, 10, 30, .2); }
+.filtro-op { width: 100%; display: flex; align-items: center; gap: 12px; min-height: 44px; padding: 10px 16px; text-align: left;
+  background: none; border: 0; color: var(--text); font-size: 15px; line-height: 1.35; }
+.filtro-op > .filtro-nome { flex: 1; min-width: 0; }
+/* Pílulas de contagem (M4, visual C do D10) */
+.pilulas { display: flex; align-items: center; gap: 4px; flex-shrink: 0; font-size: 12px; }
+.pilula { display: inline-flex; align-items: center; gap: 3px; padding: 1px 7px; border-radius: 99px; line-height: 20px; white-space: nowrap;
+  font-weight: 600; font-variant-numeric: tabular-nums; background: var(--surface2); color: var(--mid); }
+.pilula svg { width: 12px; height: 12px; flex-shrink: 0; fill: none; stroke: currentColor; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; }
+.pilula.p-ok { background: var(--ok-bg); color: var(--ok); }
+.pilula.p-bad { background: var(--bad-bg); color: var(--bad); }
+.filtro-op:hover, .filtro-op:focus-visible { background: var(--surface2); outline: none; }
+.filtro-op[aria-selected="true"] { color: var(--accent); box-shadow: inset 3px 0 0 var(--accent); }
+.filtro-op.op-cap { border-top: 1px solid var(--border); margin-top: 4px; }
+.filtro-op.op-tema { padding-left: 32px; font-size: 14px; }
+/* No computador, o painel abre logo abaixo do botão */
+@media (min-width: 720px) {
+  .filtro-painel { position: absolute; inset: auto 16px auto 16px; top: 100%; display: block; }
+  .filtro-fundo { position: fixed; background: transparent; }
+  .filtro-lista { max-height: 60vh; border-radius: var(--radius-sm); border: 1px solid var(--border); box-shadow: var(--shadow), 0 8px 24px rgba(10, 10, 30, .15); }
+}
 
 .estudo { padding-top: 12px; padding-bottom: 120px; }
 .rotulo { font-size: 12px; font-weight: 600; letter-spacing: .4px; text-transform: uppercase; color: var(--accent); }
@@ -21,5 +50,8 @@
 /* Barra de ações (fixa no rodapé) */
 .rodape-acoes { position: fixed; left: 0; right: 0; bottom: 0; z-index: 10; background: var(--bg); border-top: 1px solid var(--border); }
 .rodape-in { max-width: var(--largura); margin: 0 auto; display: flex; gap: 8px; padding: 12px 16px; padding-bottom: max(12px, env(safe-area-inset-bottom)); }
-.rodape-in .btn { flex: 1; }
+.rodape-in .btn { flex: 1; min-width: 0; }
+.rodape-in .btn.primario { white-space: nowrap; }
+.principal-filtro { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-weight: 500; }
+.principal-filtro + span { margin-left: -3px; }
 .rodape-in .icone-btn { flex: 0 0 48px; padding: 0; font-size: 18px; }

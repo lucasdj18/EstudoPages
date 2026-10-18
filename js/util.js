@@ -22,9 +22,11 @@ EP.paragrafos = texto => EP.str(texto).split(/\n\s*\n/).map(p => `<p>${EP.esc(p)
 
 EP.plural = (n, um, varios) => `${n} ${n === 1 ? um : varios}`;
 
-EP.toast = msg => {
+// Aviso rápido. op.tipo = 'ok' (fundo verde discreto); op.centro = true (no meio da tela)
+EP.toast = (msg, op = {}) => {
   document.querySelector('.toast')?.remove();
-  const t = Object.assign(document.createElement('div'), { className: 'toast', role: 'status', textContent: msg });
+  const classe = 'toast' + (op.tipo === 'ok' ? ' toast-ok' : '') + (op.centro ? ' toast-centro' : '');
+  const t = Object.assign(document.createElement('div'), { className: classe, role: 'status', textContent: msg });
   document.body.appendChild(t);
   setTimeout(() => t.remove(), 3200);
 };

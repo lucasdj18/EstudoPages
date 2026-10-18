@@ -5,13 +5,17 @@
     "sigla": "LPS"
   },
   {
-    "tipo": "materia",
-    "tema": "Apresentação da disciplina",
-    "subtema": "Mapa geral do conteúdo de Linhas de Produtos de Software",
+    "tipo": "conteudo",
+    "id": "5a582bcc-6af8-4942-b4de-d76d661309ad",
+    "capitulo": "Apresentação da disciplina",
+    "tema": "Mapa geral do conteúdo de Linhas de Produtos de Software",
     "texto": "A disciplina se organiza em quatro grandes blocos que se encaixam como um processo único. (1) Conceitos de LPS: a LPS é uma forma sistemática de reuso para construir uma família de sistemas de um mesmo domínio de mercado, com uma base comum e partes que variam. (2) Variabilidade: é o que permite que a mesma base gere produtos diferentes; você aprende a documentá-la e gerenciá-la nos artefatos de requisitos, projeto, realização (implementação) e testes, usando o Modelo Ortogonal de Variabilidade (MOV). (3) Engenharia de domínio: é o processo que constrói a plataforma reutilizável — identifica o que é comum (semelhança) e o que varia (variabilidade) e produz os ativos-base. Seus subprocessos são gerenciamento de produto, engenharia de requisitos de domínio, projeto (design) de domínio, realização de domínio e teste de domínio. (4) Engenharia de aplicação: é o processo que usa a plataforma para derivar aplicações concretas, escolhendo as variantes de cada cliente, com os subprocessos engenharia de requisitos de aplicação, projeto de aplicação, realização de aplicação e teste de aplicação. Dica para a prova: quase toda questão gira em torno de três ideias — quem produz o quê (domínio produz para reuso, aplicação consome e dá feedback), o que entra e o que sai de cada subprocesso, e como a variabilidade é representada (ponto de variação, variante, dependências e restrições)."
   },
   {
     "tipo": "questao",
+    "id": "2955a239-7378-4e2c-a23c-61ddb3819e1e",
+    "capitulo": "Apresentação da disciplina",
+    "tema": "Mapa geral do conteúdo de Linhas de Produtos de Software",
     "titulo": "Relação entre engenharia de domínio e engenharia de aplicação",
     "questao": "Uma empresa decide adotar LPS para seus sistemas de gestão de clínicas. Qual afirmação descreve corretamente a divisão de trabalho entre os dois grandes processos do framework de LPS?",
     "alternativa_a": "A engenharia de aplicação constrói a plataforma reutilizável e a engenharia de domínio gera os produtos de cada cliente.",
@@ -29,13 +33,17 @@
     "resposta_correta": "c"
   },
   {
-    "tipo": "materia",
-    "tema": "Conceitos de Linhas de Produtos de Software",
-    "subtema": "Reuso de software e estratégias da engenharia de software",
+    "tipo": "conteudo",
+    "id": "2fd59edc-535e-42bd-900a-09fc145aa52b",
+    "capitulo": "Conceitos de Linhas de Produtos de Software",
+    "tema": "Reuso de software e estratégias da engenharia de software",
     "texto": "Diferente de um produto físico (uma cadeira, um carro), o software entregue é uma cópia virtual — e isso torna o reuso muito vantajoso. A Engenharia de Software aponta três estratégias principais para o sucesso em TI: melhoria de processos, inovação tecnológica e reuso. Muitas funcionalidades se repetem em quase todos os sistemas (cadastro, login, pagamento), e ficam ainda mais parecidas quando as empresas atuam na mesma área (duas lojas de roupas têm rotinas quase iguais). A engenharia de software baseada em reuso tenta maximizar o reaproveitamento do que já existe, como fazem os engenheiros de outras áreas, que montam projetos com componentes já testados. Vantagens principais (Pressman): aumento de produtividade, aumento de qualidade e redução do prazo de entrega; também ajuda na manutenibilidade, reduz custos (desenvolver tudo de novo seria mais caro) e reduz o risco de processo, pois o custo de um componente pronto já é conhecido. As unidades de reuso têm tamanhos diferentes: objetos e funções (pequenas), componentes (pequenas a médias) e sistemas de aplicação (grandes — famílias de aplicações com arquitetura comum, que é onde nasce a LPS). Cuidado na prova: reuso NÃO é simples nem automático. Montar uma biblioteca de componentes reutilizáveis exige analisar a unidade, testar, catalogar, armazenar e documentar o uso, e os processos de desenvolvimento precisam ser adaptados. Reuso também não aumenta o tempo de desenvolvimento — ele reduz."
   },
   {
     "tipo": "questao",
+    "id": "213b6fd6-fe18-44e9-b0d6-e1bf0267030e",
+    "capitulo": "Conceitos de Linhas de Produtos de Software",
+    "tema": "Reuso de software e estratégias da engenharia de software",
     "titulo": "Tamanhos das unidades de reuso",
     "questao": "As unidades de software reutilizáveis podem ter tamanhos muito diferentes. Em qual categoria se enquadra a LPS, também chamada de família de aplicações?",
     "alternativa_a": "Objetos, por serem as menores unidades da orientação a objetos.",
@@ -54,6 +62,9 @@
   },
   {
     "tipo": "questao",
+    "id": "4101e138-26fa-460d-9fdc-5a5d229541ab",
+    "capitulo": "Conceitos de Linhas de Produtos de Software",
+    "tema": "Reuso de software e estratégias da engenharia de software",
     "titulo": "Benefícios e mitos do reuso",
     "questao": "Sobre a engenharia de software baseada em reuso, assinale a afirmação correta.",
     "alternativa_a": "Criar uma biblioteca de componentes reutilizáveis é simples e rápido, pois os processos de desenvolvimento não precisam mudar.",
@@ -71,13 +82,17 @@
     "resposta_correta": "b"
   },
   {
-    "tipo": "materia",
-    "tema": "Conceitos de Linhas de Produtos de Software",
-    "subtema": "Definição de LPS, variabilidade e tipos de especialização",
+    "tipo": "conteudo",
+    "id": "59e4e648-eb08-4c41-8c0e-7941601b52e0",
+    "capitulo": "Conceitos de Linhas de Produtos de Software",
+    "tema": "Definição de LPS, variabilidade e tipos de especialização",
     "texto": "O reuso do sistema de aplicações reaproveita um sistema inteiro, configurando-o para um ambiente específico: o sistema central é projetado para ser configurado e adaptado às necessidades de diferentes clientes. Isso é a Linha de Produtos de Software (LPS) ou família de aplicações. Definição clássica de Clements e Northrop (2002): uma LPS é um conjunto de sistemas que usam software intensivamente, compartilhando um conjunto de características comuns e gerenciadas, que satisfazem as necessidades de um segmento particular de mercado ou missão e que são desenvolvidos a partir de um conjunto comum de ativos principais (ativos-base) e de uma forma preestabelecida. Ponto-chave: para ser LPS, os produtos precisam pertencer à mesma família, ou seja, ao mesmo domínio de mercado. A ideia central é permitir a customização para cada cliente/stakeholder — e daí nasce o conceito de variabilidade: o que pode variar de um stakeholder para outro. As adaptações feitas para cada cliente também são chamadas de especialização, e há quatro tipos: (1) especialização de plataforma — versões para plataformas diferentes (Windows e Linux); a funcionalidade não muda, só os componentes que conversam com o sistema operacional; (2) especialização de ambiente — versões para lidar com dispositivos periféricos específicos; (3) especialização funcional — versões para clientes com requisitos diferentes; (4) especialização de processo — o sistema é adaptado a processos de negócio específicos. Exemplo do dia a dia: smartphones de um mesmo fabricante usam o mesmo software, com variações por modelo e personalizações do usuário."
   },
   {
     "tipo": "questao",
+    "id": "13b12076-ef5e-4ad3-84be-22bc9a30f884",
+    "capitulo": "Conceitos de Linhas de Produtos de Software",
+    "tema": "Definição de LPS, variabilidade e tipos de especialização",
     "titulo": "Identificando o tipo de especialização",
     "questao": "Uma empresa possui um sistema de controle de estacionamentos. Para atender um novo cliente, ela cria uma versão que funciona com um modelo específico de cancela eletrônica e de leitor de placas instalados no local. Que tipo de especialização foi feita?",
     "alternativa_a": "Especialização de plataforma.",
@@ -95,13 +110,17 @@
     "resposta_correta": "d"
   },
   {
-    "tipo": "materia",
-    "tema": "Conceitos de Linhas de Produtos de Software",
-    "subtema": "Feature Model e Configuration Knowledge",
+    "tipo": "conteudo",
+    "id": "ab31ac9c-f195-4a18-ae1e-c4e99dee1640",
+    "capitulo": "Conceitos de Linhas de Produtos de Software",
+    "tema": "Feature Model e Configuration Knowledge",
     "texto": "Como a arquitetura é a mesma para todos os produtos, é a variabilidade que define as partes específicas de cada negócio. O principal mecanismo para modelar essa variabilidade é o Feature Model (modelo de features). O conceito de feature vem do método FODA (Feature Oriented Domain Analysis — análise de domínio orientada a features). Uma feature é uma característica do sistema visível ao usuário final; corresponde a uma unidade comportamental relevante para um ou mais stakeholders e pode representar um agrupamento de requisitos relacionados. Seu objetivo é aproximar o programador do stakeholder, criando características de alto nível que facilitam incluir a feature no ciclo de produção. Elementos do modelo (exemplo do e-Shop): features obrigatórias (Catalogue, Payment, GUI, Info) aparecem em todos os produtos; features opcionais (Security, Banners, Offers, Search) podem ou não aparecer; grupo alternativo XOR (mutuamente exclusivo) — escolhe-se apenas uma subfeature (era o caso de Security); grupo OR — escolhe-se uma ou mais subfeatures (era o caso de Payment). Regras: uma feature filha só aparece num produto se a feature pai aparecer; a feature raiz compõe todos os produtos da LPS. Limitação importante: o Feature Model serve apenas para modelar os produtos na etapa de domínio; ele não representa COMO os produtos serão gerados a partir dos artefatos dos ativos-base. Para isso se usa o Configuration Knowledge (conhecimento de configuração), técnica que mapeia as features do Feature Model para os artefatos de implementação, garantindo a associação entre os artefatos e os itens do modelo."
   },
   {
     "tipo": "questao",
+    "id": "7bc7dda0-23b7-49f3-83d2-bd695ef827d1",
+    "capitulo": "Conceitos de Linhas de Produtos de Software",
+    "tema": "Feature Model e Configuration Knowledge",
     "titulo": "Grupos XOR e OR no Feature Model",
     "questao": "No Feature Model de um aplicativo de delivery, a feature “Entrega” tem as subfeatures “Motoboy”, “Bicicleta” e “Retirada no balcão” num grupo OR, e a feature “Tema visual” tem as subfeatures “Claro” e “Escuro” num grupo XOR. Qual configuração de produto é válida?",
     "alternativa_a": "Entrega sem nenhuma subfeature e tema Claro e Escuro ao mesmo tempo.",
@@ -120,6 +139,9 @@
   },
   {
     "tipo": "questao",
+    "id": "2eaeae2a-5872-448e-ab61-3efe3a7067bb",
+    "capitulo": "Conceitos de Linhas de Produtos de Software",
+    "tema": "Feature Model e Configuration Knowledge",
     "titulo": "Limitação do Feature Model",
     "questao": "Uma equipe modelou todas as features da sua LPS, mas percebeu que o modelo não indica quais arquivos de código e componentes devem ser usados para gerar cada produto. Qual técnica resolve esse problema?",
     "alternativa_a": "Configuration Knowledge, que mapeia as features para os artefatos de implementação.",
@@ -137,13 +159,17 @@
     "resposta_correta": "a"
   },
   {
-    "tipo": "materia",
-    "tema": "Conceitos de Linhas de Produtos de Software",
-    "subtema": "ERP como exemplo clássico de LPS",
+    "tipo": "conteudo",
+    "id": "4705b1d6-ed3c-471e-a62e-ad4eb0c54f98",
+    "capitulo": "Conceitos de Linhas de Produtos de Software",
+    "tema": "ERP como exemplo clássico de LPS",
     "texto": "O ERP (Enterprise Resource Planning — Planejamento dos Recursos da Empresa) é o exemplo mais difundido de reuso de software na abordagem de LPS (Sommerville). É um software de gestão empresarial que automatiza processos manuais, armazena dados e unifica a visualização dos resultados; como esses processos são comuns a muitas áreas, é um forte candidato a ser escalável. Há ERPs para setores específicos, chamados módulos verticais (automação comercial, comércio exterior, gestão de acervos, plano de saúde, gestão educacional, gestão de transportadora), e funcionalidades chamadas módulos principais (RH, fiscal, estoque, compras, produção, financeiro, faturamento, gerenciamento de projetos). O ERP centraliza o fluxo de trabalho, alinha a comunicação entre áreas e facilita a tomada de decisão. Histórico (ordem cronológica): EOQ (Economic Order Quantity), criado pelo engenheiro Ford Whitman Harris para programar a produção, há mais de 100 anos → MRP (Material Requirements Planning), adotado pela Black & Decker para planejar necessidades de materiais, usando conceitos do EOQ num computador → MRP II (Manufacturing Resource Planning), em 1983, integrando compras, contratos e dados entre departamentos → passou a incorporar finanças, RH e vendas e, em 1990, recebeu o nome ERP. A SAP é líder de mercado (77% das receitas de transações do mundo passam por seus sistemas) e já integra Machine Learning, IoT e análises avançadas. Vantagens do ERP: processos automatizados em todos os departamentos, menos tempo em controle de entregas, melhor qualidade de dados, mais produtividade, menos riscos e erros, menor custo de compliance/fiscal/contábil, acompanhamento de compras, contratos e estoque, gestão financeira integrada. Questão típica: um sistema de módulos integrados (financeiro, contábil, logística, RH) para controlar operações e custos é um ERP — não um CRM, EIS ou sistema especialista."
   },
   {
     "tipo": "questao",
+    "id": "36217b03-dbd0-4f54-9ca8-ec79a38cf668",
+    "capitulo": "Conceitos de Linhas de Produtos de Software",
+    "tema": "ERP como exemplo clássico de LPS",
     "titulo": "Evolução histórica até o ERP",
     "questao": "Assinale a sequência cronológica correta da evolução que levou ao ERP.",
     "alternativa_a": "MRP → EOQ → ERP → MRP II.",
@@ -161,13 +187,17 @@
     "resposta_correta": "c"
   },
   {
-    "tipo": "materia",
-    "tema": "Conceitos de Linhas de Produtos de Software",
-    "subtema": "Engenharia da LPS: atividades essenciais, formas de implantação e abordagens",
+    "tipo": "conteudo",
+    "id": "d7129697-3327-4051-87b5-f92dfc8bea17",
+    "capitulo": "Conceitos de Linhas de Produtos de Software",
+    "tema": "Engenharia da LPS: atividades essenciais, formas de implantação e abordagens",
     "texto": "Engenharia da LPS é o conjunto de etapas, processos, metodologias e demais recursos que dão suporte ao desenvolvimento da LPS; com processos estabelecidos, o ciclo de vida fica mais confiável, reduzindo custos e gerando produtos de qualidade. Existem três atividades essenciais, iterativas e interligadas, que podem ocorrer a qualquer momento e em qualquer ordem (representadas por três círculos giratórios conectados): Core Asset Development (Desenvolvimento de Ativos Principais), Product Development (Desenvolvimento do Produto) e Management (Gestão). Formas de implantação: instantânea — poucas customizações, já liberadas nas primeiras versões; custo menor e implantação mais rápida, economicamente atrativa; gradual — estudo profundo de todas as customizações, em muitas etapas; mais lenta e mais cara, mas reduz riscos e deixa o produto mais aderente aos processos da empresa; é a opção mais adotada. Abordagens de desenvolvimento: proativa — os ativos-base são desenvolvidos primeiro e depois os produtos são construídos; reativa — os ativos-base já existem e vão evoluindo com incrementos à medida que surgem novos requisitos; extrativa — analisa os produtos já existentes e suas estruturas para extrair as características comuns e variáveis e derivar a LPS. Macete: proativa = planeja antes; reativa = reage a novas demandas; extrativa = extrai de sistemas que já existem."
   },
   {
     "tipo": "questao",
+    "id": "21212377-1a58-40dc-a38c-2a85dbbe79a8",
+    "capitulo": "Conceitos de Linhas de Produtos de Software",
+    "tema": "Engenharia da LPS: atividades essenciais, formas de implantação e abordagens",
     "titulo": "Abordagens de desenvolvimento de LPS",
     "questao": "Uma software house tem três sistemas de academia, feitos separadamente para três clientes ao longo dos anos. Ela decide analisar esses sistemas, identificar o que eles têm em comum e o que difere, e a partir disso montar sua LPS. Qual abordagem está sendo usada?",
     "alternativa_a": "Proativa.",
@@ -186,6 +216,9 @@
   },
   {
     "tipo": "questao",
+    "id": "45d24280-9949-442a-956e-206e344d53dd",
+    "capitulo": "Conceitos de Linhas de Produtos de Software",
+    "tema": "Engenharia da LPS: atividades essenciais, formas de implantação e abordagens",
     "titulo": "Implantação instantânea × gradual",
     "questao": "Sobre as formas de implantação da LPS, assinale a alternativa correta.",
     "alternativa_a": "A implantação instantânea é a mais cara, pois faz muitas customizações de uma vez.",
@@ -203,13 +236,17 @@
     "resposta_correta": "e"
   },
   {
-    "tipo": "materia",
-    "tema": "Conceitos de Linhas de Produtos de Software",
-    "subtema": "Core Asset Development, Product Development e Management em detalhe",
+    "tipo": "conteudo",
+    "id": "d417a7fa-5153-4444-b05a-a3ec4f4d6750",
+    "capitulo": "Conceitos de Linhas de Produtos de Software",
+    "tema": "Core Asset Development, Product Development e Management em detalhe",
     "texto": "Core Asset Development (Desenvolvimento de Ativos Principais): objetivo de definir os aspectos comuns e a variabilidade da linha de produtos, identificando os artefatos reutilizáveis. Não há um momento certo para adicionar restrições ou padrões; as entradas afetam diretamente as saídas. Em alguns contextos os produtos existentes são a base dos ativos-base; em outros, eles são desenvolvidos do zero para reuso futuro. Ativos-base podem ser: arquitetura e sua documentação, especificações, componentes de software, ferramentas (como geradores de componentes ou de aplicação), modelos de desempenho, cronogramas, orçamentos, planos de teste, casos de teste, planos de trabalho e descrições de processo. Um ativo-base adaptável é mais amplamente utilizável; mecanismos de variação ajudam a controlar essas adaptações, que devem obrigatoriamente ser planejadas antes do desenvolvimento, pois alteram a arquitetura. Product Development (Desenvolvimento do Produto): parte dos ativos-base e desenvolve os produtos com base no plano de produção. Insumos essenciais: requisitos, escopo da linha de produtos, ativos-base e plano de produção (que detalha como os ativos-base serão usados para construir um produto). Há iterações: a existência de um produto pode afetar requisitos de produtos seguintes. Esta atividade tem a obrigação de dar feedback sobre problemas ou deficiências encontrados nos ativos-base. Management (Gestão): papel vital para institucionalizar a LPS na organização; fornece e coordena a infraestrutura necessária; envolve tarefas em nível técnico e organizacional; supervisiona a construção dos ativos-base e o desenvolvimento dos produtos, garantindo o envolvimento dos grupos e acompanhando o processo. Deve dirigir, controlar e garantir a plena utilização dos ativos. Frase importante: LPS está mais relacionada a práticas de negócio do que a práticas técnicas."
   },
   {
     "tipo": "questao",
+    "id": "483843d7-a57a-40d9-94bc-05246279b9c3",
+    "capitulo": "Conceitos de Linhas de Produtos de Software",
+    "tema": "Core Asset Development, Product Development e Management em detalhe",
     "titulo": "Insumos do Desenvolvimento do Produto",
     "questao": "Quais são os insumos essenciais da atividade Product Development (Desenvolvimento do Produto)?",
     "alternativa_a": "Código-fonte legado, relatório financeiro e contrato do cliente.",
@@ -228,6 +265,9 @@
   },
   {
     "tipo": "questao",
+    "id": "9d114496-92c6-4076-9193-69a9ea5ec9ea",
+    "capitulo": "Conceitos de Linhas de Produtos de Software",
+    "tema": "Core Asset Development, Product Development e Management em detalhe",
     "titulo": "O que pode ser ativo-base",
     "questao": "Sobre os ativos-base de uma LPS, assinale a alternativa correta.",
     "alternativa_a": "Ativos-base são exclusivamente componentes de código-fonte.",
@@ -246,6 +286,9 @@
   },
   {
     "tipo": "questao",
+    "id": "1e58a27c-f811-4414-8f74-5c73321299e8",
+    "capitulo": "Conceitos de Linhas de Produtos de Software",
+    "tema": "Core Asset Development, Product Development e Management em detalhe",
     "titulo": "Papel da Gestão (Management)",
     "questao": "Qual é o papel da atividade essencial Management (Gestão) na engenharia da LPS?",
     "alternativa_a": "Fornecer e coordenar a infraestrutura necessária, supervisionando a construção dos ativos-base e o desenvolvimento dos produtos em nível técnico e organizacional.",
@@ -263,13 +306,17 @@
     "resposta_correta": "a"
   },
   {
-    "tipo": "materia",
-    "tema": "Conceitos de Linhas de Produtos de Software",
-    "subtema": "Ferramentas de apoio à modelagem de features",
+    "tipo": "conteudo",
+    "id": "de26f6c1-5234-4484-b4a0-6eeca195fb46",
+    "capitulo": "Conceitos de Linhas de Produtos de Software",
+    "tema": "Ferramentas de apoio à modelagem de features",
     "texto": "Ferramentas citadas no material (Da Silva et al., 2011): FMP — plugin gratuito da IDE Eclipse; apoia a modelagem de domínio; grava os modelos em XML; a modelagem de features é baseada em cardinalidade (restringe a quantidade de filhos a que uma feature pode se relacionar). XFeature — também plugin do Eclipse; acompanha a modelagem e configura artefatos reusáveis; permite customizar meta-modelos (estruturas que descrevem como as features são modeladas); foi criado originalmente para aplicações espaciais (sistemas embarcados de naves), mas pode ser usado em outros contextos; baseado no Eclipse 3.3; ao contrário do FMP, não usa EMF para o meta-modelo; editor baseado no GEF (Graphical Editing Framework); depende fortemente de XML e transformações XSL, com scripts para verificar e gerar arquivos de configuração. pure::variants — plugin do Eclipse; apoia desenvolvimento e implantação de LPS e famílias de software (análise, modelagem, implementação e implantação); permite modelar o Configuration Knowledge, mapeando features e artefatos. SPLOT (Software Product Line Online Tools) — conjunto de funcionalidades: editor de modelo de features, análise automatizada, configuração de produto e repositório de modelos de features. Macete: cardinalidade = FMP; aplicações espaciais/meta-modelos/GEF/XSL = XFeature; Configuration Knowledge = pure::variants; repositório e análise automatizada online = SPLOT."
   },
   {
     "tipo": "questao",
+    "id": "10cf1907-df12-4f1d-9b49-58e0a0364d5c",
+    "capitulo": "Conceitos de Linhas de Produtos de Software",
+    "tema": "Ferramentas de apoio à modelagem de features",
     "titulo": "Identificando a ferramenta",
     "questao": "Qual ferramenta foi desenvolvida originalmente para aplicações espaciais, permite customizar meta-modelos, usa editor baseado no GEF e depende fortemente de XML e transformações XSL?",
     "alternativa_a": "FMP.",
@@ -287,13 +334,17 @@
     "resposta_correta": "c"
   },
   {
-    "tipo": "materia",
-    "tema": "Conceitos de Linhas de Produtos de Software",
-    "subtema": "Framework de LPS: plataforma, customização em massa e os dois processos",
+    "tipo": "conteudo",
+    "id": "c7786181-f53b-4465-8ae4-d48bbd4c9d4a",
+    "capitulo": "Conceitos de Linhas de Produtos de Software",
+    "tema": "Framework de LPS: plataforma, customização em massa e os dois processos",
     "texto": "O Framework para LPS (Pohl, Böckle e Linden, 2005) é uma estrutura de engenharia de produto que incorpora os conceitos centrais da engenharia de LPS por meio de plataformas capazes de oferecer personalização (customização) em massa. Em software, plataforma é uma coleção de artefatos reutilizáveis, que precisam ser reusados de forma consistente e sistemática. Para atender aos diferentes requisitos dos stakeholders, introduz-se na plataforma o conceito de variabilidade: os artefatos que podem diferir entre as aplicações são modelados com variabilidade. O paradigma separa dois processos: Engenharia de domínio — estabelece a plataforma de reutilização, definindo o que é comum e o que é variável; a plataforma inclui todos os tipos de artefato (requisitos, design, testes etc.), chamados ativos-base. Engenharia de aplicação — deriva aplicações concretas a partir da plataforma, explorando a variabilidade e assegurando sua correta instanciação conforme as necessidades das aplicações finais. Na engenharia de domínio cada etapa gera ativos: análise de domínio (requisitos), arquitetura de domínio (projeto arquitetural), implementação de domínio e testes de domínio. Vantagem da divisão: separa dois pontos de atenção — construir uma plataforma robusta e criar rapidamente softwares específicos para os clientes; os dois processos devem interagir de forma benéfica para ambos. Objetivos da engenharia de domínio: definir similaridade e variabilidade; definir o escopo (conjunto de aplicativos para os quais a LPS é planejada); definir e construir artefatos reutilizáveis que atinjam a variedade desejada. Objetivos da engenharia de aplicação: alta reutilização; explorar semelhança e variabilidade; documentar os artefatos da aplicação relacionando-os aos do domínio; vincular a variabilidade conforme a necessidade da aplicação (dos requisitos aos testes); estimar o impacto das diferenças entre requisitos da aplicação e do domínio."
   },
   {
     "tipo": "questao",
+    "id": "590b5fda-e281-401d-8af3-33bf0f5ee7ec",
+    "capitulo": "Conceitos de Linhas de Produtos de Software",
+    "tema": "Framework de LPS: plataforma, customização em massa e os dois processos",
     "titulo": "Objetivos da engenharia de domínio",
     "questao": "Qual das alternativas a seguir é um objetivo da ENGENHARIA DE DOMÍNIO, e não da engenharia de aplicação?",
     "alternativa_a": "Vincular a variabilidade conforme as necessidades de um aplicativo específico.",
@@ -311,13 +362,17 @@
     "resposta_correta": "b"
   },
   {
-    "tipo": "materia",
-    "tema": "Conceitos de Linhas de Produtos de Software",
-    "subtema": "Subprocessos da engenharia de domínio: entradas e saídas",
+    "tipo": "conteudo",
+    "id": "c3e1bd09-f35d-4abc-9673-96a626cc14cf",
+    "capitulo": "Conceitos de Linhas de Produtos de Software",
+    "tema": "Subprocessos da engenharia de domínio: entradas e saídas",
     "texto": "São cinco subprocessos. (1) Gerenciamento de produto (Product Management): trata dos aspectos econômicos e da estratégia de mercado; gerencia o portfólio de produtos; usa técnicas de escopo para definir o que está dentro e fora da LPS. Entrada: objetivos da empresa definidos pela alta administração. Saída: roteiro (roadmap) de produtos com os principais recursos comuns e variáveis e o cronograma de lançamentos, além de uma lista de produtos ou artefatos existentes que podem ser reutilizados. Antecipa mudanças de recursos, restrições legais e padrões. (2) Engenharia de requisitos de domínio: elicita e documenta requisitos comuns e variáveis. Entrada: roadmap. Saída: requisitos reutilizáveis (textuais e baseados em modelos) e, em especial, o modelo de variabilidade. Atenção: a saída NÃO é a especificação de uma aplicação, e sim os requisitos de todas as aplicações previsíveis. (3) Projeto de domínio (Domain Design): define a arquitetura de referência, estrutura comum de alto nível para todas as aplicações. Entrada: requisitos de domínio e modelo de variabilidade. Saída: arquitetura de referência e modelo de variabilidade refinado, que inclui a variabilidade interna (necessária por motivos técnicos). (4) Realização de domínio (Domain Realisation): projeto detalhado e implementação de componentes reutilizáveis. Entrada: arquitetura de referência e lista de artefatos reutilizáveis a desenvolver. Saída: design detalhado e ativos de implementação dos componentes reutilizáveis. (5) Teste de domínio (Domain Testing): validação e verificação dos componentes reutilizáveis em relação à especificação (requisitos, arquitetura, design); também desenvolve artefatos de teste reutilizáveis para reduzir o esforço de teste das aplicações. Entrada: requisitos de domínio, arquitetura de referência, designs de componentes e interfaces e componentes implementados. Saída: resultados dos testes e artefatos de teste reutilizáveis."
   },
   {
     "tipo": "questao",
+    "id": "12fa33ec-c097-405f-b04f-c5d34237a91f",
+    "capitulo": "Conceitos de Linhas de Produtos de Software",
+    "tema": "Subprocessos da engenharia de domínio: entradas e saídas",
     "titulo": "Saída do projeto de domínio",
     "questao": "Qual é a saída do subprocesso de projeto de domínio (Domain Design)?",
     "alternativa_a": "O roteiro de produtos com o cronograma de lançamentos.",
@@ -336,6 +391,9 @@
   },
   {
     "tipo": "questao",
+    "id": "77d202cd-441d-44cb-9345-f9c20aea3952",
+    "capitulo": "Conceitos de Linhas de Produtos de Software",
+    "tema": "Subprocessos da engenharia de domínio: entradas e saídas",
     "titulo": "Entrada do gerenciamento de produto",
     "questao": "No framework de LPS, qual é a entrada do subprocesso de gerenciamento de produto?",
     "alternativa_a": "O modelo de variabilidade da linha de produtos.",
@@ -353,13 +411,17 @@
     "resposta_correta": "e"
   },
   {
-    "tipo": "materia",
-    "tema": "Conceitos de Linhas de Produtos de Software",
-    "subtema": "Subprocessos da engenharia de aplicação: entradas e saídas",
+    "tipo": "conteudo",
+    "id": "7e692151-67ec-4df1-be8c-8079a060c0a3",
+    "capitulo": "Conceitos de Linhas de Produtos de Software",
+    "tema": "Subprocessos da engenharia de aplicação: entradas e saídas",
     "texto": "São quatro subprocessos. (1) Engenharia de requisitos de aplicação: desenvolve a especificação de requisitos da aplicação. A quantidade de reuso depende muito dos requisitos do aplicativo, por isso uma grande preocupação é detectar as diferenças entre os requisitos do aplicativo e os recursos disponíveis na plataforma. Entrada: requisitos de domínio e roadmap do produto (com as características da aplicação); pode haver requisitos específicos do cliente não capturados no domínio. Saída: especificação de requisitos do aplicativo específico (e não a precificação da aplicação — pegadinha comum). (2) Projeto de aplicação (Application Design): produz a arquitetura do aplicativo usando a arquitetura de referência para instanciá-la; seleciona e configura as partes necessárias e incorpora adaptações específicas. Entrada: arquitetura de referência e especificação de requisitos do aplicativo. Saída: a arquitetura final do aplicativo. (3) Realização da aplicação (Application Realisation): cria a aplicação; seleciona e configura componentes reutilizáveis e realiza ativos específicos do aplicativo, reunindo os dois. Entrada: arquitetura do aplicativo e artefatos de realização reutilizáveis da plataforma. Saída: aplicativo em execução e os artefatos de design detalhado. (4) Teste da aplicação (Application Testing): valida e verifica o aplicativo em relação à especificação. Entrada: artefatos do aplicativo usados como referência de teste, o aplicativo implementado e os artefatos de teste reutilizáveis do teste de domínio. Saída: relatório de teste com os resultados e relatórios de problemas detalhando os defeitos. Para associar coluna: “engloba as atividades para a especificação de requisitos” = requisitos de aplicação; “produz a arquitetura do aplicativo” = projeto; “cria a aplicação em questão” = realização; “valida e verifica em relação à especificação” = teste."
   },
   {
     "tipo": "questao",
+    "id": "ca0bfd6a-6c6e-4c73-89e0-ebcfac0626f4",
+    "capitulo": "Conceitos de Linhas de Produtos de Software",
+    "tema": "Subprocessos da engenharia de aplicação: entradas e saídas",
     "titulo": "Saída da realização da aplicação",
     "questao": "Qual é a saída do subprocesso de realização da aplicação (Application Realisation)?",
     "alternativa_a": "Um aplicativo em execução, junto com os artefatos de design detalhado.",
@@ -378,6 +440,9 @@
   },
   {
     "tipo": "questao",
+    "id": "908d2119-6c24-4b26-8efa-0a472fad7cdf",
+    "capitulo": "Conceitos de Linhas de Produtos de Software",
+    "tema": "Subprocessos da engenharia de aplicação: entradas e saídas",
     "titulo": "Entradas do teste da aplicação",
     "questao": "Quais itens compõem a entrada do subprocesso de teste da aplicação?",
     "alternativa_a": "Apenas o código-fonte do aplicativo.",
@@ -395,13 +460,17 @@
     "resposta_correta": "f"
   },
   {
-    "tipo": "materia",
-    "tema": "Conceitos de Linhas de Produtos de Software",
-    "subtema": "Benefícios da adoção de LPS e benefícios por stakeholder (SEI)",
+    "tipo": "conteudo",
+    "id": "87e9907d-6262-4f4a-ae3e-77e19db74e56",
+    "capitulo": "Conceitos de Linhas de Produtos de Software",
+    "tema": "Benefícios da adoção de LPS e benefícios por stakeholder (SEI)",
     "texto": "Os benefícios se classificam em três tipos. Organizacionais: melhor compreensão do domínio, mais facilidade de treinar pessoas, menos desgaste profissional e menor turnover (rotatividade), produto de maior qualidade e confiança do cliente (menos riscos e defeitos, entrega mais previsível). De engenharia de software: reutilização de requisitos e componentes, melhor análise de requisitos, outra visão dos requisitos para o cliente, padrões de programação; menos defeitos e menos tempo de correção. De negócio: lucratividade, com redução de custos de manutenção e de teste (reuso entre produtos semelhantes), mais eficiência nos processos, melhor orçamento e planejamento de tempo. Benefícios por stakeholder, segundo o framework do SEI (2016): CEO — opções para desenvolver rapidamente novos produtos, grandes ganhos de produtividade, time to market muito melhor, crescimento sustentado e presença no mercado, capacidade de capturar um nicho de mercado. Chefe de operação — uso eficiente da força de trabalho, capacidade de explorar novos mercados, tecnologias e produtos. Gerente técnico — maior previsibilidade, papéis bem estabelecidos, produção eficiente. Desenvolvedor do produto — moral mais alta, mais satisfação, foco nos aspectos verdadeiramente únicos, maior integração, menos atrasos, mais mobilidade na organização, mais comercializável, tempo para aprender tecnologias. Arquiteto ou desenvolvedor de ativos — maior desafio, trabalho com mais impacto, prestígio, torna-se tão comercializável quanto a linha. Vendedores — produtos previsíveis de alta qualidade, entrega previsível, vender com garantia de qualidade. Cliente — alta qualidade, data e custo previsíveis, custos conhecidos para requisitos exclusivos, material de treinamento bem testado, custos de manutenção compartilhados, possibilidade de grupo de usuários. Usuário final — menos defeitos, melhores materiais de treinamento e documentação, rede de outros usuários. Casos reais: Nokia produz dezenas de modelos de celular por ano; Cummins reduziu o software de motor diesel de cerca de um ano para uma semana; Motorola teve ganho de produtividade num modelo de celular; HP reduziu o time to market por um fator de sete e aumentou a produtividade por um fator de seis em sistemas de impressoras."
   },
   {
     "tipo": "questao",
+    "id": "10266604-0d3f-4878-86ab-899b3db862f0",
+    "capitulo": "Conceitos de Linhas de Produtos de Software",
+    "tema": "Benefícios da adoção de LPS e benefícios por stakeholder (SEI)",
     "titulo": "Classificando um benefício",
     "questao": "Após adotar LPS, uma empresa percebeu que ficou mais fácil treinar novos funcionários e que a rotatividade (turnover) da equipe caiu. Esses ganhos são classificados como benefícios:",
     "alternativa_a": "De negócio.",
@@ -420,6 +489,9 @@
   },
   {
     "tipo": "questao",
+    "id": "604af6de-ac41-4a6d-b60b-a880979b9ecc",
+    "capitulo": "Conceitos de Linhas de Produtos de Software",
+    "tema": "Benefícios da adoção de LPS e benefícios por stakeholder (SEI)",
     "titulo": "Benefícios por stakeholder",
     "questao": "Segundo o framework do SEI, qual stakeholder tem como benefícios “maior desafio, trabalho com mais impacto, prestígio dentro da organização e tornar-se tão comercializável quanto a linha de produtos”?",
     "alternativa_a": "Vendedor.",
@@ -438,6 +510,9 @@
   },
   {
     "tipo": "questao",
+    "id": "7597a60c-b466-46a4-b0e3-69015d3dda6e",
+    "capitulo": "Conceitos de Linhas de Produtos de Software",
+    "tema": "Benefícios da adoção de LPS e benefícios por stakeholder (SEI)",
     "titulo": "Casos industriais de LPS",
     "questao": "Qual resultado foi reportado pela Hewlett-Packard (HP) com a adoção de LPS em sistemas de impressoras?",
     "alternativa_a": "Redução do tempo de produção do software de motor diesel de um ano para uma semana.",
@@ -455,13 +530,17 @@
     "resposta_correta": "d"
   },
   {
-    "tipo": "materia",
-    "tema": "Conceitos de Linhas de Produtos de Software",
-    "subtema": "Dificuldades na adoção de LPS",
+    "tipo": "conteudo",
+    "id": "ef27e7d0-2d37-4f48-883a-d97060e35f24",
+    "capitulo": "Conceitos de Linhas de Produtos de Software",
+    "tema": "Dificuldades na adoção de LPS",
     "texto": "Adotar LPS não é simples e exige esforço da organização: custos, reorganização de processos e mudança de cultura da equipe — fatores que podem ser barreiras iniciais e comprometer a mudança de mentalidade (Pressman). Os fatores de dificuldade apresentados: (1) Liderança comprometida com a adoção — a adoção precisa ser conduzida por líderes que conheçam bem a LPS e possam apoiar, supervisionar, gerenciar e motivar a equipe. (2) Comprometimento da gerência — acompanhamento próximo para que pressões externas não deixem o projeto de LPS em segundo plano. (3) Adoção da abordagem equivocada — não se deve “forçar” um produto para dentro de uma LPS; é preciso análise cuidadosa, e se o produto não tiver similaridade suficiente com a família, não é possível garantir a viabilidade. (4) Comprometimento da equipe — a mudança de cultura e de processo gera resistência natural e falta de motivação. A LPS ainda não é amplamente adotada, mas a engenharia de software vem difundindo boas práticas e pesquisas mostram casos reais de sucesso. Conclusão do tema: sucesso em LPS exige mudança cultural com foco no reuso, apoio da liderança e foco em qualidade. Pegadinha de prova: “a adequação deve sempre ocorrer, independentemente da aderência do negócio, pois reuso sempre dá lucro” é FALSO; “visão de qualidade e eficiência” não é uma dificuldade, é um objetivo."
   },
   {
     "tipo": "questao",
+    "id": "7c294d79-d81c-4b72-8275-0cbf224db7df",
+    "capitulo": "Conceitos de Linhas de Produtos de Software",
+    "tema": "Dificuldades na adoção de LPS",
     "titulo": "Reconhecendo uma dificuldade de adoção",
     "questao": "Uma empresa com LPS de sistemas de varejo decide encaixar na mesma linha um sistema de controle de tráfego aéreo, apenas para “aproveitar” a plataforma. Qual dificuldade de adoção de LPS esse caso ilustra?",
     "alternativa_a": "Falta de liderança comprometida.",
@@ -479,13 +558,17 @@
     "resposta_correta": "e"
   },
   {
-    "tipo": "materia",
-    "tema": "Variabilidade em LPS",
-    "subtema": "Gerenciamento de variabilidade, resolução e tempo de ligação",
+    "tipo": "conteudo",
+    "id": "777141c0-d1a1-48f1-8339-f39ee7c53243",
+    "capitulo": "Variabilidade em LPS",
+    "tema": "Gerenciamento de variabilidade, resolução e tempo de ligação",
     "texto": "A documentação e o gerenciamento da variabilidade são o que distingue a Engenharia de Linha de Produtos de Software (ELPS) do desenvolvimento de um único sistema e do reuso comum: na ELPS a variabilidade é definida explicitamente e gerenciada. A variabilidade é introduzida quando o gerenciamento de produto identifica os recursos comuns e variáveis; depois é carregada para os requisitos de domínio e segue para projeto, implementação e teste. Em cada nível de abstração a variabilidade do nível anterior é refinada e pode surgir variabilidade nova, própria daquele nível (exemplo: na implementação pode-se considerar diferentes linguagens de programação, algo que não existia no projeto). Gerenciar a variabilidade é defini-la e explorá-la ao longo do ciclo de vida da LPS, o que engloba: atividades de apoio à definição da variabilidade; gerenciamento de artefatos variáveis; atividades de apoio à resolução da variabilidade; e coletar, armazenar e gerenciar as informações de rastreamento necessárias. Todo subprocesso da engenharia de aplicação deve relacionar a variabilidade introduzida pelo subprocesso correspondente da engenharia de domínio, refinando a variabilidade das fases iniciais com segurança, para garantir que os requisitos variáveis sejam corretamente construídos. Essa atividade se chama RESOLUÇÃO DE VARIABILIDADE, e o momento em que ela é executada se chama TEMPO DE LIGAÇÃO (binding time) da variabilidade. Em nome da flexibilidade, o tempo de ligação pode ser deixado para fases mais tardias. Pegadinhas: não é “resolução de similaridade”, nem “tempo de otimização”, nem “dissolução”."
   },
   {
     "tipo": "questao",
+    "id": "17973dc6-b4cb-4048-8d63-0d8ef47d0417",
+    "capitulo": "Variabilidade em LPS",
+    "tema": "Gerenciamento de variabilidade, resolução e tempo de ligação",
     "titulo": "Resolução de variabilidade",
     "questao": "Na engenharia de aplicação, um engenheiro escolhe, para o cliente atual, quais variantes definidas no domínio serão usadas. Como se chamam essa atividade e o momento em que ela acontece?",
     "alternativa_a": "Análise de similaridade e tempo de análise.",
@@ -503,13 +586,17 @@
     "resposta_correta": "f"
   },
   {
-    "tipo": "materia",
-    "tema": "Variabilidade em LPS",
-    "subtema": "Sujeito e objeto de variabilidade; ponto de variação e variante",
+    "tipo": "conteudo",
+    "id": "2ce990bf-9bb1-4236-aa80-ada82cc00569",
+    "capitulo": "Variabilidade em LPS",
+    "tema": "Sujeito e objeto de variabilidade; ponto de variação e variante",
     "texto": "Na ELPS a variabilidade não acontece por acaso: ela é provocada. Para entendê-la, fazemos três perguntas. (1) O QUE varia? Leva ao SUJEITO DE VARIABILIDADE (SV): um item do mundo real, ou uma propriedade dele, que varia — as cores de uma casa, o material de uma porta, as formas de uma cadeira, o “método de pagamento”, o “mecanismo de identificação”. (2) POR QUE varia? Por várias condições: gosto do cliente, clima da região, leis do país. SVs podem ser interdependentes (a cor da porta depende do material: madeira admite cores que alumínio não admite). (3) COMO varia? Leva ao OBJETO DE VARIABILIDADE (OV): as instâncias possíveis — verde, amarela ou azul; madeira, ferro ou alumínio; clássico ou moderno; dinheiro, cartão de crédito ou débito; impressão digital, voz ou senha. OVs também podem influenciar OVs de outros itens (senha × voz muda o tipo de armazenamento no banco). Passando para a ELPS: o PONTO DE VARIAÇÃO (PV, ou VP — variation point) corresponde ao SV, mas enriquecido de informações contextuais (por exemplo, o motivo de a variação ter sido incorporada); vale para todos os artefatos, dos requisitos aos testes. A VARIANTE (V) corresponde ao OV e identifica UMA ÚNICA opção de um PV. PV e V são entidades independentes, distintas dos artefatos de requisitos, arquitetura ou tecnologia; uma variante pode ser associada a artefatos para indicar que eles correspondem àquela opção (e, quando não há confusão, esses artefatos também são chamados de variantes). Exemplo: SV “cor” com OVs verde, branco, amarelo, vermelho, azul...; uma montadora que só fabrica carros vermelhos e verdes terá o PV “cor” com as variantes “vermelho” e “verde”. Resumo: SV→PV e OV→V."
   },
   {
     "tipo": "questao",
+    "id": "42b861b7-9a97-41d7-973d-ae56a92bc76d",
+    "capitulo": "Variabilidade em LPS",
+    "tema": "Sujeito e objeto de variabilidade; ponto de variação e variante",
     "titulo": "Identificando SV e OV",
     "questao": "Uma rede de cafeterias quer que seu sistema aceite “tamanho do copo” com as opções pequeno, médio e grande. Considerando o mundo real, qual é a classificação correta?",
     "alternativa_a": "“Tamanho do copo” é o sujeito de variabilidade; pequeno, médio e grande são os objetos de variabilidade.",
@@ -528,6 +615,9 @@
   },
   {
     "tipo": "questao",
+    "id": "46f1c51b-56ae-4b22-9008-048cda002402",
+    "capitulo": "Variabilidade em LPS",
+    "tema": "Sujeito e objeto de variabilidade; ponto de variação e variante",
     "titulo": "Ponto de variação × variante",
     "questao": "Assinale a afirmativa correta sobre pontos de variação (PV) e variantes (V).",
     "alternativa_a": "A variante corresponde ao sujeito de variabilidade do mundo real.",
@@ -545,13 +635,17 @@
     "resposta_correta": "d"
   },
   {
-    "tipo": "materia",
-    "tema": "Variabilidade em LPS",
-    "subtema": "Os três passos para definir pontos de variação e variantes",
+    "tipo": "conteudo",
+    "id": "7c152fff-0064-4523-9c0b-166b232268b9",
+    "capitulo": "Variabilidade em LPS",
+    "tema": "Os três passos para definir pontos de variação e variantes",
     "texto": "A definição de PVs e variantes deve ser sistemática, para evitar definições equivocadas. Processo em três passos, com o exemplo do software de automação residencial: PRIMEIRO PASSO — identificar o item do mundo real que varia, ou seja, o SV. Os engenheiros notam várias formas de comunicação entre os componentes (LAN cabeada, LAN sem fio, Bluetooth) e identificam o SV “tipo de rede”. SEGUNDO PASSO — definir o PV dentro da LPS. É necessário porque há diferença entre a variação do mundo real (SV) e sua correspondente na LPS (PV). O SV “tipo de rede” resulta no PV “sistema de comunicação do software de automação residencial”, que indica que o sistema deve suportar múltiplas formas de comunicação, SEM dizer quais. TERCEIRO PASSO — definir as variantes, com base nos OVs do mundo real. Por questões técnicas e de mercado, só interessam LAN sem fio e Bluetooth; essas são as variantes do PV definido no passo dois. Repare: o mundo real tinha três OVs (inclusive LAN cabeada), mas a LPS escolheu só duas variantes — a LPS não precisa oferecer todas as opções do mundo real. Ordem para decorar: SV → PV → V."
   },
   {
     "tipo": "questao",
+    "id": "3a7c7f9d-7365-4ae9-af98-ea29c3285d99",
+    "capitulo": "Variabilidade em LPS",
+    "tema": "Os três passos para definir pontos de variação e variantes",
     "titulo": "Ordem dos passos para definir PV e V",
     "questao": "Num sistema de biblioteca, a equipe percebe que empréstimos podem ser feitos por balcão, totem ou aplicativo. Decide criar o PV “canal de empréstimo” e, por custo, oferecer apenas as variantes “balcão” e “aplicativo”. Qual sequência de passos foi seguida?",
     "alternativa_a": "Definir as variantes → identificar o SV → definir o PV.",
@@ -569,13 +663,17 @@
     "resposta_correta": "c"
   },
   {
-    "tipo": "materia",
-    "tema": "Variabilidade em LPS",
-    "subtema": "Variabilidade × semelhança; variabilidade no tempo × no espaço",
+    "tipo": "conteudo",
+    "id": "2466fbcf-107c-4db5-9b54-87d897620a9a",
+    "capitulo": "Variabilidade em LPS",
+    "tema": "Variabilidade × semelhança; variabilidade no tempo × no espaço",
     "texto": "VARIABILIDADE é a variação modelada para permitir aplicações customizadas pelo reuso de artefatos predefinidos e ajustáveis; ela distingue as aplicações da linha. SEMELHANÇA (comunalidade) é a característica implementada da mesma forma em todas as aplicações. A equipe decide se uma característica será variável ou comum. Exemplo: escolher o idioma antes da instalação é variabilidade (e, pagando a mais, pode-se escolher a qualquer momento); se a escolha de idioma for oferecida a todos na interface, ela é uma semelhança. VARIABILIDADE NO TEMPO: variação de versão de um artefato ao longo do tempo (sistemas evoluem, por exemplo, por evolução tecnológica ou mudança de lei). Existe tanto na engenharia tradicional quanto na ELPS e é gerenciada normalmente por GERENCIAMENTO DE CONFIGURAÇÃO. Na LPS é mais fácil introduzir uma evolução se ela ocorrer num PV já previsto. Exemplo: criar o PV “mecanismo de identificação” com uma única variante “cartão magnético” prepara o sistema para incluir a variante “leitor digital” quando essa tecnologia amadurecer. VARIABILIDADE NO ESPAÇO: existência de diferentes versões de um artefato AO MESMO TEMPO (produtos similares oferecidos simultaneamente, diferindo num escopo definido). A engenharia tradicional não oferece forma de lidar com ela; entender e manipular a variabilidade no espaço é uma questão central da ELPS. Macete: tempo = versões que se sucedem e não coexistem; espaço = opções que coexistem em produtos diferentes."
   },
   {
     "tipo": "questao",
+    "id": "f335285c-cb4f-4392-af9c-4e38bd8edbae",
+    "capitulo": "Variabilidade em LPS",
+    "tema": "Variabilidade × semelhança; variabilidade no tempo × no espaço",
     "titulo": "Tempo ou espaço?",
     "questao": "Uma LPS de sistemas de ponto eletrônico vende, no mesmo período, versões com registro por crachá para uma empresa e por reconhecimento facial para outra. Esse cenário é um exemplo de:",
     "alternativa_a": "Variabilidade no tempo, gerenciada por controle de versões.",
@@ -593,13 +691,17 @@
     "resposta_correta": "e"
   },
   {
-    "tipo": "materia",
-    "tema": "Variabilidade em LPS",
-    "subtema": "Variabilidade externa × interna e níveis de abstração",
+    "tipo": "conteudo",
+    "id": "812ac5da-7c03-4415-a63f-052cc52ede62",
+    "capitulo": "Variabilidade em LPS",
+    "tema": "Variabilidade externa × interna e níveis de abstração",
     "texto": "Quanto à visibilidade, a variabilidade pode ser EXTERNA — aquela que o cliente percebe e tem o poder de escolher as variantes de que precisa (exemplo: escolher a forma de identificação na automação residencial: senha, cartão magnético ou leitor de digital) — ou INTERNA — “escondida” do cliente, percebida e decidida pelos engenheiros (exemplo: a variante “protocolo de comunicação”: a partir de medições da qualidade da rede, os instaladores escolhem entre o protocolo que privilegia velocidade e o que privilegia correção dos dados; isso é transparente para o usuário). Regra importante: quanto MAIS BAIXO o nível de abstração (das necessidades do usuário → requisitos → projeto → implementação de componentes → testes), MAIOR a quantidade de variabilidade interna e MENOR a de variabilidade externa. No MOV, a classe abstrata ponto de variação se especializa (de forma completa e disjunta) em ponto de variação interno e externo. Na engenharia de requisitos de domínio, uma tarefa específica é identificar e documentar explicitamente a variabilidade externa; o projeto de domínio acrescenta a variabilidade interna. Quem decide se um PV será externo ou interno é o gerenciamento de produto."
   },
   {
     "tipo": "questao",
+    "id": "7094f731-6343-4d03-9bc7-a0a6c0758a30",
+    "capitulo": "Variabilidade em LPS",
+    "tema": "Variabilidade externa × interna e níveis de abstração",
     "titulo": "Variabilidade nos níveis de abstração",
     "questao": "À medida que o desenvolvimento desce dos requisitos para o projeto, a implementação e os testes, o que acontece com a variabilidade?",
     "alternativa_a": "A variabilidade externa aumenta e a interna diminui.",
@@ -617,13 +719,17 @@
     "resposta_correta": "d"
   },
   {
-    "tipo": "materia",
-    "tema": "Variabilidade em LPS",
-    "subtema": "Modelo Ortogonal de Variabilidade (MOV): dependências de variabilidade e escolha alternativa",
+    "tipo": "conteudo",
+    "id": "6c0f3598-bbce-489d-b60a-3077cc5f6972",
+    "capitulo": "Variabilidade em LPS",
+    "tema": "Modelo Ortogonal de Variabilidade (MOV): dependências de variabilidade e escolha alternativa",
     "texto": "A documentação da variabilidade deve responder: O que varia? (quais PVs) Por que varia? (causas internas, como tecnologia; causas externas, como necessidades dos stakeholders) Como varia? (quais variantes, quais ligações entre variantes e PVs, a quais partes do modelo se referem) Para quem é documentada? (usuário, engenheiro de testes...). O MOV (Modelo Ortogonal de Variabilidade, também chamado MVO) é uma linguagem para definir a variabilidade da LPS de forma ORTOGONAL, oferecendo uma visão TRANSVERSAL da variabilidade para todos os artefatos (requisitos, projeto, código, testes) sem alterar a forma original desses modelos. O metamodelo é descrito com diagrama de classes UML 2. Elementos centrais: PV e V se relacionam (1..n, 1..n) — cada PV tem uma ou mais variantes e vice-versa. PV é classe abstrata especializada em interno e externo. A associação PV–V tem a classe associativa abstrata DEPENDÊNCIA DE VARIABILIDADE, especializada em: OPCIONAL — a variante pode ou não estar no produto (exemplo: PV “mecanismo de autenticação” com teclado, leitor de digital e cartão; pode-se ter de nenhuma a todas); MANDATÓRIA (obrigatória) — se o PV estiver presente, a variante também deve estar. A ESCOLHA ALTERNATIVA, com atributos min e max, relaciona-se com dependências opcionais (2..n, 0..1) e restringe quantas variantes podem ser escolhidas (só uma, duas a duas, todas...). Na notação, a cardinalidade padrão (default) da escolha alternativa é 1..1 — uma e somente uma variante; quando omitida, vale 1..1. Exemplo: PV “trava de porta” com variantes “teclado” e “digital” em escolha alternativa 1..1, cada uma ligada ao caso de uso correspondente (“destravar porta pelo teclado”, “destravar porta com digital”) por dependência de artefato."
   },
   {
     "tipo": "questao",
+    "id": "42f9d8b9-a9a0-4e1c-a37a-0aec2214a3e5",
+    "capitulo": "Variabilidade em LPS",
+    "tema": "Modelo Ortogonal de Variabilidade (MOV): dependências de variabilidade e escolha alternativa",
     "titulo": "Dependência mandatória × opcional",
     "questao": "No MOV de um sistema de alarme, o PV “ativação de alarme” possui a variante “sirene” que deve estar presente em todo produto que tiver esse PV, e a variante “aviso por SMS”, que o cliente pode ou não contratar. Como se classificam as dependências de variabilidade?",
     "alternativa_a": "Sirene: opcional; aviso por SMS: mandatória.",
@@ -642,6 +748,9 @@
   },
   {
     "tipo": "questao",
+    "id": "c74aa399-3518-469a-a68a-707792d8bc12",
+    "capitulo": "Variabilidade em LPS",
+    "tema": "Modelo Ortogonal de Variabilidade (MOV): dependências de variabilidade e escolha alternativa",
     "titulo": "Escolha alternativa e cardinalidade padrão",
     "questao": "No MOV, um PV “forma de pagamento” tem as variantes “PIX”, “boleto” e “cartão” ligadas a uma escolha alternativa sem cardinalidade indicada na notação. O que isso significa?",
     "alternativa_a": "Que o engenheiro pode escolher nenhuma, uma, duas ou as três variantes livremente.",
@@ -659,13 +768,17 @@
     "resposta_correta": "f"
   },
   {
-    "tipo": "materia",
-    "tema": "Variabilidade em LPS",
-    "subtema": "Restrições de variabilidade e rastreabilidade entre variabilidade e artefatos",
+    "tipo": "conteudo",
+    "id": "9c0780d3-b3cc-4483-97bb-458099a0f675",
+    "capitulo": "Variabilidade em LPS",
+    "tema": "Restrições de variabilidade e rastreabilidade entre variabilidade e artefatos",
     "texto": "RESTRIÇÕES DE VARIABILIDADE (parte superior do metamodelo) relacionam variantes e PVs entre si e podem ser de REQUISIÇÃO (requer) ou de EXCLUSÃO (exclui). Três tipos (todos completos e disjuntos): (i) dependência de restrição de VARIANTES — uma V requer ou exclui outra V, do mesmo ou de outro PV; (ii) dependência de restrição de VARIANTE PARA PONTO DE VARIAÇÃO — uma V requer ou exclui um PV (qualquer variante dele); (iii) dependência de restrição de PONTOS DE VARIAÇÃO — um PV requer ou exclui outro PV. Exemplo de (i): a V “WLan” (PV “comunicação sem fio”) exclui a V “sensor baseado em radar” (PV “detector de movimento”), pois ambos usam a mesma faixa de banda. Exemplo de (ii): a V “eletrônico” do PV “travamento de porta” requer o PV “autenticação de travamento”. RASTREABILIDADE (parte inferior do metamodelo): não basta modelar PV, V e relações; é preciso ligá-los aos artefatos (requisitos, projeto, implementação, testes) por meio da classe “artefato de desenvolvimento”. DEPENDÊNCIA DE ARTEFATO liga uma V aos artefatos que a realizam (“realizado por”); VP ARTEFATO liga um PV aos artefatos que o representam (“representado por”). Multiplicidades: um artefato pode realizar nenhuma ou várias variantes, mas TODA variante deve ser realizada por PELO MENOS UM artefato; um artefato pode representar nenhum ou vários PVs, e cada PV pode ser representado por nenhum ou muitos artefatos. Exemplo de PV representado por artefato: uma classe abstrata que realiza o comportamento comum de várias classes-variante."
   },
   {
     "tipo": "questao",
+    "id": "03b15bb7-5c46-42b1-b7e0-6984acba4023",
+    "capitulo": "Variabilidade em LPS",
+    "tema": "Restrições de variabilidade e rastreabilidade entre variabilidade e artefatos",
     "titulo": "Multiplicidade da rastreabilidade no MOV",
     "questao": "Segundo o metamodelo do MOV, qual afirmação sobre a rastreabilidade entre variabilidade e artefatos está correta?",
     "alternativa_a": "Todo PV deve ser representado por pelo menos um artefato, mas variantes podem não ter artefato.",
@@ -684,6 +797,9 @@
   },
   {
     "tipo": "questao",
+    "id": "f22fd95f-7c85-42ef-9b22-e32364b7e7a5",
+    "capitulo": "Variabilidade em LPS",
+    "tema": "Restrições de variabilidade e rastreabilidade entre variabilidade e artefatos",
     "titulo": "Tipo de restrição de variabilidade",
     "questao": "Num sistema de casa inteligente, a variante “câmera 4K” do PV “vigilância” só funciona se o produto tiver o PV “armazenamento em nuvem” (com qualquer uma de suas variantes). Que tipo de restrição é essa?",
     "alternativa_a": "Dependência de restrição de variante para ponto de variação, do tipo “requer”.",
@@ -701,13 +817,17 @@
     "resposta_correta": "a"
   },
   {
-    "tipo": "materia",
-    "tema": "Variabilidade em LPS",
-    "subtema": "Variabilidade em artefatos de requisitos: requisitos textuais",
+    "tipo": "conteudo",
+    "id": "5396e240-2340-4cf1-a3f6-0d31feb914e2",
+    "capitulo": "Variabilidade em LPS",
+    "tema": "Variabilidade em artefatos de requisitos: requisitos textuais",
     "texto": "Requisitos de domínio abrangem os requisitos comuns a todas as aplicações e os variáveis que permitem aplicações diferentes; são criados na engenharia de requisitos de domínio e servem de entrada para o projeto de domínio. Requisito é (1) uma condição ou necessidade do usuário para resolver um problema ou alcançar um objetivo, ou (2) uma característica que o sistema ou componente deve ter para satisfazer um contrato, padrão ou documento formal. Podem ser escritos em LINGUAGEM NATURAL — mais flexível, porém sujeita a interpretações ambíguas — ou em LINGUAGEM DE MODELAGEM — com regras e elementos que tornam o entendimento inequívoco. Há três tipos de modelos de requisitos: FUNCIONAIS (exemplo: diagrama de casos de uso), DE DADOS (exemplo: diagrama de classes, pois guarda a estrutura dos dados e relacionamentos) e DE COMPORTAMENTO (exemplo: diagrama de estados). Meta × funcionalidade: a meta é uma intenção de alto nível dos stakeholders, definida pela equipe de requisitos; a funcionalidade é uma característica visível ao usuário, modelada pela equipe de projeto; as duas têm grande interseção. Requisitos textuais com MOV: o objetivo é não transferir a ambiguidade do texto para a modelagem. Exemplo: “o sistema de segurança deve ter câmeras em preto e branco ou coloridas capazes de capturar fotos infravermelhas; se coloridas, o armazenamento comprime vídeo a cerca de 1:200” (ambíguo: a câmera P&B captura infravermelho?). Solução: PV “tipo de câmera” com variantes “preto e branco” e “colorida” (escolha alternativa 1..1 omitida); dependências de artefato ligam cada variante ao PEDAÇO de texto correspondente, e a variante “colorida” se liga também ao trecho da compressão — ou seja, uma variante pode se ligar a mais de um pedaço de texto e o texto precisa estar separado em pedaços. O texto pode ser enriquecido com tabelas, marcações ou hiper-referências; XML com tags opcionais também pode representar variabilidade."
   },
   {
     "tipo": "questao",
+    "id": "ea902d75-4473-4a0e-a308-e5d5c4dfb4cb",
+    "capitulo": "Variabilidade em LPS",
+    "tema": "Variabilidade em artefatos de requisitos: requisitos textuais",
     "titulo": "Tipos de modelos de requisitos",
     "questao": "Qual associação entre tipo de modelo de requisitos e diagrama de exemplo está correta?",
     "alternativa_a": "Requisitos funcionais — diagrama de estados.",
@@ -726,6 +846,9 @@
   },
   {
     "tipo": "questao",
+    "id": "e5692a3d-391a-45fd-b648-e52ac3ed8c39",
+    "capitulo": "Variabilidade em LPS",
+    "tema": "Variabilidade em artefatos de requisitos: requisitos textuais",
     "titulo": "MOV em requisitos textuais",
     "questao": "Ao documentar a variabilidade de um requisito textual com o MOV, qual afirmação é correta?",
     "alternativa_a": "O requisito textual pode permanecer como um bloco único, sem divisão em pedaços.",
@@ -743,13 +866,17 @@
     "resposta_correta": "d"
   },
   {
-    "tipo": "materia",
-    "tema": "Variabilidade em LPS",
-    "subtema": "Variabilidade em casos de uso, diagramas de classes e diagramas de estados",
+    "tipo": "conteudo",
+    "id": "969b57c9-2281-4fac-8306-fbeb7b3cd1bd",
+    "capitulo": "Variabilidade em LPS",
+    "tema": "Variabilidade em casos de uso, diagramas de classes e diagramas de estados",
     "texto": "Os modelos de requisitos (casos de uso, cenários, classes) não foram feitos para documentar a variabilidade como a ELPS exige; o MOV permite documentá-la SEM alterar a forma original desses modelos. CASOS DE USO: são documentados por descrição, cenário (texto tabulado ou diagrama de sequência) e diagrama de casos de uso. Em qualquer uma dessas formas, a integração com o MOV é feita por dependências de artefato que ligam as variantes às partes do artefato (exemplo: passos para fechar a porta da frente que mudam conforme a variante teclado ou leitor de digital). O diagrama de casos de uso mostra os requisitos num nível mais alto. Grande vantagem: o MOV correlaciona as variantes presentes em vários modelos ao mesmo tempo, o que seria muito difícil (talvez impossível) em sistemas grandes. DIAGRAMA DE CLASSES: documenta a variabilidade de requisitos estruturais, que pode envolver variabilidade de comportamento (associações), de função (métodos) e de qualidade (atributos). A variabilidade é inerente ao modelo de classes porque ele especifica instâncias validadas em tempo de execução — mas a variabilidade da LINHA DE PRODUTO não pode ser documentada com a notação padrão do modelo de classes; por isso se usa o MOV. Granularidade GROSSA: a dependência liga variantes a classes e subclasses; granularidade FINA: liga a elementos das classes (atributos, métodos, relacionamentos). DIAGRAMA DE ESTADOS: documenta o comportamento; a variabilidade é documentada ligando as variantes a partes da máquina de estados por dependências de artefato."
   },
   {
     "tipo": "questao",
+    "id": "5cc9ba28-5a02-4e5e-a0c4-b79ab53a2458",
+    "capitulo": "Variabilidade em LPS",
+    "tema": "Variabilidade em casos de uso, diagramas de classes e diagramas de estados",
     "titulo": "Granularidade no diagrama de classes",
     "questao": "Um engenheiro liga a variante “desconto progressivo” diretamente ao método calcularDesconto() de uma classe, e não à classe inteira. Que tipo de documentação de variabilidade ele está fazendo?",
     "alternativa_a": "Granularidade grossa, pois envolve uma classe.",
@@ -767,13 +894,17 @@
     "resposta_correta": "f"
   },
   {
-    "tipo": "materia",
-    "tema": "Variabilidade em LPS",
-    "subtema": "Variabilidade em artefatos de projeto: estrutura, textura e visões da arquitetura",
+    "tipo": "conteudo",
+    "id": "fc407da0-a9c2-46d1-8ee1-8ffb21952e35",
+    "capitulo": "Variabilidade em LPS",
+    "tema": "Variabilidade em artefatos de projeto: estrutura, textura e visões da arquitetura",
     "texto": "Na fase de projeto se determina, tecnicamente, como as aplicações são construídas. Na ELPS a arquitetura de domínio (de referência) deve valer para várias aplicações, por isso os artefatos de domínio precisam ser flexíveis; o MOV documenta essa variabilidade de forma clara. O projeto tem duas fases: PROJETO DE ALTO NÍVEL — o principal produto é a arquitetura da aplicação, com a estrutura do software; PROJETO DE BAIXO NÍVEL — a realização (implementação, no subprocesso de realização do domínio), que deve ser aderente à arquitetura. Quatro preocupações dos arquitetos: (1) identificar quais requisitos têm impacto essencial na arquitetura; (2) criar uma arquitetura conceitual antes de construir os modelos; (3) decompor o software em partes e relacionamentos — ESTRUTURA arquitetural; (4) definir a coleção de regras comuns para a realização do sistema — TEXTURA arquitetural. Exemplo de estrutura: quatro camadas do sistema de automação residencial. Exemplo de textura: o sistema é organizado em camadas, usando os padrões Facade (interface simples entre subsistemas) e Observer (separa a interface do usuário dos dados); a textura trata de regras de codificação e mecanismos gerais, como estilos e padrões de projeto. A estrutura é formada por VISÕES: LÓGICA — incorpora os requisitos e descreve as aplicações segundo o problema do domínio (expressa em artefatos de requisitos); DESENVOLVIMENTO — decompõe o software em componentes, objetos e interfaces (diagramas de pacotes, componentes, classes e objetos); PROCESSO — explicita as atividades durante a execução (diagramas de estado, atividade e sequência); CÓDIGO — mapeia código-fonte e executável em arquivos e diretórios e os distribui em unidades de processamento (diagramas de implantação e de componentes). A representação clara de PV, V e dos mecanismos de variabilidade obtida na engenharia de domínio é a arquitetura de referência."
   },
   {
     "tipo": "questao",
+    "id": "3732c527-52b5-46b6-9198-acf98326d432",
+    "capitulo": "Variabilidade em LPS",
+    "tema": "Variabilidade em artefatos de projeto: estrutura, textura e visões da arquitetura",
     "titulo": "Estrutura × textura arquitetural",
     "questao": "A equipe define que todo módulo deve usar o padrão Observer para separar a interface dos dados e seguir as mesmas regras de codificação. Essa definição faz parte da:",
     "alternativa_a": "Estrutura arquitetural, porque decompõe o sistema em camadas.",
@@ -792,6 +923,9 @@
   },
   {
     "tipo": "questao",
+    "id": "12c4db7c-3a53-4132-82b3-ac307ee7329c",
+    "capitulo": "Variabilidade em LPS",
+    "tema": "Variabilidade em artefatos de projeto: estrutura, textura e visões da arquitetura",
     "titulo": "Visões da estrutura arquitetural",
     "questao": "Qual associação entre visão da arquitetura e seus diagramas está correta?",
     "alternativa_a": "Visão de processo — diagramas de implantação e de componentes.",
@@ -809,13 +943,17 @@
     "resposta_correta": "b"
   },
   {
-    "tipo": "materia",
-    "tema": "Variabilidade em LPS",
-    "subtema": "Documentando variabilidade nas visões de desenvolvimento, processo e código",
+    "tipo": "conteudo",
+    "id": "61f21b17-bba7-4e8a-87aa-ae45c1106093",
+    "capitulo": "Variabilidade em LPS",
+    "tema": "Documentando variabilidade nas visões de desenvolvimento, processo e código",
     "texto": "VISÃO DE DESENVOLVIMENTO: uma das mais importantes para capturar variabilidade e semelhança. A estrutura em camadas pode ser refinada com diagrama de pacotes, ligando PVs a elementos da arquitetura para indicar que o artefato-alvo tem instâncias diferentes. No diagrama de componentes (UML 2), cada componente pode realizar uma variante; exemplo: a V “eletrônico” do PV “travamento de porta” tem restrição de requisição para o PV “autenticação de travamento”. Componentes se conectam por interfaces, que descrevem a funcionalidade oferecida pelo provedor ao requisitante sem dizer como ela é implementada. CONFIGURAÇÃO DE COMPONENTES: documentar a variabilidade é especificar quais configurações são possíveis e quais não são (quais componentes são comuns, opcionais ou variáveis). Isso pode ser feito por LISTAS ou por um FRAMEWORK DE COMPONENTES — diagrama com COMPONENTES PLUGIN que são adicionados em LOCALIZAÇÕES PLUGIN (interfaces requeridas), seguindo regras; partes opcionais e variantes ligadas por linhas tracejadas; PVs ligados a interfaces e variantes ligadas aos componentes que se conectam a elas. VISÃO DE PROCESSO: comportamento em execução (threads, processos, interações, recursos). A variabilidade aparece em: diferentes agrupamentos de tarefas; tarefas e processos opcionais e/ou com múltiplas instâncias; esquema de prioridades; mecanismos de comunicação entre processos. Afeta velocidade, rendimento e tempo de reação; pode vir de requisitos de desempenho/qualidade e de variabilidade interna do hardware ou infraestrutura. Os diagramas dessa visão não têm notação de variabilidade (descrevem só semelhanças); além do MOV, pode-se usar uma TABELA DE PROCESSOS relacionando processos, tarefas e componentes — tarefas variam junto com os componentes a que estão atribuídas. VISÃO DE CÓDIGO: distribuição do código-fonte em arquivos e diretórios e dos executáveis nas unidades de processamento. A variabilidade pode ocorrer em arquivos, diretórios, unidades de processamento, número e papéis das unidades e mapeamento do código nas unidades. É documentada com diagramas de implantação e de componentes."
   },
   {
     "tipo": "questao",
+    "id": "3e5aac39-f3d3-4c49-8b10-0359ccac66e6",
+    "capitulo": "Variabilidade em LPS",
+    "tema": "Documentando variabilidade nas visões de desenvolvimento, processo e código",
     "titulo": "Variabilidade na visão de processo",
     "questao": "Os diagramas usados na visão de processo não possuem notação para variabilidade. Além do MOV, qual recurso o material sugere para documentar a variabilidade nessa visão?",
     "alternativa_a": "Uma tabela de processos, que relaciona processos, tarefas e componentes.",
@@ -834,6 +972,9 @@
   },
   {
     "tipo": "questao",
+    "id": "a326f622-8739-4d0b-bc3e-f9e30e0c241b",
+    "capitulo": "Variabilidade em LPS",
+    "tema": "Documentando variabilidade nas visões de desenvolvimento, processo e código",
     "titulo": "Framework de componentes",
     "questao": "Sobre o framework de componentes usado para documentar a configuração de componentes, assinale a alternativa correta.",
     "alternativa_a": "É um diagrama de sequência que mostra a ordem de chamada dos componentes.",
@@ -851,13 +992,17 @@
     "resposta_correta": "e"
   },
   {
-    "tipo": "materia",
-    "tema": "Variabilidade em LPS",
-    "subtema": "Variabilidade em artefatos de realização: componentes e interfaces",
+    "tipo": "conteudo",
+    "id": "20295d16-47f2-422b-bf5c-6a5ae442f77c",
+    "capitulo": "Variabilidade em LPS",
+    "tema": "Variabilidade em artefatos de realização: componentes e interfaces",
     "texto": "O subprocesso de realização de domínio cria os artefatos de realização comuns e variáveis, incluindo os componentes reutilizáveis. Sua entrada são os produtos do projeto de domínio: a ESTRUTURA arquitetônica — determina os componentes e interfaces a projetar e implementar, documentando também a variabilidade externa e interna — e a TEXTURA arquitetônica — diretrizes e regras comuns para lidar com a variabilidade no projeto e na implementação de componentes e interfaces. No PROJETO de domínio, componentes e interfaces são DEFINIDOS; na REALIZAÇÃO de domínio eles são CARACTERIZADOS, descendo um nível em relação às suas especificações (projeto detalhado). Componentes são as peças principais das aplicações; interfaces são as partes externamente visíveis usadas para conectá-los — um componente oferece funcionalidade por uma interface fornecida e usa a de outros por uma interface requerida. Um componente da plataforma é usado em muitos aplicativos; uma falha nele se espalha por toda a linha, por isso o projetista precisa conhecer bem o papel do componente na arquitetura. VARIABILIDADE DA INTERFACE: a mesma interface pode ser fornecida por vários componentes e requisitada por outros, gerando muitas configurações possíveis. Quatro tipos de variabilidade afetam o projeto de uma interface: (1) diferentes ALGORITMOS ou PROTOCOLOS — a interface define tipos de argumentos e retorno; cada componente implementa seu algoritmo usando sempre os mesmos tipos; (2) diferenças nos RECURSOS fornecidos — componentes com a mesma funcionalidade, mas que usam quantidades diferentes de memória, tempo de processamento, espaço de tela, largura de banda ou velocidade de comunicação; a interface pode precisar oferecer funções ou parâmetros que indiquem o nível de recursos disponíveis (avaliados em tempo de execução) e mecanismos de realocação; (3) diferenças na CONFIGURAÇÃO DA APLICAÇÃO — diferenças de hardware e software (tamanho de memória, pacotes disponíveis); a interface deve ter funções ou parâmetros que diferenciem as variantes; recursos são um caso especial de configuração (recursos = propriedades internas de hardware/software; configuração = todo tipo de propriedade do sistema); (4) MUITOS COMPONENTES DE FORNECIMENTO. Uma interface também pode ser usada por vários componentes em processos que afetam quase todos, como inicialização e tratamento de erros; nesse caso tem poucas classes com métodos bem genéricos, implementados de formas diferentes conforme quem a usa — outra forma de implementar a variância. Pegadinha: a variabilidade inerente ao modelo de classes usada para validar instâncias em tempo de execução NÃO é um dos tipos que afetam o projeto da interface."
   },
   {
     "tipo": "questao",
+    "id": "d8bf4511-dda0-492e-a81d-292ead3a121c",
+    "capitulo": "Variabilidade em LPS",
+    "tema": "Variabilidade em artefatos de realização: componentes e interfaces",
     "titulo": "Tipo de variabilidade que afeta a interface",
     "questao": "Dois componentes de exibição de gráficos oferecem a mesma funcionalidade, mas um foi feito para telas grandes e consome muita memória, e o outro para telas pequenas e consome pouca. A interface precisa oferecer uma função que informe o espaço de tela e a memória disponíveis. Que tipo de variabilidade está afetando o projeto dessa interface?",
     "alternativa_a": "Variabilidade em algoritmos ou protocolos.",
@@ -876,6 +1021,9 @@
   },
   {
     "tipo": "questao",
+    "id": "ae8d40d3-9309-43bc-ab58-f6839210a256",
+    "capitulo": "Variabilidade em LPS",
+    "tema": "Variabilidade em artefatos de realização: componentes e interfaces",
     "titulo": "Projeto × realização de componentes e interfaces",
     "questao": "Em que subprocessos os componentes e as interfaces são, respectivamente, definidos e caracterizados (descendo um nível em relação às suas especificações)?",
     "alternativa_a": "Definidos na engenharia de requisitos de domínio e caracterizados no teste de domínio.",
@@ -893,13 +1041,17 @@
     "resposta_correta": "d"
   },
   {
-    "tipo": "materia",
-    "tema": "Variabilidade em LPS",
-    "subtema": "Variabilidade interna do componente e o papel da herança",
+    "tipo": "conteudo",
+    "id": "903fce5b-1328-4315-8c44-303c9c4693d7",
+    "capitulo": "Variabilidade em LPS",
+    "tema": "Variabilidade interna do componente e o papel da herança",
     "texto": "As necessidades de variabilidade são atendidas na realização do componente de duas maneiras NÃO excludentes: (1º) fornecer variantes diferentes de um mesmo componente; (2º) dar variabilidade dentro do componente. Como componentes são formados por várias classes, usa-se diagrama de classes para documentar sua estrutura interna: algumas classes são definidas nas interfaces fornecidas e requeridas, outras são internas. Exemplo: componente “controle de bloqueio” com várias interfaces fornecidas e requeridas; as classes das interfaces para controle de atuadores e sensores são herdadas pelas classes “sensor de bloqueio” e “acionador de bloqueio”. As interfaces requeridas têm suas funcionalidades implementadas nas classes filhas pela HERANÇA, que documenta a variabilidade nesse ponto. Há várias formas de descrever variabilidade em diagramas de classes — herança, anotações de multiplicidade e atributos de classe —, mas o mecanismo realmente importante para a ELPS é a HERANÇA, usada para fornecer variantes para classes abstratas das interfaces necessárias, em conjunto com o MOV. Cuidado: boa parte da variabilidade do diagrama de classes é a de instâncias em tempo de execução, que NÃO tem relação com a variabilidade da linha de produtos (a que diferencia um produto do outro). O projetista deve deixar clara a diferença entre variação por tempo de execução e variação de LPS, usando por exemplo texto explicativo."
   },
   {
     "tipo": "questao",
+    "id": "e660971b-1a28-4176-9fcc-ca71f3cf471f",
+    "capitulo": "Variabilidade em LPS",
+    "tema": "Variabilidade interna do componente e o papel da herança",
     "titulo": "Mecanismo de variabilidade no projeto detalhado",
     "questao": "No projeto detalhado de componentes, qual mecanismo do diagrama de classes é considerado realmente importante para a ELPS, usado em conjunto com o MOV para capturar a variabilidade da linha?",
     "alternativa_a": "Anotações de multiplicidade, pois indicam quantos objetos existem em execução.",
@@ -917,13 +1069,17 @@
     "resposta_correta": "c"
   },
   {
-    "tipo": "materia",
-    "tema": "Variabilidade em LPS",
-    "subtema": "Artefatos de teste segundo o IEEE 829",
+    "tipo": "conteudo",
+    "id": "3ca04aa4-848b-4aeb-9bf3-b6b85eacb2e7",
+    "capitulo": "Variabilidade em LPS",
+    "tema": "Artefatos de teste segundo o IEEE 829",
     "texto": "O teste normalmente é a etapa final e verifica o nível de qualidade; pode encontrar erros de compatibilidade, de algoritmo, requisitos não contemplados e limitações de hardware. Artefatos de teste contêm o que testar, como testar e como documentar os resultados (que também são artefatos de teste). Como domínio e aplicação fazem testes, há artefatos de teste nas duas engenharias, e eles proporcionam testes REPETÍVEIS e RASTREÁVEIS. O padrão IEEE 829 especifica o conjunto de documentos de teste. A principal tarefa do teste na engenharia de domínio é desenvolver artefatos reutilizáveis de forma eficiente no teste das aplicações; para isso a documentação da variabilidade nos artefatos de teste deve ser clara e inequívoca. Os artefatos de teste se dividem em planos, especificações e resultados. Tipos: RELATÓRIO DE RESUMO DO TESTE — visão geral dos resultados de uma execução; refere-se ao sistema testado, ao plano relacionado e aos casos executados; pode classificar defeitos. PLANO DE TESTE — determina os casos de teste a realizar, suas prioridades, recursos e ferramentas; relaciona os itens de teste, o que deve e o que não deve ser testado (escopo); traz estratégia, atividades, critérios de sucesso/falha, de suspensão e de reinício. CASO DE TESTE — define as condições para o teste: dados de entrada, saídas esperadas, objetivos, ambiente necessário, um ou mais cenários, como realizar o teste e critérios de falha. Dois níveis de abstração: LÓGICO (descreve tipos de dados, condições e ações sem os dados concretos) e DETALHADO (traz todos os detalhes, eliminando ambiguidade). CENÁRIO DE CASO DE TESTE — cada uma das sequências específicas de ações de um caso de teste; executar todos os cenários atinge o objetivo do caso. PASSO DO CENÁRIO — instrução para uma ação da sequência, podendo conter o resultado esperado daquele passo."
   },
   {
     "tipo": "questao",
+    "id": "c6061253-a184-4d16-8b80-6ee6dd69b7b7",
+    "capitulo": "Variabilidade em LPS",
+    "tema": "Artefatos de teste segundo o IEEE 829",
     "titulo": "Níveis de abstração do caso de teste",
     "questao": "Um engenheiro escreve um caso de teste dizendo apenas “informar um CPF válido e verificar se o cadastro é aceito”, sem definir qual CPF usar. Depois, outro engenheiro completa com o CPF exato, a tela e os botões. Esses dois momentos correspondem, respectivamente, aos níveis:",
     "alternativa_a": "Físico e lógico.",
@@ -941,13 +1097,17 @@
     "resposta_correta": "f"
   },
   {
-    "tipo": "materia",
-    "tema": "Variabilidade em LPS",
-    "subtema": "Variabilidade nos artefatos de teste",
+    "tipo": "conteudo",
+    "id": "dc8d7ac0-1c28-4686-894c-de10034eef36",
+    "capitulo": "Variabilidade em LPS",
+    "tema": "Variabilidade nos artefatos de teste",
     "texto": "PLANO DE TESTE: usado no domínio e na aplicação. Na engenharia de domínio o plano deve determinar as atividades de forma inequívoca, SEM variabilidade. Mas podem ser preparados planos de teste GENÉRICOS para uso nos testes de aplicação, que sofrem o impacto da modelagem de variabilidade. Esse plano deve estimar, ao menos aproximadamente, o tipo e a quantidade de recursos dos casos de teste de cada variante; definir casos comuns e variáveis e quais variantes se ligam aos planos variáveis; explicitar a prioridade dos casos conforme a variante; e, se as ferramentas não suportarem variabilidade, complementar com notas textuais. Como é escrito em linguagem natural, a variabilidade é modelada como nos requisitos textuais. CASOS DE TESTE: são os artefatos de teste MAIS IMPORTANTES, comuns ou variáveis. Os dados devem ser adequados à variante considerada no MOV; o ambiente de software (configuração) e de hardware deve ser apropriado ao item testado (ou seja, a configuração do ambiente é documentada no caso de teste); e os critérios de falha de cada item devem ser definidos e ligados aos itens. CENÁRIOS DE CASOS DE TESTE: ordenam os passos. A ELPS trabalha com três tipos: comum a todas as aplicações; específico para uma variante; adaptável a duas ou mais variantes. Exemplo: o cenário do travamento de porta em diagrama de sequência, com passos de inicialização e finalização comuns e passos variáveis, é “adaptável a duas ou mais variantes”. A especificação do cenário de teste é mais detalhada que a do cenário de requisitos, embora use a mesma notação. PASSOS: contêm entradas, saídas esperadas e informações de execução (apertar um botão, clicar com o botão direito, navegar até uma linha do log), tudo podendo variar com a variante; podem ser representados em linguagem natural ou diagrama de sequência. RELATÓRIO DE RESUMO: deve referenciar as variantes, mas ele próprio não tem variabilidade; é documentado como na engenharia tradicional, com informações adicionais: a descrição do sistema pode incluir as variantes, os casos são descritos em relação às variantes testadas e a classificação dos defeitos distingue defeitos de artefatos de domínio e de aplicação."
   },
   {
     "tipo": "questao",
+    "id": "6fd0324e-6883-4690-bde3-56e0f27e6968",
+    "capitulo": "Variabilidade em LPS",
+    "tema": "Variabilidade nos artefatos de teste",
     "titulo": "Tipos de cenários de caso de teste",
     "questao": "Um cenário de teste de pagamento tem os passos de abrir o carrinho e fechar o pedido iguais para todos, e passos intermediários que mudam conforme a variante PIX ou cartão. Na ELPS, esse cenário é classificado como:",
     "alternativa_a": "Comum a todas as aplicações.",
@@ -966,6 +1126,9 @@
   },
   {
     "tipo": "questao",
+    "id": "443a57b5-24de-4447-bb37-a08d012c5442",
+    "capitulo": "Variabilidade em LPS",
+    "tema": "Variabilidade nos artefatos de teste",
     "titulo": "Variabilidade nos artefatos de teste",
     "questao": "Sobre a documentação da variabilidade nos artefatos de teste, assinale a alternativa correta.",
     "alternativa_a": "O relatório de resumo do teste é o artefato com mais variabilidade.",
@@ -983,13 +1146,17 @@
     "resposta_correta": "c"
   },
   {
-    "tipo": "materia",
-    "tema": "Engenharia de domínio",
-    "subtema": "Gestão de produto e roteiro de produto",
+    "tipo": "conteudo",
+    "id": "e1417604-3cd2-445a-8252-83734c8776e4",
+    "capitulo": "Engenharia de domínio",
+    "tema": "Gestão de produto e roteiro de produto",
     "texto": "A engenharia de domínio busca distinguir, produzir, registrar e difundir componentes utilizáveis em softwares, existentes ou futuros, de um mesmo domínio. Para isso é preciso definir o domínio (o tipo de software) a ser construído. Suas atividades podem ser feitas em qualquer ordem, com idas e vindas para melhorias constantes. GERENCIAMENTO (GESTÃO) DE PRODUTO é o subprocesso que controla o desenvolvimento, a produção e o marketing da LPS e de seus aplicativos, influenciando requisitos, projeto, realização e teste. O ROTEIRO DE PRODUTO (roadmap) é o PRINCIPAL resultado do gerenciamento de produtos: descreve a linha até onde é previsível em determinado momento (não é perene nem imutável); define os principais recursos COMUNS E VARIÁVEIS de todos os aplicativos; e traz um CRONOGRAMA de entrega de aplicativos a clientes ou ao mercado. Suas características afetam diretamente a engenharia de requisitos de DOMÍNIO e a de APLICAÇÃO. O roteiro implementa a estratégia da empresa; o cronograma resulta de raciocínio estratégico e estimativa de esforço feitos por gerentes de produto e desenvolvedores. Além do roteiro, o gerenciamento fornece uma LISTA DE ARTEFATOS EXISTENTES (produtos anteriores) que podem embasar os requisitos de domínio. A gestão precisa reagir a: mudança nas necessidades dos clientes, novas tecnologias, concorrentes com novos recursos e mudanças de demanda e preços — por isso adaptações do roteiro (novos recursos, eliminação de aplicativos desatualizados) são contínuas. Com a engenharia de requisitos de aplicação: o gerenciamento especifica quais aplicativos derivar e quais recursos comuns e variáveis cada um terá; em certas situações (aplicativos específicos de cliente, pilotos) os recursos são realizados primeiro na engenharia de aplicação e, se bem-sucedidos, propagados depois para o domínio; a engenharia de requisitos de aplicação dá feedback com sugestões de recursos adicionais ou alterados."
   },
   {
     "tipo": "questao",
+    "id": "41541a62-b9d0-46e6-8bcd-f950a801055c",
+    "capitulo": "Engenharia de domínio",
+    "tema": "Gestão de produto e roteiro de produto",
     "titulo": "Características do roteiro de produto",
     "questao": "Sobre o roteiro de produto (roadmap) na ELPS, assinale a alternativa correta.",
     "alternativa_a": "Descreve a linha de produtos de forma perene, sem precisar de adaptações.",
@@ -1007,13 +1174,17 @@
     "resposta_correta": "e"
   },
   {
-    "tipo": "materia",
-    "tema": "Engenharia de domínio",
-    "subtema": "Gerenciamento de portfólio e tipos de negócio de TI",
+    "tipo": "conteudo",
+    "id": "1e3371fa-7d2e-41b7-82b6-753d7ade43f0",
+    "capitulo": "Engenharia de domínio",
+    "tema": "Gerenciamento de portfólio e tipos de negócio de TI",
     "texto": "GERENCIAMENTO DE PORTFÓLIO é um processo de decisão dinâmico em que a lista de projetos ativos da empresa (produtos novos e evolução dos existentes) é constantemente atualizada e revisada para decidir quantos recursos alocar a cada projeto. Produtos são bens ou serviços oferecidos no mercado com funções e características que os tornam adequados às necessidades concretas dos clientes; produtos complexos formados por bens E serviços são chamados de soluções; os tipos de produtos sempre estão relacionados ao tipo de negócio da empresa. Os quatro tipos de negócio de TI são determinados por dois aspectos: o TEMPO que o cliente leva para decidir a compra e a VINCULAÇÃO do cliente pela decisão de compra (se ela está ligada a outras compras). (1) NEGÓCIO DE PRODUTOS — produto ou serviço pré-fabricado oferecido ao mercado; o cliente pode ser anônimo; decisão rápida e não ligada a outras compras. Exemplo: software padrão como o MS Office. (2) NEGÓCIO DE SOLUÇÕES — produto ou serviço específico para um cliente individual, executado ou instalado no local; decisão não ligada a outras. Exemplo: software para uma usina ou sistema de distribuição postal. (3) NEGÓCIO DE SISTEMA — conjunto pré-fabricado de produtos e serviços inespecíficos e relacionados, oferecido ao mercado; a compra de um produto está ligada à de outros. Exemplo: sistema operacional com vários aplicativos integrados. (4) NEGÓCIO DE COMPONENTES DE SERVIÇO — produto ou serviço pré-fabricado, mas individualizado, para um cliente individual; a compra está ligada a outras compras do mesmo cliente. Exemplo: módulos adicionais com funcionalidades extras para softwares já em uso."
   },
   {
     "tipo": "questao",
+    "id": "9a3f3209-27e8-445d-ad6e-9518b3f1a2de",
+    "capitulo": "Engenharia de domínio",
+    "tema": "Gerenciamento de portfólio e tipos de negócio de TI",
     "titulo": "Classificando o tipo de negócio de TI",
     "questao": "Uma empresa vende módulos extras (por exemplo, um módulo de folha de pagamento) para clientes que já usam o seu ERP. A compra do módulo depende do software que o cliente já tem. Qual é o tipo de negócio?",
     "alternativa_a": "Negócio de produtos.",
@@ -1031,13 +1202,17 @@
     "resposta_correta": "d"
   },
   {
-    "tipo": "materia",
-    "tema": "Engenharia de domínio",
-    "subtema": "Ciclo de vida do produto",
+    "tipo": "conteudo",
+    "id": "3b28ed39-1a7d-455b-84b5-6673bfd73c75",
+    "capitulo": "Engenharia de domínio",
+    "tema": "Ciclo de vida do produto",
     "texto": "O ciclo de vida do produto descreve uma progressão idealizada das curvas de vendas e de lucro, em cinco estágios: INTRODUÇÃO — produto desconhecido; vendas baixas; despesas altas (montar canais de distribuição, divulgar); LUCRO NEGATIVO. CRESCIMENTO — o produto fica conhecido; vendas e lucro aumentam rapidamente; normalmente concorrentes entram no mercado nesta fase. MATURIDADE — o rápido aumento das vendas desacelera; os preços caem para ganhar participação; o lucro cai lentamente. SATURAÇÃO — vendas no máximo; forte competição por participação de mercado; lucros ainda mais em declínio. DEGENERAÇÃO — o produto é substituído por novos; demanda e vendas caem acentuadamente; lucro continua caindo; o produto deve ser retirado do mercado ou relançado. Macete de ordem: I-C-M-S-D (Introdução, Crescimento, Maturidade, Saturação, Degeneração). Detalhe que cai em prova: vendas no MÁXIMO = saturação; concorrentes CHEGANDO = crescimento; preço CAINDO para ganhar mercado = maturidade."
   },
   {
     "tipo": "questao",
+    "id": "fb202937-f3c9-4015-856f-931c798f0955",
+    "capitulo": "Engenharia de domínio",
+    "tema": "Ciclo de vida do produto",
     "titulo": "Identificando o estágio do ciclo de vida",
     "questao": "Um aplicativo de agendamento atingiu o maior volume de vendas da sua história, mas enfrenta forte competição por participação de mercado e os lucros continuam caindo. Em que estágio do ciclo de vida ele está?",
     "alternativa_a": "Introdução.",
@@ -1055,13 +1230,17 @@
     "resposta_correta": "c"
   },
   {
-    "tipo": "materia",
-    "tema": "Engenharia de domínio",
-    "subtema": "Avaliação de portfólio (matriz BCG) e interdependências de produtos",
+    "tipo": "conteudo",
+    "id": "6d4f0348-a195-409c-b834-833e541fa7dc",
+    "capitulo": "Engenharia de domínio",
+    "tema": "Avaliação de portfólio (matriz BCG) e interdependências de produtos",
     "texto": "Um portfólio EQUILIBRADO combina produtos em DIFERENTES estágios do ciclo de vida. Produtos em crescimento ou maturidade geram altos lucros, mas ainda demandam investimento até a saturação; produtos em SATURAÇÃO geram lucros que podem ser REINVESTIDOS em produtos de introdução ou crescimento; produtos em INTRODUÇÃO garantem vendas e lucros FUTUROS (não imediatos). A matriz do Boston Consulting Group (BCG) classifica produtos por crescimento de mercado e participação de mercado: INTERROGAÇÃO (question mark) — alto crescimento, baixa participação; produtos em introdução ou crescimento inicial; estratégia: investir para virar estrela (como os recursos são escassos, escolher os de maior potencial; podem acabar como cães). ESTRELA — alto crescimento e alta participação; fim do crescimento ou maturidade; reinvestir o volume de vendas para proteger a posição. VACA LEITEIRA — alta participação, baixo crescimento; estágio de saturação, vendas máximas; estratégia: reduzir investimentos ao necessário para mantê-la ali o maior tempo possível; são os produtos que geram lucro para a empresa. CÃO POBRE (abacaxi) — baixo crescimento e baixa participação; saturação tardia ou degeneração; recomenda-se eliminar. INTERDEPENDÊNCIAS de produtos (o portfólio deve gerar sinergia; os produtos geralmente estão relacionados): (1) de AQUISIÇÃO — vendidos juntos ou em promoção comum; (2) de USO — usados de forma complementar, solução para um campo de problemas; (3) de DEMANDA — comprados no mesmo processo de compra; (4) de SELEÇÃO — podem substituir uns aos outros (soluções alternativas); (5) de ENGENHARIA — vêm do mesmo processo de engenharia. Ao ADICIONAR um produto, verificar a interdependência de USO (produtos complementares também devem entrar); ao REMOVER, garantir (se ainda houver demanda) soluções alternativas — interdependência de SELEÇÃO. Interdependências também podem ser criadas de propósito, por exemplo recursos complementares que induzem o cliente a comprar uma combinação de produtos."
   },
   {
     "tipo": "questao",
+    "id": "571b0092-5b1a-4c1a-a9fc-2b2e94c7e219",
+    "capitulo": "Engenharia de domínio",
+    "tema": "Avaliação de portfólio (matriz BCG) e interdependências de produtos",
     "titulo": "Matriz BCG",
     "questao": "Um sistema de gestão escolar tem alta participação de mercado num mercado que quase não cresce mais e é o principal gerador de lucros da empresa. Na matriz BCG ele é classificado como _____ e a estratégia padrão é _____.",
     "alternativa_a": "Estrela; reinvestir todo o volume de vendas para crescer mais.",
@@ -1080,6 +1259,9 @@
   },
   {
     "tipo": "questao",
+    "id": "5bc2141b-ffe4-4f28-87ff-e952468ad2f3",
+    "capitulo": "Engenharia de domínio",
+    "tema": "Avaliação de portfólio (matriz BCG) e interdependências de produtos",
     "titulo": "Interdependências ao remover um produto",
     "questao": "Uma empresa vai retirar do portfólio um aplicativo antigo de controle de estoque, que ainda tem clientes usando. Segundo o material, o que ela deve garantir?",
     "alternativa_a": "Que existam soluções alternativas para esses clientes, considerando a interdependência de seleção.",
@@ -1097,13 +1279,17 @@
     "resposta_correta": "a"
   },
   {
-    "tipo": "materia",
-    "tema": "Engenharia de domínio",
-    "subtema": "Engenharia de requisitos de domínio: objetivos e inter-relações",
+    "tipo": "conteudo",
+    "id": "44b28aa7-dfbb-48c8-b950-68d1fa2e3865",
+    "capitulo": "Engenharia de domínio",
+    "tema": "Engenharia de requisitos de domínio: objetivos e inter-relações",
     "texto": "Os principais objetivos da engenharia de requisitos de domínio são desenvolver os requisitos de domínio comuns e variáveis e documentá-los com precisão. É um processo CONTÍNUO de definição PROATIVA dos requisitos para todas as aplicações previsíveis da LPS. Uma questão específica dela é identificar e documentar EXPLICITAMENTE a variabilidade EXTERNA. Ela deve aderir à especificação dos principais recursos fornecidos pelo gerenciamento de produtos e cria requisitos detalhados o suficiente para orientar projeto, realização e teste; também fornece a entrada da engenharia de requisitos de aplicação. Fluxos de informação: GERENCIAMENTO DE PRODUTOS → requisitos de domínio: o ROTEIRO (principal entrada: produtos pretendidos, semelhanças e variabilidades pretendidas e cronograma) e a LISTA DE ARTEFATOS EXISTENTES de projetos anteriores. Requisitos de domínio → gerenciamento: feedback com sugestões de alterações, refinamentos e características adicionais (a partir da análise de produtos existentes e necessidades). Requisitos de domínio → DESIGN DE DOMÍNIO: todos os requisitos definidos (uniformidade e variabilidade) e o MOV, que define PELO MENOS a variabilidade EXTERNA e pode especificar parte da interna. Design de domínio → requisitos: solicitação de requisitos mais detalhados e revisados. Essa inter-relação é uma ESPIRAL alternada entre requisitos (visão do problema) e arquitetura (visão da solução), progredindo do grosseiro para o detalhado. Requisitos de domínio → ENGENHARIA DE REQUISITOS DE APLICAÇÃO: artefatos de requisitos comuns E variáveis predefinidos no MOV. Requisitos de aplicação → requisitos de domínio: feedback com solicitações de requisitos adicionais e alternativos. Pegadinhas: quem identifica artefatos existentes é o gerenciamento de produtos (não a engenharia de aplicação); o feedback com sugestões de características vai PARA o gerenciamento de produtos (não vem do design); a engenharia de requisitos de domínio fornece comuns e variáveis (não “apenas comuns”)."
   },
   {
     "tipo": "questao",
+    "id": "d3bcaf8d-5802-41d7-9fe1-8397f2ad084b",
+    "capitulo": "Engenharia de domínio",
+    "tema": "Engenharia de requisitos de domínio: objetivos e inter-relações",
     "titulo": "Fluxos da engenharia de requisitos de domínio",
     "questao": "Assinale a alternativa que descreve corretamente um fluxo de informação da engenharia de requisitos de domínio.",
     "alternativa_a": "Recebe do design de domínio a lista de artefatos existentes de projetos anteriores.",
@@ -1121,13 +1307,17 @@
     "resposta_correta": "e"
   },
   {
-    "tipo": "materia",
-    "tema": "Engenharia de domínio",
-    "subtema": "Atividades tradicionais e específicas da engenharia de requisitos de domínio",
+    "tipo": "conteudo",
+    "id": "f68159c1-db1a-4422-8071-321b2fbdf983",
+    "capitulo": "Engenharia de domínio",
+    "tema": "Atividades tradicionais e específicas da engenharia de requisitos de domínio",
     "texto": "A engenharia de requisitos de domínio precisa considerar a variabilidade, o que gera tarefas que não existem na engenharia de requisitos tradicional. ATIVIDADES TRADICIONAIS: ELICITAÇÃO — entender necessidades e restrições dos usuários a partir de várias fontes (clientes, especialistas, documentação, legislação, padrões); DOCUMENTAÇÃO — registrar de forma estruturada; NEGOCIAÇÃO — consenso suficiente entre as partes interessadas; VALIDAÇÃO E VERIFICAÇÃO — provar que os requisitos são claros, completos, corretos e compreensíveis; GERENCIAMENTO — manter os requisitos atualizados e consistentes ao longo do ciclo de vida. Outras visões citadas: especificação (compreensão tão completa quanto possível), representação (tipos de representação usados) e acordo (conciliação de opiniões conflitantes). ATIVIDADES ESPECÍFICAS (documentadas no MOV para se comunicar com design e teste de domínio): ANÁLISE DE SIMILARIDADES — identifica requisitos comuns a todas as aplicações; ANÁLISE DE VARIABILIDADE — identifica os requisitos que diferem entre as aplicações e determina precisamente as diferenças; MODELAGEM DE VARIABILIDADE — modela PVs, variantes e seus relacionamentos. Também é preciso manter consistência entre os artefatos de requisitos (objetivos, recursos, cenários, casos de uso, modelos de dados), e incorporar diferentes pontos de vista ajuda a comunicar semelhança e variabilidade. Requisitos comuns: são a BASE de toda a LPS e PODEM se tornar variáveis; requisitos variáveis e comuns são modelados juntos nos mesmos artefatos. Os requisitos variáveis são documentados em QUATRO PASSOS: (1) identificar o conjunto inicial de requisitos variáveis; (2) desenvolver o MOV; (3) documentar os requisitos em detalhes numa notação adequada; (4) relacionar cada elemento variável (PVs e variantes) aos artefatos de requisitos (casos de uso, diagrama de classes etc.)."
   },
   {
     "tipo": "questao",
+    "id": "d7ead3d0-c19f-4c1d-8bcb-6a14c6c81d32",
+    "capitulo": "Engenharia de domínio",
+    "tema": "Atividades tradicionais e específicas da engenharia de requisitos de domínio",
     "titulo": "Atividade específica da ELPS",
     "questao": "Qual das atividades abaixo NÃO existe na engenharia de requisitos tradicional e é específica da engenharia de requisitos de domínio?",
     "alternativa_a": "Elicitação.",
@@ -1146,6 +1336,9 @@
   },
   {
     "tipo": "questao",
+    "id": "8c5d6343-efc0-4040-89a6-28f8478b5dbc",
+    "capitulo": "Engenharia de domínio",
+    "tema": "Atividades tradicionais e específicas da engenharia de requisitos de domínio",
     "titulo": "Passos para definir requisitos variáveis",
     "questao": "Qual é a ordem correta dos quatro passos para definir os requisitos variáveis com o MOV?",
     "alternativa_a": "Desenvolver o MOV → identificar os requisitos variáveis → relacionar PVs e variantes aos artefatos → documentar em detalhes.",
@@ -1163,13 +1356,17 @@
     "resposta_correta": "b"
   },
   {
-    "tipo": "materia",
-    "tema": "Engenharia de domínio",
-    "subtema": "Análise de similaridade e análise de variabilidade",
+    "tipo": "conteudo",
+    "id": "ebcd5457-4ab4-449b-a14f-721d1fa2a767",
+    "capitulo": "Engenharia de domínio",
+    "tema": "Análise de similaridade e análise de variabilidade",
     "texto": "ANÁLISE DE SIMILARIDADE: requisitos comuns formam a base da LPS; é importante ter MUITOS requisitos comuns e o MENOR número possível de variáveis — quanto maior a base de similaridade, menor o esforço para dar flexibilidade à linha. Técnicas: (1) MATRIZ DE REQUISITOS DE APLICAÇÃO — linhas são requisitos e colunas são aplicações, marcando onde cada um é mandatório; um requisito mandatório em TODAS as aplicações (como R1) é forte candidato a comum; os mandatórios só em algumas (R2, R3) não são comuns. (2) ANÁLISE BASEADA EM PRIORIDADE — stakeholders classificam os requisitos segundo um esquema. Os requisitos comuns podem ser: BÁSICOS (toda aplicação precisa realizar), de ALTA PRIORIDADE (um grande grupo de stakeholders os considera assim e ninguém os rejeita) e ESTRATÉGICOS (requisitos previsíveis que devem ser implementados como semelhança para manter um conjunto estável de artefatos comuns). Exemplo da automação residencial: controle de calor = comum básico; controle de acesso à residência (apontado pela maioria) = comum de alta prioridade; comunicação wireless (necessidade básica num futuro próximo) = comum estratégico. (3) LISTAS DE VERIFICAÇÃO — cada item representa uma categoria candidata a requisito comum (básicos, alta prioridade, estratégicos e também requisitos prescritos por leis e padrões nacionais, internacionais e organizacionais). ANÁLISE DE VARIABILIDADE: identifica a variabilidade dos requisitos e define PVs e variantes. Na ELPS não é preciso harmonizar requisitos contrastantes (de clientes diferentes ou de sistemas legados diferentes): diferenças indicam variabilidade. Mas NEM TODA diferença vira PV — a decisão exige cuidado, pois pode impactar muito a arquitetura de referência. Exemplo: exigências diferentes de segurança levam ao PV “segurança doméstica por” com variantes “detecção de movimento” e “vigilância por câmera”. Começa pela análise de requisitos de alto nível, identificando requisitos exclusivos de um subconjunto de aplicações ou com características diferentes. Usa as mesmas técnicas: na matriz, requisitos mandatórios só para um pequeno conjunto de aplicações são fortes candidatos a variáveis; na análise por prioridade, requisitos de alta prioridade para alguns clientes e baixa para outros possivelmente são variantes; listas de verificação ajudam a achar diferenças de estrutura, funcionalidade, comportamento, qualidade (segurança, proteção, confiabilidade), interface com sistemas legados, interface de usuário, restrições de design, bancos de dados, tipos de rede e sistemas operacionais."
   },
   {
     "tipo": "questao",
+    "id": "73cce707-6c5c-4c5e-9e2a-c5d8ea9ecd2a",
+    "capitulo": "Engenharia de domínio",
+    "tema": "Análise de similaridade e análise de variabilidade",
     "titulo": "Lendo a matriz de requisitos de aplicação",
     "questao": "Numa matriz de requisitos de aplicação com 5 aplicações, o requisito R7 é mandatório apenas na App2. O requisito R8 é mandatório nas cinco. O que a análise indica?",
     "alternativa_a": "R7 é forte candidato a requisito comum e R8 a variável.",
@@ -1188,6 +1385,9 @@
   },
   {
     "tipo": "questao",
+    "id": "9de85888-0c22-4371-ba9f-243fa9ecb8de",
+    "capitulo": "Engenharia de domínio",
+    "tema": "Análise de similaridade e análise de variabilidade",
     "titulo": "Tipos de requisitos comuns",
     "questao": "Num sistema de automação residencial, os stakeholders afirmam que a integração com assistentes de voz ainda não é exigida, mas será uma necessidade básica num futuro próximo, e por isso deve ser implementada como comum desde já. Esse requisito é um requisito comum:",
     "alternativa_a": "Básico.",
@@ -1205,13 +1405,17 @@
     "resposta_correta": "d"
   },
   {
-    "tipo": "materia",
-    "tema": "Engenharia de domínio",
-    "subtema": "Definindo a variabilidade dos requisitos e o papel do gerenciamento de produto",
+    "tipo": "conteudo",
+    "id": "1decd0c8-26c1-4eb0-8bb0-4c6083d05bc0",
+    "capitulo": "Engenharia de domínio",
+    "tema": "Definindo a variabilidade dos requisitos e o papel do gerenciamento de produto",
     "texto": "Definir a variabilidade dos requisitos de domínio é pré-requisito para entender e comunicar a variabilidade da linha. O engenheiro de requisitos de domínio deve: definir cuidadosamente o conjunto correto de PVs e variantes; determinar suas dependências; e definir, junto com os gerentes de produto, qual parte da variabilidade será oferecida ao cliente como variabilidade EXTERNA. Nem sempre fica claro a qual PV uma variante pertence — os requisitos documentados geralmente NÃO dizem isso explicitamente. O caminho é procurar o ASSUNTO comum de variabilidade. Exemplo: App1 exige “porta da frente protegida com teclado” e App2 exige “autorização baseada em impressões digitais”; os dois se referem ao mesmo assunto, o mecanismo de identificação (PV), com variantes teclado e digital. As dependências de variabilidade e escolhas alternativas determinam as combinações permitidas; podem estar claras em fontes como prospectos de produto; se não estiverem, envolver os stakeholders. A variabilidade pode ter FORTE influência na arquitetura de referência (projetar uma arquitetura que suporte muitas variantes opcionais com qualidades muito diferentes pode ser impossível), por isso os ARQUITETOS devem participar da definição da variabilidade dos requisitos. Exemplo: a brochura diz que o sistema de segurança sempre vem com “alarme acústico”, mas o cliente pode optar pela “informação à polícia” → PV “ativação de alarme” com variante OBRIGATÓRIA “alarme acústico” e variante OPCIONAL “informações policiais”. QUEM DECIDE: as decisões FINAIS sobre a variabilidade nos artefatos de requisitos de domínio são do GERENCIAMENTO DE PRODUTO, que decide: se um PV entra ou não na LPS (ou se um novo PV deve ser adicionado); se as variantes entram ou não (ou se há novas); se as restrições e dependências estão corretas ou devem ser adaptadas; e se um PV é variabilidade externa ou interna. Os engenheiros de requisitos de domínio então adaptam os artefatos afetados."
   },
   {
     "tipo": "questao",
+    "id": "bbcf7a6b-2fd1-4b46-96f0-96c967349b89",
+    "capitulo": "Engenharia de domínio",
+    "tema": "Definindo a variabilidade dos requisitos e o papel do gerenciamento de produto",
     "titulo": "Quem decide a variabilidade",
     "questao": "A equipe de requisitos identificou o PV “idioma da interface”. Quem toma a decisão final sobre se esse PV fará parte da LPS e se ele será oferecido ao cliente como variabilidade externa ou mantido como interna?",
     "alternativa_a": "O desenvolvedor que implementar o componente.",
@@ -1229,13 +1433,17 @@
     "resposta_correta": "e"
   },
   {
-    "tipo": "materia",
-    "tema": "Engenharia de domínio",
-    "subtema": "Design de domínio: interações, atividades e requisitos de qualidade",
+    "tipo": "conteudo",
+    "id": "41ccce91-f071-425e-a4bb-fa9e239d20c2",
+    "capitulo": "Engenharia de domínio",
+    "tema": "Design de domínio: interações, atividades e requisitos de qualidade",
     "texto": "O design (projeto) de domínio produz a ARQUITETURA DE REFERÊNCIA, com a estrutura principal e a textura. Interações mais importantes: engenharia de requisitos de domínio, REALIZAÇÃO de domínio e DESIGN de aplicação (não “realização de aplicação”). Fluxos: recebe da engenharia de requisitos de domínio o modelo de variabilidade e os artefatos comuns e variáveis e solicita detalhamento e revisão de requisitos. O MOV é a base da variabilidade da arquitetura e é ADAPTADO no design de domínio, RESOLVENDO parte da variabilidade e ADICIONANDO variabilidade interna. Fornece à realização de domínio a arquitetura de referência e uma SELEÇÃO DE ARTEFATOS REUTILIZÁVEIS a construir, e recebe dela os problemas encontrados na realização. Envia ao design de aplicação O MESMO que envia à realização de domínio, e recebe pedidos de alteração do projeto e artefatos de projeto para integrar à plataforma. A arquitetura de referência inclui uma estrutura variável, base de todas as aplicações, e fornece a textura de componentes e interfaces. ATIVIDADES TRADICIONAIS de suporte: ABSTRAÇÃO — agrupa informações considerando só certos aspectos, reduzindo a complexidade; PROTOTIPAGEM — implementações rápidas de aspectos importantes, executadas para medir o comportamento real; MODELAGEM — relaciona abstrações entre si para permitir raciocinar sobre elas; SIMULAÇÃO — executa modelos para medir aspectos do sistema. REQUISITOS DE QUALIDADE: muitos requisitos tratam de qualidade (desempenho, segurança, proteção, usabilidade) e são resolvidos em partes da estrutura/textura ou em aspectos que valem para todos os componentes. Os que surgem especificamente da ELPS: (1) SUPORTE À VARIABILIDADE — crucial; o arquiteto escolhe quais mecanismos de configuração usar e onde; (2) FLEXIBILIDADE — permite acomodar NOVOS APLICATIVOS com requisitos inesperados; (3) EVOLUÇÃO — permite mudar a PRÓPRIA ARQUITETURA conforme novos requisitos, mantendo os aplicativos existentes em conformidade (senão a arquitetura se deteriora); (4) MANUTENIBILIDADE — incorporar mudanças nas aplicações já entregues (correção de erros, adaptações). Diferença-chave: flexibilidade = acomodar novos sistemas; evolução = mudar a arquitetura."
   },
   {
     "tipo": "questao",
+    "id": "cac7920d-6e6c-4e2e-ac34-709ad3d48065",
+    "capitulo": "Engenharia de domínio",
+    "tema": "Design de domínio: interações, atividades e requisitos de qualidade",
     "titulo": "Atividades tradicionais do design de domínio",
     "questao": "Qual associação entre atividade de suporte do design de domínio e sua descrição está correta?",
     "alternativa_a": "Abstração — produz implementações rápidas de aspectos importantes do sistema.",
@@ -1254,6 +1462,9 @@
   },
   {
     "tipo": "questao",
+    "id": "eb658592-d767-4497-a666-5598ab4e6e08",
+    "capitulo": "Engenharia de domínio",
+    "tema": "Design de domínio: interações, atividades e requisitos de qualidade",
     "titulo": "Flexibilidade × evolução",
     "questao": "A arquitetura de referência de uma LPS precisa receber um novo aplicativo com requisitos que ninguém tinha previsto, sem que a própria arquitetura seja reformulada. Qual requisito de qualidade específico da ELPS está sendo exigido?",
     "alternativa_a": "Flexibilidade.",
@@ -1271,13 +1482,17 @@
     "resposta_correta": "a"
   },
   {
-    "tipo": "materia",
-    "tema": "Engenharia de domínio",
-    "subtema": "Design de domínio: priorização, rastreabilidade e variabilidade futura",
+    "tipo": "conteudo",
+    "id": "379f30c8-dce1-4c83-8b51-912d187cd4f6",
+    "capitulo": "Engenharia de domínio",
+    "tema": "Design de domínio: priorização, rastreabilidade e variabilidade futura",
     "texto": "A priorização dos requisitos é estabelecida na engenharia de requisitos de domínio; flexibilidade, capacidade de evolução e manutenibilidade normalmente têm a prioridade mais alta (por exemplo, inspirando uma arquitetura baseada em componentes em camadas). Quando o desempenho é uma questão comum importante, surgem padrões comuns de criação e interação de processos e diretrizes de uso de recursos; se a usabilidade é importante, criam-se subsistemas específicos para a interação com o usuário. MAPEAMENTO ENTRE DESIGN E REQUISITOS: a rastreabilidade entre requisitos e arquitetura é complexa; uma boa estratégia é um mapeamento de POUCOS-PARA-POUCOS (“poucos” é deliberadamente vago), pois a rastreabilidade só é útil se for compreensível. Razões para não fazer um mapeamento simples um-para-um: interação dos requisitos; requisitos da linha como flexibilidade e adaptabilidade; opções de tecnologia; disponibilidade de recursos de desenvolvimento; preparação para o futuro. A variação nos requisitos geralmente vira variação no projeto ou na realização; o arquiteto primeiro analisa a semelhança da variação, REDUZINDO a variação ao mínimo para facilitar flexibilidade e evolução. Além da variabilidade externa (que vem dos requisitos), o projeto considera a variabilidade INTERNA introduzida pela solução técnica; diferenças de qualidade podem gerar diferenças de hardware ou de funcionalidade básica (protocolos, acesso a banco). Regra para decorar: a SEMELHANÇA é capturada na TEXTURA e nos FRAMEWORKS; a VARIAÇÃO é capturada em MULTIPLICIDADES e COMPONENTES DE PLUG-IN. Links de rastreamento permitem estimar o impacto de mudanças. Deve-se EVITAR duplicar informação: não é boa prática espalhar os parâmetros de um único PV por vários locais; armazene-os num só lugar e deixe as outras partes consultarem. VARIABILIDADE FUTURA: muitas vezes se sabe com anos de antecedência que uma tecnologia vai surgir ou mudar; criam-se PVs para o futuro e as variantes são projetadas só quando a tecnologia fica disponível (exemplo: PV “autenticação” com variantes teclado e íris e reticências indicando novas variantes)."
   },
   {
     "tipo": "questao",
+    "id": "395a231c-cbd9-4921-bf9f-0c2b4f658be1",
+    "capitulo": "Engenharia de domínio",
+    "tema": "Design de domínio: priorização, rastreabilidade e variabilidade futura",
     "titulo": "Onde ficam semelhança e variação na arquitetura",
     "questao": "No design de domínio, onde são capturadas, respectivamente, a semelhança e a variação da arquitetura?",
     "alternativa_a": "Semelhança nos componentes de plug-in; variação na textura.",
@@ -1295,13 +1510,17 @@
     "resposta_correta": "b"
   },
   {
-    "tipo": "materia",
-    "tema": "Engenharia de domínio",
-    "subtema": "Arquitetura de referência: framework de componentes, plug-ins, aspectos e validação",
+    "tipo": "conteudo",
+    "id": "8d368cac-176e-4e7e-95b1-09e5875775bd",
+    "capitulo": "Engenharia de domínio",
+    "tema": "Arquitetura de referência: framework de componentes, plug-ins, aspectos e validação",
     "texto": "FRAMEWORK DE COMPONENTES: a arquitetura de referência tem muitos componentes ligados por interfaces; as estruturas de componentes RESTRINGEM o número de configurações, pois a configuração não pode ficar totalmente nas mãos dos desenvolvedores de aplicativos (configurações indesejadas geram aplicativos inutilizáveis ou lentos). Um framework fornece uma estrutura comum de componentes e interfaces com LOCAIS PREDEFINIDOS onde componentes de plug-in podem ser adicionados; esses componentes podem ser específicos da aplicação ou componentes de domínio reutilizáveis. A diversidade de requisitos de qualidade leva a várias estruturas, cada uma com vários plug-ins. Aumentar o número de plug-ins favorece o surgimento de novos interesses (que exigiriam uma difícil adaptação da estrutura); reduzir se apoia em que grupos de plug-ins que sempre mudam juntos devem ficar juntos. PLUG-INS ESPECÍFICOS DO APLICATIVO: a arquitetura de referência determina os ativos reutilizáveis (semelhanças + variantes mais escolhidas); quando os ativos não servem (requisitos muito específicos), o arquiteto de aplicação define variantes específicas nos locais permitidos pela arquitetura de referência — e o arquiteto de domínio deve se preparar para isso. Exemplo das fechaduras: se as variantes de fechadura (manual, eletrônica com terminal e banco de chaves) tivessem de ser feitas aplicação por aplicação, a engenharia de aplicação teria muito esforço, dificultando a customização em massa; por isso a arquitetura deve ter componentes GENÉRICOS que não diferenciam os tipos de fechadura, e terminais e bases de dados são concebidos como componentes específicos de variantes. ASPECTOS: o arquiteto de domínio introduz aspectos para problemas recorrentes de realização, reduzindo esforço e uniformizando o projeto (inclusive manutenibilidade). A textura traz diretrizes e a regra para separar aspectos, podendo exigir interfaces separadas para certos aspectos — exemplo: um componente FORNECE interfaces de configuração, inicialização e recuperação, autoteste e teste de campo, e USA interfaces de login, acesso a dados, manipulação de erros e de processo. Tratar a variabilidade de forma comum facilita a configuração, pois só alguns mecanismos de ligação são usados. VALIDAÇÃO: a TEXTURA (regras de codificação, estilos, padrões) deve estar presente em TODAS as aplicações e é definida UMA VEZ — é parte da SEMELHANÇA da arquitetura. Exemplo de textura: controlador de alto nível cercado de gerenciadores, cada um com um tipo de dispositivo implementado por plug-in, e registro dos plug-ins. A arquitetura do aplicativo deve ser consistente com a de referência e precisa ser VALIDADA (estrutura e textura) antes de ser usada para construir o aplicativo; o arquiteto de domínio verifica se os novos plug-ins carregam a interface correta, estão no subsistema correto e seguem a textura."
   },
   {
     "tipo": "questao",
+    "id": "85022184-41bf-42e8-b09d-87cafb2d35e2",
+    "capitulo": "Engenharia de domínio",
+    "tema": "Arquitetura de referência: framework de componentes, plug-ins, aspectos e validação",
     "titulo": "Textura e validação da arquitetura",
     "questao": "Sobre a textura arquitetural e a validação da arquitetura na ELPS, assinale a alternativa correta.",
     "alternativa_a": "A textura é redefinida a cada aplicação, por isso é parte da variabilidade.",
@@ -1319,13 +1538,17 @@
     "resposta_correta": "f"
   },
   {
-    "tipo": "materia",
-    "tema": "Engenharia de domínio",
-    "subtema": "Realização de domínio: inter-relações e atividades tradicionais",
+    "tipo": "conteudo",
+    "id": "bcaab848-6ec6-4522-a8a1-1f5f53fff44b",
+    "capitulo": "Engenharia de domínio",
+    "tema": "Realização de domínio: inter-relações e atividades tradicionais",
     "texto": "A realização de domínio fornece o projeto detalhado e a implementação dos ativos reutilizáveis, com base na arquitetura de referência. Os ativos são principalmente componentes e interfaces reutilizáveis, mas desenhos de fios, tabelas de banco de dados, protocolos e formatos de fluxo de dados também são produtos dela. Suas principais relações são com DESIGN DE DOMÍNIO, TESTE DE DOMÍNIO e REALIZAÇÃO DE APLICAÇÃO (não design nem teste de aplicação). Fluxos: o design de domínio fornece a arquitetura de referência e a seleção de artefatos reutilizáveis; a realização devolve os problemas encontrados ao realizar artefatos conforme a arquitetura. O TESTE DE DOMÍNIO recebe da realização os componentes e interfaces reutilizáveis PRONTOS PARA TESTE e as descrições de interface (referências de teste para o projeto de testes de componentes); devolve resultados (passou/falhou), relatórios de problemas e defeitos nas descrições de interface. A REALIZAÇÃO DE APLICAÇÃO recebe da realização de domínio os componentes e interfaces projetados, implementados e PRONTOS PARA REUTILIZAÇÃO (já aprovados no teste de domínio), além de SUPORTE DE CONFIGURAÇÃO; devolve solicitações de adição ou alteração (funcionalidade/qualidade que o domínio deveria fornecer e não fornece bem), o que inicia uma evolução da LPS, e artefatos de realização que podem ser incorporados à linha. ATIVIDADES TRADICIONAIS (construir o sistema conforme a arquitetura de referência): DESIGN DE INTERFACE — feito em estreita cooperação com todos os desenvolvedores de componentes que a fornecem ou exigem; DESIGN DE COMPONENTES — para fornecer a funcionalidade das interfaces fornecidas usando as interfaces necessárias; IMPLEMENTAÇÃO DA INTERFACE — geralmente bem direta após o design; IMPLEMENTAÇÃO DE COMPONENTES — em linguagem de programação; COMPILAÇÃO — todos os componentes compilados em bibliotecas objeto. A textura arquitetural contém as regras de codificação seguidas na implementação."
   },
   {
     "tipo": "questao",
+    "id": "33996a50-c7b4-4112-8ca5-fc78b6177b73",
+    "capitulo": "Engenharia de domínio",
+    "tema": "Realização de domínio: inter-relações e atividades tradicionais",
     "titulo": "Inter-relações da realização de domínio",
     "questao": "Assinale a alternativa correta sobre as inter-relações da realização de domínio.",
     "alternativa_a": "A realização de domínio recebe do teste de domínio os componentes prontos para teste.",
@@ -1343,13 +1566,17 @@
     "resposta_correta": "c"
   },
   {
-    "tipo": "materia",
-    "tema": "Engenharia de domínio",
-    "subtema": "Realização de domínio: interfaces, componentes variáveis e configuração",
+    "tipo": "conteudo",
+    "id": "94f02ab1-84d1-4ef6-9b88-6a1c4871a2d4",
+    "capitulo": "Engenharia de domínio",
+    "tema": "Realização de domínio: interfaces, componentes variáveis e configuração",
     "texto": "REALIZAÇÃO DE INTERFACES: uma mesma interface vale para vários componentes e lida com seus aspectos comuns. A variabilidade exige abstrair as diferenças entre os componentes fornecedores e oferecer funções que exponham informações da variabilidade (por exemplo, para descobrir a variante em tempo de execução). A interface é um CONTRATO entre o componente PROVEDOR e o componente USUÁRIO; os dois podem ter variantes, mas a INTERFACE DEVE SER INVARIÁVEL, oferecendo funções de acesso à variabilidade implementada nos componentes. Ela oferece abstrações dos detalhes internos (funções, constantes, tipos, exceções, eventos, classes); o nível de abstração não deve ser tão alto que impeça entender o que a funcionalidade faz, nem tão baixo que impeça usá-la para várias variantes. COMPONENTES VARIÁVEIS: podem precisar ser variáveis e reutilizáveis; devem ter ALTA ROBUSTEZ, pois o contexto de uso é desconhecido no desenvolvimento. Robustez = interagir corretamente em muitas circunstâncias, independentemente do recurso usado e da ordem e tempo entre chamadas; não significa funcionar sempre, mas disparar uma mensagem de erro adequada quando não puder atender. DISTRIBUIÇÃO DA VARIABILIDADE: o design do componente é limitado pelas interfaces fornecidas e exigidas; a arquitetura de referência determina a maior parte da variabilidade (sobretudo via configurações). Deve-se buscar EQUILÍBRIO e evitar os dois extremos: um único componente com todas as variantes (muita variabilidade interna, complexo, difícil de realizar) ou um componente separado para cada variante (muitos componentes, muito esforço de desenvolvimento e manutenção); os extremos só funcionam com variabilidade limitada. REALIZANDO A CONFIGURAÇÃO: a variabilidade do componente é vinculada na realização de APLICAÇÃO, e a realização de domínio deve preparar para isso com uma coleção de PARÂMETROS DE CONFIGURAÇÃO que selecionem a variante certa — via parâmetros de compilação, macros, arquivos de parâmetros. Esses parâmetros devem estar relacionados aos PVs e variantes do MOV; um PV pode impactar vários componentes. INDEPENDÊNCIA DE CONFIGURAÇÃO: o componente não deve depender muito do ambiente; deve garantir exatamente o que suas interfaces fornecidas especificam e usar exatamente o que suas interfaces necessárias especificam, sem restrições adicionais. Dois aspectos a suportam: NÍVEL DE DETALHE (granularidade das funções expostas na interface) e NÍVEL DE ABSTRAÇÃO (tipos de dados expostos na interface)."
   },
   {
     "tipo": "questao",
+    "id": "49ba7845-f7f8-42ce-a955-0bef3d724af7",
+    "capitulo": "Engenharia de domínio",
+    "tema": "Realização de domínio: interfaces, componentes variáveis e configuração",
     "titulo": "Interface como contrato",
     "questao": "Na realização de domínio, uma interface é um contrato entre o componente provedor e o componente usuário de uma funcionalidade. Assinale a alternativa correta.",
     "alternativa_a": "A interface deve variar junto com os componentes, tendo uma versão por variante.",
@@ -1368,6 +1595,9 @@
   },
   {
     "tipo": "questao",
+    "id": "d947546a-cb8c-46b7-a123-df48af7bc956",
+    "capitulo": "Engenharia de domínio",
+    "tema": "Realização de domínio: interfaces, componentes variáveis e configuração",
     "titulo": "Distribuição da variabilidade nos componentes",
     "questao": "Uma equipe precisa implementar 12 variantes de um módulo de relatórios. Qual decisão segue a recomendação do material sobre a distribuição da variabilidade nos componentes?",
     "alternativa_a": "Criar um único componente que contenha as 12 variantes internamente, pois isso sempre simplifica.",
@@ -1386,6 +1616,9 @@
   },
   {
     "tipo": "questao",
+    "id": "48c17890-8323-4784-befe-3eab41d5c037",
+    "capitulo": "Engenharia de domínio",
+    "tema": "Realização de domínio: interfaces, componentes variáveis e configuração",
     "titulo": "Independência de configuração",
     "questao": "Dois aspectos suportam a independência de configuração de um componente: o nível de detalhe e o nível de abstração. A que cada um se refere?",
     "alternativa_a": "Nível de detalhe: granularidade das funções expostas na interface; nível de abstração: tipos de dados expostos na interface.",
@@ -1403,13 +1636,17 @@
     "resposta_correta": "a"
   },
   {
-    "tipo": "materia",
-    "tema": "Engenharia de domínio",
-    "subtema": "Teste de domínio: desafios, variantes ausentes e inter-relações",
+    "tipo": "conteudo",
+    "id": "a2158e5e-62df-4a84-a7b7-914c9dd21d0d",
+    "capitulo": "Engenharia de domínio",
+    "tema": "Teste de domínio: desafios, variantes ausentes e inter-relações",
     "texto": "O foco principal do teste de domínio é VALIDAR os artefatos de REALIZAÇÃO. A definição de casos de teste se baseia em entradas da engenharia de requisitos de domínio, do design de domínio e da realização de domínio, buscando um processo geral eficiente — é importante testar CEDO e com FREQUÊNCIA. O PRINCIPAL DESAFIO é lidar adequadamente com a separação entre engenharia de domínio e de aplicação e com a presença de variabilidade. A variabilidade e sua relação com os artefatos de domínio são documentadas no MOV durante a engenharia de DOMÍNIO; no teste de domínio, o MOV é usado para DERIVAR artefatos de teste. Artefatos variáveis de apenas uma ou poucas aplicações e componentes de uma só aplicação NÃO são realizados no domínio, e sim projetados na engenharia de aplicação. VARIANTES AUSENTES são variantes sem realização disponível na engenharia de domínio e normalmente são DIFÍCEIS de testar. Inter-relações: REQUISITOS DE DOMÍNIO → teste: artefatos de requisitos e MOV, usados para criar TESTES DE SISTEMA. Como a plataforma é só um conjunto de componentes fracamente acoplados, sem aplicativo completo, o engenheiro só pode fazer testes de sistema nas partes que atendem requisitos comuns e não são afetadas pela variabilidade. Defeitos de requisitos (requisitos mal declarados, dependências indesejadas) são reportados de volta — o teste ajuda a validar os requisitos. DESIGN DE DOMÍNIO → teste: arquitetura de referência (para validar interações entre componentes) e seleção de artefatos reutilizáveis (define o ESCOPO dos testes de INTEGRAÇÃO); o teste devolve defeitos de design (artefatos incompletos ou ambíguos). REALIZAÇÃO DE DOMÍNIO → teste: descrições de interface e componentes/interfaces prontos para teste, usados no TESTE DE UNIDADE; o teste devolve resultados (aceitação ou rejeição), relatórios de problemas e defeitos nas descrições de interface. TESTE DE APLICAÇÃO ← teste de domínio: recebe artefatos de teste de domínio (que podem ter variabilidade) para reexecutar; devolve defeitos nesses artefatos e artefatos de teste a integrar ao domínio. Resumo: requisitos → teste de sistema; design → teste de integração; realização → teste de unidade."
   },
   {
     "tipo": "questao",
+    "id": "17100c66-904c-4d1d-8693-2dbd5dd2c5c3",
+    "capitulo": "Engenharia de domínio",
+    "tema": "Teste de domínio: desafios, variantes ausentes e inter-relações",
     "titulo": "Variantes ausentes e desafios do teste de domínio",
     "questao": "Sobre o teste de domínio, assinale a alternativa correta.",
     "alternativa_a": "Variantes ausentes são as que nenhuma aplicação usará, por isso não precisam ser testadas.",
@@ -1428,6 +1665,9 @@
   },
   {
     "tipo": "questao",
+    "id": "c376a514-d18c-4c11-959e-c486111c1ff1",
+    "capitulo": "Engenharia de domínio",
+    "tema": "Teste de domínio: desafios, variantes ausentes e inter-relações",
     "titulo": "Insumo de cada nível de teste no domínio",
     "questao": "No teste de domínio, qual subprocesso fornece as descrições de interface e os componentes prontos para teste usados principalmente no teste de unidade?",
     "alternativa_a": "Engenharia de requisitos de domínio.",
@@ -1445,13 +1685,17 @@
     "resposta_correta": "d"
   },
   {
-    "tipo": "materia",
-    "tema": "Engenharia de domínio",
-    "subtema": "Teste de software: níveis e teste de domínio × teste de aplicação",
+    "tipo": "conteudo",
+    "id": "4d9d13ae-4ffd-4e8b-bd4e-0b192cb28e77",
+    "capitulo": "Engenharia de domínio",
+    "tema": "Teste de software: níveis e teste de domínio × teste de aplicação",
     "texto": "TESTE DE SOFTWARE é o processo de descobrir defeitos em sistemas, sendo também um processo de garantia de qualidade; deve ser feito antes da entrega e NÃO inclui depuração nem correção de bugs. Os defeitos detectados são reportados à EQUIPE DE DESENVOLVIMENTO responsável. Um DEFEITO é uma diferença entre um requisito (que define o comportamento desejado) e sua REALIZAÇÃO no programa. O teste pode ser POSITIVO (a correção do teste encerra o problema) ou NEGATIVO (a correção exige mais testes). O teste permite que as partes interessadas determinem a qualidade do software e inclui revisões de requisitos, especificações de projeto, código, procedimentos de aceitação etc. Um NÍVEL DE TESTE é definido pela granularidade dos itens testados e pelos requisitos usados como referência: UNIDADE — valida o comportamento de um componente, método ou classe (geralmente executado pelo programador da unidade); INTEGRAÇÃO — valida dois ou mais componentes que juntos formam uma configuração da arquitetura; SISTEMA — valida o sistema inteiro em relação à especificação do comportamento desejado. TESTE DE DOMÍNIO × TESTE DE APLICAÇÃO: o de domínio lida com componentes REUTILIZÁVEIS; o de aplicação com aplicativos COMPLETOS. Devem cooperar para reduzir complexidade e criar sinergia. O teste de domínio descobre defeitos em artefatos de domínio e cria artefatos de teste reutilizáveis para o teste de aplicação; abrange as mesmas atividades do teste de sistema único, mas lida com variabilidade e com a ausência de um sistema executável. Exemplo: o teste de domínio valida o controle de porta (verificar status, abrir, fechar); o teste de aplicação reutiliza esses artefatos para achar defeitos nos aplicativos. Mesmo assim, cada aplicativo deve ser testado extensivamente, pois artefatos comuns podem ter interdependências com variáveis. TESTE DE VARIABILIDADE: no modelo V (ramo esquerdo = etapas de desenvolvimento; direito = níveis de teste), tijolos cinza são partes comuns e brancos são variabilidade. No teste de unidade de domínio, a unidade é construída com cada variante definida uma vez e cada construção é testada como em sistema único. No teste de integração, a variabilidade influencia de três maneiras: dentro de um componente, na forma como os componentes interagem, ou o próprio componente realiza uma variante. Para testes de sistema, a variabilidade está nos artefatos de requisitos de domínio, que são as referências de teste."
   },
   {
     "tipo": "questao",
+    "id": "a19dd84d-5392-419e-b8ff-145ee8c78a19",
+    "capitulo": "Engenharia de domínio",
+    "tema": "Teste de software: níveis e teste de domínio × teste de aplicação",
     "titulo": "Conceitos de teste de software",
     "questao": "No contexto de teste de software em LPS, assinale a afirmação correta.",
     "alternativa_a": "O teste de software inclui a depuração e a correção dos bugs encontrados.",
@@ -1469,13 +1713,17 @@
     "resposta_correta": "d"
   },
   {
-    "tipo": "materia",
-    "tema": "Engenharia de domínio",
-    "subtema": "Estratégias de teste da linha de produtos e planejamento do teste de domínio",
+    "tipo": "conteudo",
+    "id": "3f0296e9-7198-4f90-ab86-ce10444b065f",
+    "capitulo": "Engenharia de domínio",
+    "tema": "Estratégias de teste da linha de produtos e planejamento do teste de domínio",
     "texto": "ESTRATÉGIA DE FORÇA BRUTA (EFB/BFS): testa extensivamente no domínio, em todos os níveis e para TODAS as configurações possíveis; por isso NÃO há teste de aplicação; exige realização de domínio mais longa (implementar todos os componentes). É IMPRATICÁVEL pelo número de configurações (o material cita que dez PVs com três variantes cada já geram centenas de milhares de aplicações possíveis). Única vantagem: validação antecipada. ESTRATÉGIA DE APLICAÇÃO PURA (EAP/PAS): oposta — negligencia o teste de domínio e faz só testes de aplicação; o time verifica se cada defeito é da aplicação ou de um artefato de domínio. Inadequada: alta sobrecarga (artefatos de teste feitos para cada aplicação) e NENHUMA validação antecipada (nada é testado até ser construído). ESTRATÉGIA DE APLICATIVO DE AMOSTRA (EAA/SAS, também chamada EAE): usa uma ou algumas aplicações de amostra para testar os artefatos de domínio; validação antecipada a custo razoável; todos os componentes comuns e variantes são testados no contexto das variantes da amostra; como nem todos os aplicativos são testados, o teste de aplicação também deve ser feito, podendo reusar alguns artefatos. Valida as semelhanças da linha, garante que derivar uma aplicação é possível e que os mecanismos de vinculação funcionam. Fraquezas: tempo de criar artefatos (não produz artefatos variáveis nem reuso sistemático) e SOBRECARGA de criar o aplicativo de amostra. É indicada quando há previsão de mercado ou clientes, pois as aplicações pretendidas servem de amostra e não há overhead. ESTRATÉGIA DE SIMILARIDADE E REUTILIZAÇÃO (ESR/CRS): distribui o teste entre domínio e aplicação e facilita o reuso sistemático; o domínio testa as partes comuns e PREPARA artefatos de teste com variabilidade para as partes variáveis, criando um REPOSITÓRIO; a aplicação reusa os comuns e vincula os variáveis. SEM sobrecarga — razão principal para usá-la nos demais casos; artefatos para todas as combinações podem ser derivados. COMBINADA EAA/ESR: mantém os pontos fortes — artefatos reutilizáveis no domínio e reuso na aplicação (bom tempo) + validação antecipada com FRAGMENTOS de aplicativo de amostra (sobrecarga bem menor). EFB e EAP não são recomendadas; EAA e ESR são razoáveis. PLANEJAMENTO DO TESTE DE DOMÍNIO: as especificações dos itens devem estar disponíveis e é preciso saber quando estarão prontos; baseia-se nos requisitos de domínio, na arquitetura de referência, nos artefatos de projeto detalhado e, principalmente, no MOV. O roteiro de produto determina quando as aplicações devem estar prontas, sendo relevante para o cronograma de testes. A PRIMEIRA ETAPA do PLANEJAMENTO é selecionar a estratégia (EAA, ESR ou composta); depois alocar recursos, definir e priorizar casos de teste e definir o suporte de ferramentas. A ESPECIFICAÇÃO de teste de domínio cria casos reutilizáveis em duas etapas: casos LÓGICOS (sem dados concretos, elementos de GUI etc.) e, depois, casos DETALHADOS (com a informação que faltava)."
   },
   {
     "tipo": "questao",
+    "id": "0adc63a3-a115-4d4d-96ce-6152665fc074",
+    "capitulo": "Engenharia de domínio",
+    "tema": "Estratégias de teste da linha de produtos e planejamento do teste de domínio",
     "titulo": "Escolhendo a estratégia de teste",
     "questao": "Uma empresa vai lançar sua LPS e não tem nenhum cliente nem previsão concreta de quais aplicações serão vendidas. Ela quer evitar qualquer sobrecarga e ter artefatos de teste com variabilidade num repositório para reuso nas futuras aplicações. Qual estratégia é mais adequada?",
     "alternativa_a": "Estratégia de força bruta.",
@@ -1494,6 +1742,9 @@
   },
   {
     "tipo": "questao",
+    "id": "2e8a6b98-c629-4b2d-a80f-8d0bc8927a89",
+    "capitulo": "Engenharia de domínio",
+    "tema": "Estratégias de teste da linha de produtos e planejamento do teste de domínio",
     "titulo": "Planejamento e especificação do teste de domínio",
     "questao": "Sobre o planejamento e a especificação do teste de domínio, assinale a alternativa correta.",
     "alternativa_a": "A primeira etapa da especificação de teste é selecionar a estratégia de teste.",
@@ -1511,13 +1762,17 @@
     "resposta_correta": "c"
   },
   {
-    "tipo": "materia",
-    "tema": "Engenharia de aplicação",
-    "subtema": "Engenharia de requisitos de aplicação: objetivos, inter-relações e requisitos delta",
+    "tipo": "conteudo",
+    "id": "9cb6f059-e0df-4fbb-8761-581ca5362b79",
+    "capitulo": "Engenharia de aplicação",
+    "tema": "Engenharia de requisitos de aplicação: objetivos, inter-relações e requisitos delta",
     "texto": "A engenharia de aplicação busca: o mais alto grau possível de reuso dos ativos de domínio; explorar semelhança e variabilidade durante o desenvolvimento de uma aplicação; documentar os artefatos da aplicação relacionando-os aos de domínio; e vincular a variabilidade conforme a aplicação, dos requisitos aos componentes e casos de teste. Seus quatro subprocessos (requisitos, projeto, realização e teste de aplicação) podem ser executados em qualquer ordem. A ENGENHARIA DE REQUISITOS DE APLICAÇÃO define e documenta os requisitos de uma aplicação específica reutilizando os requisitos de domínio, e se conecta com: GERENCIAMENTO DE PRODUTO — define as principais características para TODAS as aplicações da linha; envia à engenharia de requisitos de aplicação as FEATURES das aplicações (seta 1) e recebe dela SUGESTÕES de alterações ou inclusões (seta 2). Como certas características são específicas de só algumas aplicações, seus artefatos NÃO são definidos no domínio; cabe à engenharia de requisitos de aplicação essa tarefa. ENGENHARIA DE REQUISITOS DE DOMÍNIO — fornece artefatos de requisitos comuns e variáveis e o modelo de variabilidade de domínio (seta 3), usados para identificar as variantes e requisitos a reutilizar; recebe pedidos de alteração ou inclusão e artefatos a incorporar ao domínio (seta 4). DESIGN DE APLICAÇÃO — recebe o principal produto, a ESPECIFICAÇÃO DE REQUISITOS DA APLICAÇÃO (seta 5), com o modelo de variabilidade da aplicação (derivado do de domínio), os artefatos reusados e os REQUISITOS DELTA; o design apoia a avaliação das mudanças pela análise dos deltas (seta 6). DELTA é a diferença entre os requisitos do domínio e os da aplicação; se o requisito é idêntico, não há delta. Regra de ouro: se o requisito da aplicação é uma ADAPTAÇÃO de um requisito de domínio → cria-se uma NOVA VARIANTE (no domínio existem teclado, cartão e digital; surge “reconhecimento de íris”). Se o requisito NÃO EXISTE no domínio → cria-se um NOVO PONTO DE VARIAÇÃO (informar o clima: PV “informação climática” com variantes chuva, umidade, ventos). Deltas podem gerar mudanças significativas na arquitetura e nos componentes e aumentar custos."
   },
   {
     "tipo": "questao",
+    "id": "94594d24-89d6-4295-8cbe-8082f3a43777",
+    "capitulo": "Engenharia de aplicação",
+    "tema": "Engenharia de requisitos de aplicação: objetivos, inter-relações e requisitos delta",
     "titulo": "Nova variante ou novo ponto de variação?",
     "questao": "Uma LPS de e-commerce tem o PV “forma de entrega” com as variantes “transportadora” e “retirada”. Um cliente pede (1) “entrega por drone” e (2) um módulo de “programa de fidelidade”, assunto que não existe em nenhum requisito do domínio. Como esses deltas devem ser tratados?",
     "alternativa_a": "(1) novo ponto de variação; (2) nova variante de “forma de entrega”.",
@@ -1536,6 +1791,9 @@
   },
   {
     "tipo": "questao",
+    "id": "2514362c-33f5-4931-9531-b75715352934",
+    "capitulo": "Engenharia de aplicação",
+    "tema": "Engenharia de requisitos de aplicação: objetivos, inter-relações e requisitos delta",
     "titulo": "Fluxo entre gerenciamento de produto e requisitos de aplicação",
     "questao": "Sobre a inter-relação entre gerenciamento de produto e engenharia de requisitos de aplicação, assinale a alternativa correta.",
     "alternativa_a": "A engenharia de requisitos de aplicação envia ao gerenciamento de produto a lista de features das aplicações.",
@@ -1553,13 +1811,17 @@
     "resposta_correta": "b"
   },
   {
-    "tipo": "materia",
-    "tema": "Engenharia de aplicação",
-    "subtema": "Atividades da engenharia de requisitos de aplicação",
+    "tipo": "conteudo",
+    "id": "3c7f153e-9e43-440d-be0e-1f949031ab2c",
+    "capitulo": "Engenharia de aplicação",
+    "tema": "Atividades da engenharia de requisitos de aplicação",
     "texto": "Por causa das decisões de troca (trade-off) feitas em relação aos requisitos de domínio, os requisitos dos stakeholders podem ser TOTALMENTE, PARCIALMENTE ou NÃO realizados na aplicação. Três atividades essenciais: (1) COMUNICAR A SEMELHANÇA E A VARIABILIDADE EXTERNA da linha — o MOV tem papel central, pois permite que o engenheiro de requisitos comunique os artefatos de domínio ao stakeholder (seta 1); com os links de rastreabilidade, o engenheiro descreve funcionalidade e qualidade de cada variante; os stakeholders pesquisam a semelhança e a variabilidade externa e comunicam seus requisitos (seta 2). Isso aumenta o nível de reuso. (2) AVALIAR OS DELTAS entre requisitos de domínio e da aplicação — deltas surgem quando os requisitos não podem ser completamente satisfeitos pelos artefatos de domínio e são avaliados pelo esforço de realização: AVALIAÇÃO (analisar os deltas no modelo de variabilidade), IMPACTO (analisar o impacto nos artefatos de requisitos de domínio) e RESULTADOS (modelos de variabilidade e deltas de artefatos, comunicados ao ARQUITETO DE APLICATIVOS, que ESTIMA o esforço). O feedback do esforço estimado (seta 3) permite ao STAKEHOLDER DECIDIR se os deltas serão realizados, comunicando a decisão ao engenheiro de requisitos (seta 4). (3) DOCUMENTAR os requisitos da aplicação, contendo: artefatos de requisitos da aplicação; deltas entre artefatos da aplicação e do domínio; rastreabilidade entre os artefatos da aplicação e os de domínio; modelo de variabilidade do aplicativo (com os deltas incorporados); links de rastreabilidade dos requisitos para esse modelo. Os custos estimados são associados aos deltas para manter as decisões rastreáveis; a especificação resultante é a base das fases seguintes."
   },
   {
     "tipo": "questao",
+    "id": "5e0d0bbb-d2e4-45cf-9073-1018b77c1afe",
+    "capitulo": "Engenharia de aplicação",
+    "tema": "Atividades da engenharia de requisitos de aplicação",
     "titulo": "Quem estima e quem decide os deltas",
     "questao": "Na avaliação de deltas da engenharia de requisitos de aplicação, quem estima o esforço de realização e quem decide se o delta será realizado?",
     "alternativa_a": "O arquiteto de aplicativos estima o esforço; o stakeholder decide.",
@@ -1577,13 +1839,17 @@
     "resposta_correta": "a"
   },
   {
-    "tipo": "materia",
-    "tema": "Engenharia de aplicação",
-    "subtema": "Comunicação da variabilidade da linha aos stakeholders",
+    "tipo": "conteudo",
+    "id": "8c82588f-8640-43ad-8895-ecc0a529ac74",
+    "capitulo": "Engenharia de aplicação",
+    "tema": "Comunicação da variabilidade da linha aos stakeholders",
     "texto": "O modelo de variabilidade dá uma visão coerente da variabilidade da linha. O engenheiro de requisitos navega entre o MOV e os artefatos de requisitos para dar aos stakeholders informações detalhadas sobre funcionalidade e qualidade das variantes. A comunicação da variabilidade externa normalmente COMEÇA PELOS PONTOS DE VARIAÇÃO, que oferecem o nível MAIS ALTO de abstração. Comunicar um PV envolve comunicar: as variantes do PV, as dependências de variabilidade e as escolhas alternativas definidas; e os PVs e variantes dependentes, seguindo as dependências de restrição. Exemplo: “a linha oferece dois mecanismos de autenticação e só um pode ser escolhido: senha ou impressão digital. Para a variante senha, o PV padrão de segurança deve ser vinculado — escolha básica ou avançada”. ARTEFATOS DE REQUISITOS DE DOMÍNIO: o stakeholder PODE PRECISAR de informações mais detalhadas para decidir a favor ou contra uma variante; seguindo o link de rastreabilidade, o engenheiro encontra, por exemplo, o caso de uso “autenticação por senha”; requisitos baseados em modelo, como um DIAGRAMA DE CLASSES, oferecem uma visão mais detalhada e orientada à solução; e como “senha” se relaciona ao PV “padrão de segurança”, mostram-se os requisitos de segurança das variantes básica e avançada. RESULTADO da comunicação: classificação dos requisitos dos stakeholders em DUAS categorias — (1) requisitos que PODEM ser satisfeitos vinculando a variabilidade definida nos artefatos de domínio (documentados como requisitos de aplicação que reutilizam artefatos de domínio); (2) requisitos que NÃO correspondem aos artefatos de domínio — daí surgem os DELTAS."
   },
   {
     "tipo": "questao",
+    "id": "cc0ed8d7-89d2-4547-a2b5-27f303f0aa89",
+    "capitulo": "Engenharia de aplicação",
+    "tema": "Comunicação da variabilidade da linha aos stakeholders",
     "titulo": "Comunicação da variabilidade externa",
     "questao": "Sobre a comunicação da variabilidade da linha de produtos aos stakeholders, assinale a alternativa correta.",
     "alternativa_a": "A comunicação começa pelos pontos de variação, que fornecem o nível mais baixo de abstração.",
@@ -1601,13 +1867,17 @@
     "resposta_correta": "f"
   },
   {
-    "tipo": "materia",
-    "tema": "Engenharia de aplicação",
-    "subtema": "Análise de deltas e categorias de esforço de adaptação da arquitetura",
+    "tipo": "conteudo",
+    "id": "e9b6cee3-ed32-4216-963e-5e27d48158bf",
+    "capitulo": "Engenharia de aplicação",
+    "tema": "Análise de deltas e categorias de esforço de adaptação da arquitetura",
     "texto": "O principal objetivo da ANÁLISE DELTA é apoiar a decisão sobre realizar ou não os deltas na aplicação; analisam-se os deltas em relação ao modelo de variabilidade, aos artefatos de requisitos de domínio e à arquitetura; com base nos resultados, os stakeholders decidem. DELTAS DO MODELO DE VARIABILIDADE são DIFERENÇAS (não similaridades) entre o modelo de domínio e o da aplicação, e são de DOIS tipos: (1) PARTE DA VARIABILIDADE EXTERNA EXISTENTE DEVE SER MODIFICADA — adiciona-se uma NOVA VARIANTE, ou modifica-se uma dependência de variabilidade ou de restrição; (2) UMA PARTE INVARIÁVEL DEVE SER TRANSFORMADA EM VARIÁVEL — parte dos requisitos comuns vira variável e a variabilidade externa é estendida com um NOVO PONTO DE VARIAÇÃO. IMPACTO NO MODELO DE VARIABILIDADE: nova funcionalidade/qualidade num PV → nova variante no modelo da aplicação; alterar uma variante existente → define-se uma NOVA variante representando a alterada, e as DUAS (original e alterada) ficam selecionáveis. Modificações de dependências podem envolver: rejeitar uma variante obrigatória; escolher um número de variantes fora do intervalo de uma escolha alternativa; escolher duas variantes ligadas por “exclui”; escolher só uma de duas variantes ligadas por “requer”. IMPACTO NOS ARTEFATOS DE REQUISITOS: mudanças causadas pela introdução de novas variantes e/ou PVs, e mudanças causadas por adaptações de dependências de variabilidade e restrição. IMPACTO NA ARQUITETURA: o esforço é avaliado quanto a adaptação da arquitetura, realização dos componentes e manutenção; o arquiteto de aplicativos mapeia os deltas para a arquitetura de referência pelos links de rastreabilidade do domínio. CATEGORIAS de adaptação arquitetônica: A — SEM esforço (sem impacto na estrutura e textura); B — esforço MODERADO (adaptações LOCAIS, em componentes individuais); C — esforço ALTO (mudanças GLOBAIS na arquitetura de referência, muitos componentes/interfaces); D — esforço MUITO ALTO (nenhuma realização economicamente razoável é possível dentro da LPS). TABELA (Pohl, 2005): nova variante → A ou B; adaptação de dependências de variabilidade → A, B ou C; adaptação de dependências de restrição → B, C ou D; novo ponto de variação → B, C ou D. Ou seja: só “nova variante” e “dependência de variabilidade” podem ser categoria A; restrição e novo PV nunca são A."
   },
   {
     "tipo": "questao",
+    "id": "f3986b63-a387-485f-9709-ebc572f33013",
+    "capitulo": "Engenharia de aplicação",
+    "tema": "Análise de deltas e categorias de esforço de adaptação da arquitetura",
     "titulo": "Tipos de delta do modelo de variabilidade",
     "questao": "Sobre os deltas do modelo de variabilidade, assinale a alternativa correta.",
     "alternativa_a": "Deltas do modelo de variabilidade são similaridades entre o modelo de domínio e o da aplicação.",
@@ -1626,6 +1896,9 @@
   },
   {
     "tipo": "questao",
+    "id": "fb24a237-f8e2-4490-8356-4f69aec816b3",
+    "capitulo": "Engenharia de aplicação",
+    "tema": "Análise de deltas e categorias de esforço de adaptação da arquitetura",
     "titulo": "Categorias de esforço de adaptação",
     "questao": "Um delta exige alterar apenas um componente individual da arquitetura de referência, sem mudanças globais. Em que categoria de esforço de adaptação arquitetônica ele se enquadra?",
     "alternativa_a": "Categoria A — sem esforço de adaptação.",
@@ -1644,6 +1917,9 @@
   },
   {
     "tipo": "questao",
+    "id": "d9cffbbc-b790-4705-a27d-d7bd575287cc",
+    "capitulo": "Engenharia de aplicação",
+    "tema": "Análise de deltas e categorias de esforço de adaptação da arquitetura",
     "titulo": "Relação entre deltas e categorias",
     "questao": "Segundo a tabela que relaciona tipos de delta e categorias de esforço (Pohl, 2005), qual afirmação é correta?",
     "alternativa_a": "Um novo ponto de variação pode ser realizado sem esforço de adaptação (categoria A).",
@@ -1661,13 +1937,17 @@
     "resposta_correta": "f"
   },
   {
-    "tipo": "materia",
-    "tema": "Engenharia de aplicação",
-    "subtema": "Documentação da especificação de requisitos de aplicação",
+    "tipo": "conteudo",
+    "id": "4589cdbe-668b-41b2-beb4-09bb237ad5b4",
+    "capitulo": "Engenharia de aplicação",
+    "tema": "Documentação da especificação de requisitos de aplicação",
     "texto": "A especificação de requisitos de aplicação é a BASE para os outros subprocessos da engenharia de aplicação e define TODOS os requisitos da aplicação. Seus segmentos: (1) ARTEFATOS DE REQUISITOS DE APLICAÇÃO que correspondem aos de domínio, com a rastreabilidade — contém todos os artefatos reutilizados SEM adaptações, ou seja, as semelhanças e os pontos de variação VINCULADOS às variantes selecionadas; (2) MODELO DE VARIABILIDADE DE APLICAÇÃO — descreve o modelo de variabilidade DO APLICATIVO com as variantes SELECIONADAS (as ligações de variabilidade); (3) os DELTAS do modelo de variabilidade são incluídos no modelo de variabilidade de APLICAÇÃO (não no de domínio), com rastreabilidade para o modelo original; (4) a RELAÇÃO dos artefatos de requisitos de aplicação com as variantes selecionadas, capturando a rastreabilidade entre requisitos e variantes selecionadas PARA A APLICAÇÃO; (5) os DELTAS DE REQUISITOS, com os traços para os artefatos de domínio originais — contêm todos os artefatos NOVOS ou MODIFICADOS especificamente para o aplicativo. Usos: os rastreamentos de artefatos de requisitos de DOMÍNIO contidos na especificação de APLICAÇÃO são essenciais para o reuso no design, na realização e no teste da aplicação; as vinculações de variabilidade fornecem a base para derivar as ligações dos PVs na arquitetura de referência, nos componentes e nos testes; as vinculações de mudanças no modelo permitem ao arquiteto de aplicação refinar os deltas quanto à variabilidade arquitetônica; os rastros dos artefatos modificados para os originais permitem ao arquiteto identificar e adaptar os artefatos correspondentes da arquitetura de referência. Pegadinhas: deltas de requisitos contêm o que é novo ou modificado (não o que é reutilizado sem mudança); o modelo de variabilidade de aplicação descreve o modelo do APLICATIVO (não “do domínio”)."
   },
   {
     "tipo": "questao",
+    "id": "03a85537-eee0-4270-90b4-2e2b22495e6b",
+    "capitulo": "Engenharia de aplicação",
+    "tema": "Documentação da especificação de requisitos de aplicação",
     "titulo": "Conteúdo da especificação de requisitos de aplicação",
     "questao": "Assinale a alternativa correta sobre o que a especificação de requisitos de aplicação inclui.",
     "alternativa_a": "Os deltas de requisitos contêm todos os artefatos reutilizados do domínio sem alteração.",
@@ -1685,13 +1965,17 @@
     "resposta_correta": "c"
   },
   {
-    "tipo": "materia",
-    "tema": "Engenharia de aplicação",
-    "subtema": "Projeto de aplicação: objetivo e inter-relações",
+    "tipo": "conteudo",
+    "id": "80024acb-cc13-42a3-bdf5-4e7a95b35572",
+    "capitulo": "Engenharia de aplicação",
+    "tema": "Projeto de aplicação: objetivo e inter-relações",
     "texto": "O principal objetivo do projeto (design) de aplicação é produzir a ARQUITETURA DE APLICAÇÃO, uma ESPECIALIZAÇÃO da arquitetura de referência desenvolvida no design de domínio. Os arquitetos de aplicação VINCULAM a variabilidade da arquitetura de referência e introduzem alterações específicas conforme a especificação de requisitos da aplicação. A arquitetura de aplicação é passada para a REALIZAÇÃO DO APLICATIVO, onde os componentes e interfaces reutilizáveis são MONTADOS e os específicos são DESENVOLVIDOS. Fluxos: ENGENHARIA DE REQUISITOS DE APLICAÇÃO → design: TODA a especificação de requisitos da aplicação (modelo de variabilidade do aplicativo, todos os requisitos — reutilizados e específicos —, links de rastreabilidade e relação com as variantes selecionadas) (seta 1). Design → requisitos de aplicação: o esforço de realização ESTIMADO, considerando as decisões de compensação (seta 2); as decisões sobre requisitos específicos fazem parte da negociação com os stakeholders. DESIGN DE DOMÍNIO → design de aplicação: a arquitetura de referência (base da arquitetura de aplicação) e a seleção de artefatos de domínio reutilizáveis (seta 3); o arquiteto associa a variabilidade arquitetônica conforme o modelo de variabilidade da aplicação. Design de aplicação → design de domínio: FEEDBACK com solicitações de alterações e inclusões, que podem melhorar a arquitetura de referência, e ARTEFATOS DE DESIGN que precisam ser REPROJETADOS para flexibilidade e reuso e incorporados à plataforma (seta 4). Design de aplicação → REALIZAÇÃO DE APLICAÇÃO: a arquitetura de aplicação, que determina a estrutura e as regras de construção (textura) e a configuração dos componentes e interfaces reutilizados e sua relação com os específicos (seta 5). Realização → design: feedback sobre todos os tipos de ERROS DE PROJETO, incluindo componentes e interfaces não reutilizáveis e configurações que não funcionam (seta 6). Pegadinhas: o design de aplicação NÃO cria artefatos de domínio diretamente (cria artefatos de design que serão reprojetados pelo domínio); a realização recebe a arquitetura do DESIGN de aplicação, e não da engenharia de requisitos."
   },
   {
     "tipo": "questao",
+    "id": "020f0877-a4d1-4bd9-a9a5-e1a5bf060c9b",
+    "capitulo": "Engenharia de aplicação",
+    "tema": "Projeto de aplicação: objetivo e inter-relações",
     "titulo": "Inter-relações do projeto de aplicação",
     "questao": "Sobre o relacionamento do projeto de aplicação com outros subprocessos, assinale a alternativa correta.",
     "alternativa_a": "Toda a especificação de requisitos do aplicativo é passada do projeto de domínio para o projeto do aplicativo.",
@@ -1709,13 +1993,17 @@
     "resposta_correta": "d"
   },
   {
-    "tipo": "materia",
-    "tema": "Engenharia de aplicação",
-    "subtema": "Desenvolvimento da arquitetura da aplicação e vinculação de variantes",
+    "tipo": "conteudo",
+    "id": "ab828df3-2aa3-4766-8b78-010fcf6881b0",
+    "capitulo": "Engenharia de aplicação",
+    "tema": "Desenvolvimento da arquitetura da aplicação e vinculação de variantes",
     "texto": "MODELAGEM ESPECÍFICA DA APLICAÇÃO: o arquiteto de aplicativos tem responsabilidades parecidas com as do arquiteto tradicional (abstração, modelagem, simulação, prototipagem), mas APENAS para as partes específicas do aplicativo. A arquitetura de referência traz muitas decisões reutilizáveis (não “nada” nem “tudo”). O arquiteto COMEÇA pela arquitetura de REFERÊNCIA e a ESPECIALIZA para a arquitetura do aplicativo — associando variantes conforme o modelo de variabilidade do aplicativo e incluindo partes específicas. No design de APLICAÇÃO são introduzidas as abstrações necessárias para a aplicação específica, não cobertas pelos artefatos de domínio; essas abstrações geralmente se relacionam a requisitos específicos, especialmente requisitos de qualidade muito rígidos (exemplo: requisitos de desempenho mais rigorosos que os da linha → abstrações para sincronização e comunicação de threads) ou recursos não oferecidos pela linha. Elas devem ser integradas às abstrações da arquitetura de referência. Como a arquitetura do aplicativo é MAIS CONCRETA que a de referência, as SIMULAÇÕES são MAIS REALISTAS (exemplo: simulação de desempenho para escolher a melhor configuração); a prototipagem também pode ser mais concreta. VINCULAÇÃO DE VARIANTES: as variantes devem ser vinculadas aos PVs da arquitetura de referência conforme o modelo de variabilidade do aplicativo. A facilidade depende da qualidade da arquitetura de referência, que depende de três fatores: (1) como a customização em massa é incorporada (estilos, estruturas e padrões para lidar com a variabilidade); (2) as abstrações usadas (quais PVs e variantes existem); (3) a rastreabilidade entre a variabilidade dos requisitos de domínio e a arquitetura de referência. Se nenhum artefato de domínio estiver disponível, o arquiteto define um ESPECÍFICO do aplicativo, a ser realizado na realização da aplicação. Certas variantes valem para uma única aplicação e podem envolver novos componentes, interfaces, configurações, padrões e até novas estruturas. DETERMINANDO A CONFIGURAÇÃO: resulta da associação dos PVs com as variantes; componentes de domínio desnecessários ficam ausentes; se variantes em plug-ins diferentes coexistem, é preciso mais de um plug-in; componentes específicos são projetados como plug-ins adicionais nos locais planejados. SELEÇÃO CONSISTENTE: decide-se quais variantes têm consequências globais; como as informações estão espalhadas pelos componentes, deve-se escolher uma configuração consistente; variações de hardware (memória, periféricos) são limitadas pela seleção de componentes ou por parâmetros de configuração. FEEDBACK: variantes e soluções do projeto da aplicação podem servir a outros aplicativos; o arquiteto de aplicativos discute com o de domínio; muitas vezes os artefatos são feitos primeiro para uma aplicação e, se o GERENCIAMENTO DE PRODUTO decidir integrá-los ao domínio, o ARQUITETO DE DOMÍNIO assume e faz o REDESENHO para torná-los reutilizáveis."
   },
   {
     "tipo": "questao",
+    "id": "db94cd16-3c76-46dd-8343-b7836e30f3c7",
+    "capitulo": "Engenharia de aplicação",
+    "tema": "Desenvolvimento da arquitetura da aplicação e vinculação de variantes",
     "titulo": "Desenvolvimento da arquitetura da aplicação",
     "questao": "Em relação ao desenvolvimento da arquitetura da aplicação, assinale a alternativa correta.",
     "alternativa_a": "O arquiteto de aplicativos começa pela arquitetura do aplicativo e a especializa para a arquitetura de referência.",
@@ -1734,6 +2022,9 @@
   },
   {
     "tipo": "questao",
+    "id": "1dc56851-aab3-4ae0-b24c-3b8a94df95b1",
+    "capitulo": "Engenharia de aplicação",
+    "tema": "Desenvolvimento da arquitetura da aplicação e vinculação de variantes",
     "titulo": "Do artefato específico ao artefato de domínio",
     "questao": "Um componente criado para um único cliente funcionou muito bem e pode ser útil para outras aplicações. Segundo o material, como ele passa a fazer parte dos artefatos de domínio?",
     "alternativa_a": "O desenvolvedor da aplicação o torna reutilizável durante a realização da aplicação, por conta própria.",
@@ -1751,13 +2042,17 @@
     "resposta_correta": "d"
   },
   {
-    "tipo": "materia",
-    "tema": "Engenharia de aplicação",
-    "subtema": "Esforço e custo de variantes",
+    "tipo": "conteudo",
+    "id": "c70c3de7-8a88-41d4-81d4-da42259a37b7",
+    "capitulo": "Engenharia de aplicação",
+    "tema": "Esforço e custo de variantes",
     "texto": "O custo de selecionar uma variante para a arquitetura do aplicativo depende do que é preciso fazer para realizá-la. Categorias: A — NENHUM esforço de adaptação: custo PEQUENO, porque a variante já está realizada na plataforma; o principal custo é determinar os parâmetros corretos. B — esforço MODERADO: custo moderado quando os componentes específicos do aplicativo fornecem e usam apenas INTERFACES específicas de DOMÍNIO; se for preciso desenvolver componentes específicos da aplicação, os custos geralmente são MUITO MAIS ALTOS. C — esforço ALTO: muitas vezes a realização pode usar outros componentes como modelo; quando uma GRANDE parte da nova estrutura deve ser fornecida, custos e esforço são ALTOS, pois novas interfaces devem ser fornecidas e realizadas, e simulação e validação devem ser feitas ANTES de concluir a arquitetura do aplicativo. D — esforço MUITO ALTO: quando grandes partes da arquitetura precisam ser adicionadas, as mudanças podem ser tão grandes que não dá para realizá-las com a arquitetura de referência (exemplo: introduzir um novo framework para um novo recurso). FATORES que influenciam o esforço e o custo: número de novos componentes; número de interfaces a realizar; número de pequenas adaptações de componentes e interfaces (cuidado: grandes adaptações podem custar quase o mesmo ou mais que escrever um novo); simulações para verificar adaptações e ampliações (quase inevitáveis com novos requisitos de qualidade); adaptações a aspectos transversais (podem exigir mudar muitos componentes e novas interfaces); testes de componentes reutilizados e configurações; testes de novos componentes (mais esforço, pois exigem novos casos de teste). A organização pode ter números padronizados, ajustados em situações específicas (mudança parecida com outra = custo menor; design completamente novo = custo maior). O custo de uma nova variante é comunicado aos engenheiros de requisitos e stakeholders, que decidem se vale a pena; se for muito alto, adaptar os requisitos pode tornar o custo acessível. Se o aplicativo servir de BANCO DE TESTES para um novo recurso, custos adicionais podem ser aceitáveis, pois o recurso poderá ser reutilizado em futuras aplicações."
   },
   {
     "tipo": "questao",
+    "id": "e6916963-7ff1-49e3-ab21-2ab0e878aad0",
+    "capitulo": "Engenharia de aplicação",
+    "tema": "Esforço e custo de variantes",
     "titulo": "Custo de realizar variantes",
     "questao": "Sobre o custo de realização de variantes na arquitetura do aplicativo, assinale a alternativa correta.",
     "alternativa_a": "Se a variante já está realizada na plataforma, o custo é alto (categoria A).",
@@ -1775,13 +2070,17 @@
     "resposta_correta": "f"
   },
   {
-    "tipo": "materia",
-    "tema": "Engenharia de aplicação",
-    "subtema": "Realização de aplicação: objetivos e inter-relações",
+    "tipo": "conteudo",
+    "id": "6f5d4d43-bfd7-412a-8446-6b02a850fa64",
+    "capitulo": "Engenharia de aplicação",
+    "tema": "Realização de aplicação: objetivos e inter-relações",
     "texto": "O principal objetivo da realização de aplicação é desenvolver aplicativos que possam ser TESTADOS e levados ao MERCADO após garantir qualidade suficiente. Ela fornece o design detalhado e a implementação dos componentes ESPECÍFICOS da aplicação e os CONFIGURA com as variantes corretas dos ativos de domínio. (Desenvolver componentes de DOMÍNIO não é objetivo dela.) Principais resultados: componentes e interfaces específicos do aplicativo, as variantes selecionadas de componentes reutilizados e a configuração. Relaciona-se com PROJETO DE APLICAÇÃO, TESTE DE APLICAÇÃO e REALIZAÇÃO DE DOMÍNIO. Fluxos: DESIGN DE APLICAÇÃO → realização: a arquitetura do aplicativo, que determina a configuração dos componentes e interfaces (reutilizados da plataforma ou específicos) (seta 1); realização → design: erros de projeto descobertos, como uma configuração que não funciona (seta 2). REALIZAÇÃO → TESTE DE APLICAÇÃO: um aplicativo COMPLETO pronto para teste e as DESCRIÇÕES DE INTERFACE (por exemplo, para o teste de unidade) (seta 3); o teste executa testes de unidade, integração e sistema com base nos requisitos, no design e nos artefatos de realização; teste → realização: resultados (aceitação ou rejeição) e relatórios de problemas, usados para melhorar o aplicativo até a aceitação (seta 4), além de defeitos nas descrições de interface. REALIZAÇÃO DE DOMÍNIO → realização de aplicação: componentes e interfaces reutilizáveis projetados, implementados e prontos para reuso (seta 5). As INTERFACES são reutilizadas SEM alterações, mas os COMPONENTES geralmente têm PONTOS DE VARIAÇÃO INTERNOS, que precisam ser vinculados; por isso a realização de domínio também fornece SUPORTE À CONFIGURAÇÃO. Realização de aplicação → domínio: solicitações de realização adicional ou alterada (funcionalidade ou qualidade que a plataforma deveria fornecer) e componentes e interfaces específicos para possível integração aos artefatos de domínio (seta 6)."
   },
   {
     "tipo": "questao",
+    "id": "c7335d22-8eb9-48c0-8061-c0ec462952a4",
+    "capitulo": "Engenharia de aplicação",
+    "tema": "Realização de aplicação: objetivos e inter-relações",
     "titulo": "Com quem a realização de aplicação se relaciona",
     "questao": "Qual opção contém somente subprocessos com os quais a realização de aplicação troca artefatos e informações diretamente?",
     "alternativa_a": "Teste de domínio e design de domínio.",
@@ -1799,13 +2098,17 @@
     "resposta_correta": "b"
   },
   {
-    "tipo": "materia",
-    "tema": "Engenharia de aplicação",
-    "subtema": "Configuração e realização de componentes específicos da aplicação",
+    "tipo": "conteudo",
+    "id": "6071c20a-7e52-4d76-8617-45ae0e74519a",
+    "capitulo": "Engenharia de aplicação",
+    "tema": "Configuração e realização de componentes específicos da aplicação",
     "texto": "CONFIGURAÇÃO: muitas interfaces entre os componentes de um aplicativo são interfaces de domínio reutilizáveis; a maioria dos componentes as utiliza, pois elas suportam a textura e implementam pontos de variação (variantes diferentes de um componente geralmente exigem e fornecem as mesmas interfaces). Os componentes de domínio reutilizáveis COSTUMAM ter pontos de variação internos, e a REALIZAÇÃO DE DOMÍNIO fornece mecanismos para apoiar a seleção de variantes. As variantes internas podem ser selecionadas, por exemplo, por ASSOCIAÇÃO DE PARÂMETROS. Guiada pela ARQUITETURA DO APLICATIVO e pelo MODELO DE VARIABILIDADE DO APLICATIVO, a realização da aplicação seleciona as variantes apropriadas dos componentes; para cada componente REUTILIZÁVEL, determina a escolha certa dos parâmetros para vincular a variante necessária. Como vários componentes podem precisar da mesma informação, surge REDUNDÂNCIA de parâmetros, e o erro humano pode gerar inconsistências — por isso a realização da aplicação acompanha os parâmetros e seus relacionamentos. A qualidade da arquitetura de referência e dos designs de componentes determina se isso é simples ou complexo; para reduzir a redundância, o projeto e a realização do domínio podem introduzir COMPONENTES DE CONFIGURAÇÃO ou usar suporte de FERRAMENTAS. COMPONENTES ESPECÍFICOS DA APLICAÇÃO: são realizados como na engenharia de sistema único, mas muitas vezes reutilizando INTERFACES de domínio. Exemplo: um componente de PLUG-IN específico do aplicativo deve transportar TODAS as interfaces determinadas pela arquitetura de domínio para aquele plug-in. Sempre que NÃO houver um componente de domínio reutilizável adequado, são necessários componentes e interfaces específicos. Tornar esses componentes reutilizáveis NÃO é de interesse do desenvolvedor da aplicação (foco num único aplicativo); se o componente tiver de ir para o domínio, a realização de domínio assume no momento apropriado, sem atrapalhar a aplicação. Se o componente da aplicação se parece com componentes de domínio (por exemplo, são variantes de um PV comum), é boa ideia usar o design das variantes existentes como entrada para o design da nova variante."
   },
   {
     "tipo": "questao",
+    "id": "126d6c6e-91e2-4060-bc64-e52814bb4e10",
+    "capitulo": "Engenharia de aplicação",
+    "tema": "Configuração e realização de componentes específicos da aplicação",
     "titulo": "Configuração de componentes na realização da aplicação",
     "questao": "Sobre a configuração e a realização de componentes na realização de aplicação, assinale a alternativa correta.",
     "alternativa_a": "Componentes de domínio reutilizáveis quase nunca têm pontos de variação internos.",
@@ -1823,13 +2126,17 @@
     "resposta_correta": "c"
   },
   {
-    "tipo": "materia",
-    "tema": "Engenharia de aplicação",
-    "subtema": "Construindo a aplicação: compilação, versões e problemas reportados",
+    "tipo": "conteudo",
+    "id": "8df753de-3032-4d3b-971b-41c8c18eb7ac",
+    "capitulo": "Engenharia de aplicação",
+    "tema": "Construindo a aplicação: compilação, versões e problemas reportados",
     "texto": "A tarefa FINAL da realização da aplicação é realizar a configuração que será entregue como aplicativo: as variantes de componentes devem ser COMPILADAS, VINCULADAS (linkadas) e IMPLANTADAS no hardware real; em todas essas etapas a variabilidade pode ser limitada pelo mecanismo de configuração usado. Uma variante de componente é realizada como uma COLEÇÃO DE ARQUIVOS: código-fonte, arquivos de cabeçalho e definições de parâmetros. As interfaces geralmente ficam em um ou mais arquivos de CABEÇALHO, necessários para compilar a variante; as interfaces FORNECIDAS não precisam ser incluídas. A vinculação combina as variantes em EXECUTÁVEIS ou BIBLIOTECAS DE VÍNCULO DINÂMICO (DLLs); o aplicativo é composto por um ou mais executáveis e DLLs. VERSÕES: como em sistema único, componentes e interfaces existem em várias versões, vindas da manutenção e de novos requisitos (o que é normal para ativos de plataforma usados por vários aplicativos). A seleção de variantes deve considerar a VERSÃO; uma versão posterior geralmente tem melhor qualidade, MAS pode não ser possível introduzi-la num aplicativo por não interagir com outros componentes (mudanças de funcionalidade, de suporte de qualidade ou de interfaces), ou porque a combinação de componentes ainda não foi exaustivamente testada. PROBLEMAS: durante os testes de integração e a manutenção em campo surgem relatórios de problemas, e a engenharia de APLICAÇÃO é responsável por resolvê-los. Se o problema está em componentes e interfaces ESPECÍFICOS do aplicativo, a REALIZAÇÃO DA APLICAÇÃO corrige; se está em ARTEFATOS DE DOMÍNIO, o relatório deve ser assumido pela ENGENHARIA DE DOMÍNIO."
   },
   {
     "tipo": "questao",
+    "id": "814a155e-f0a5-4f5d-9e44-18c7c0e8980b",
+    "capitulo": "Engenharia de aplicação",
+    "tema": "Construindo a aplicação: compilação, versões e problemas reportados",
     "titulo": "Quem corrige o defeito",
     "questao": "Durante a manutenção em campo de um aplicativo da LPS, descobre-se um defeito num componente reutilizável da plataforma, usado por vários aplicativos. Quem deve assumir a correção?",
     "alternativa_a": "A engenharia de domínio.",
@@ -1847,13 +2154,17 @@
     "resposta_correta": "a"
   },
   {
-    "tipo": "materia",
-    "tema": "Engenharia de aplicação",
-    "subtema": "Teste de aplicação: inter-relações",
+    "tipo": "conteudo",
+    "id": "9a67ed4d-1a83-4c8a-8ceb-94545d2a2acc",
+    "capitulo": "Engenharia de aplicação",
+    "tema": "Teste de aplicação: inter-relações",
     "texto": "O teste de aplicação garante qualidade suficiente do aplicativo, complementando o teste de domínio, e REUTILIZA artefatos de teste de domínio. Regra para decorar: o TESTE DE UNIDADE requer entrada da REALIZAÇÃO do aplicativo; o TESTE DE INTEGRAÇÃO requer entrada do DESIGN do aplicativo; o TESTE DE SISTEMA é feito com base nos REQUISITOS DA APLICAÇÃO (não do domínio). Ele se relaciona com TODOS os subprocessos da engenharia de aplicação e, no domínio, APENAS com o TESTE DE DOMÍNIO. Fluxos: ENGENHARIA DE REQUISITOS DE APLICAÇÃO → teste: especificação dos requisitos, usada como referência do teste de sistema (seta 1); o teste deve garantir que o aplicativo cumpra os requisitos da APLICAÇÃO e que nenhum tenha sido omitido. O modelo de variabilidade do aplicativo define as variantes selecionadas, e o teste VINCULA os PVs dos artefatos de teste de domínio conforme essas ligações. Criar casos de teste também valida os requisitos: defeitos (ambíguos, incompletos) e erros na configuração de variantes são relatados à engenharia de requisitos de aplicação (seta 2) e devem ser corrigidos antes da conclusão do teste. PROJETO DE APLICAÇÃO → teste: a arquitetura do aplicativo (estrutura estática e comportamento dinâmico), entrada do teste de integração (seta 3). Com os PVs vinculados, todos os componentes estão disponíveis; eles se dividem em reutilizados do domínio e específicos (domínio modificados + recém-desenvolvidos). No teste de integração o DESIGN é validado: é preciso garantir que a variabilidade do projeto foi vinculada corretamente e que o projeto é testável; se o engenheiro não consegue definir os casos e dados de integração, detectou incompletude ou ambiguidade, e os defeitos de design são relatados (seta 4). REALIZAÇÃO DE APLICAÇÃO → teste: o aplicativo e as descrições de interface para o teste de unidade (seta 5); o teste de unidade valida os componentes novos ou modificados e REPETE os testes já feitos no domínio; o teste devolve resultados (casos executados, passou/falhou), relatórios de problemas (desvios em relação à referência) e defeitos nas descrições de interface (seta 6). TESTE DE DOMÍNIO → teste de aplicação: artefatos de teste reutilizáveis, para não começar do zero; os PVs nos projetos de teste de domínio são vinculados conforme o modelo de variabilidade da aplicação (seta 7). Teste de aplicação → teste de domínio: defeitos nos artefatos de teste de domínio e artefatos de teste específicos que sejam relevantes para mais de um aplicativo, para integração ao domínio (seta 8)."
   },
   {
     "tipo": "questao",
+    "id": "469f941c-3667-45cc-8cb0-02bd49dcebbd",
+    "capitulo": "Engenharia de aplicação",
+    "tema": "Teste de aplicação: inter-relações",
     "titulo": "Entradas de cada nível no teste de aplicação",
     "questao": "No teste de aplicação, qual associação entre nível de teste e sua entrada principal está correta?",
     "alternativa_a": "Teste de unidade — design de domínio.",
@@ -1872,6 +2183,9 @@
   },
   {
     "tipo": "questao",
+    "id": "95c6bb63-ebd0-444d-ae71-5c937add6272",
+    "capitulo": "Engenharia de aplicação",
+    "tema": "Teste de aplicação: inter-relações",
     "titulo": "Subprocessos relacionados ao teste de aplicação",
     "questao": "Qual opção contém somente subprocessos com os quais o teste de aplicação se relaciona diretamente?",
     "alternativa_a": "Realização de domínio e design de domínio.",
@@ -1889,13 +2203,17 @@
     "resposta_correta": "c"
   },
   {
-    "tipo": "materia",
-    "tema": "Engenharia de aplicação",
-    "subtema": "Reúso dos artefatos de teste de domínio",
+    "tipo": "conteudo",
+    "id": "3eebdd2f-751b-40ab-988f-395401e04137",
+    "capitulo": "Engenharia de aplicação",
+    "tema": "Reúso dos artefatos de teste de domínio",
     "texto": "A ideia-chave do reúso de artefatos de teste é desenvolvê-los UMA VEZ para toda a linha, incluí-los nos artefatos de domínio e reutilizá-los em várias aplicações — para partes COMUNS e VARIÁVEIS. Depende da estratégia de teste de domínio: com a ESTRATÉGIA DE SIMILARIDADE E REÚSO (ESR), o domínio prepara casos de teste com partes comuns e variáveis explícitas; os casos de partes COMUNS são reutilizados COMO ESTÃO; os que contêm variabilidade precisam ter seus PVs VINCULADOS conforme o modelo de variabilidade do aplicativo antes de serem executados. Com a ESTRATÉGIA DE APLICATIVO DE EXEMPLO/AMOSTRA (EAE/EAA), os casos de teste do aplicativo de amostra servem de base; COMPARAM-SE as variantes da amostra com as do aplicativo em teste e, pelas diferenças, determinam-se as adaptações necessárias — se as diferenças forem grandes, pode haver retrabalho significativo. Dois PRÉ-REQUISITOS para reúso eficiente (valem para sistema, integração e unidade): (1) LIDAR COM A VARIABILIDADE — o engenheiro de teste da aplicação deve entender os PVs e variantes dos artefatos de domínio e saber vinculá-los; planos, casos e cenários de teste são adaptados conforme o modelo de variabilidade do aplicativo. (2) USO DE LINKS DE RASTREABILIDADE — para recuperar os casos de teste de domínio aplicáveis: a rastreabilidade capturada pela engenharia de requisitos de aplicação mostra quais requisitos de domínio foram reutilizados; o teste de domínio mostra qual artefato de teste se relaciona a qual requisito; assim, a partir dos requisitos de domínio, recuperam-se os testes reutilizáveis. As DUAS PEDRAS ANGULARES do reúso estruturado: a RASTREABILIDADE (primeira) e as INFORMAÇÕES DELTA de requisitos da especificação de aplicação (segunda) — os deltas determinam se um caso de teste pode ser reutilizado sem alterações, adaptado ou criado de novo. Na engenharia industrial são necessárias regras claras de quando registrar e quando usar as informações de rastreamento."
   },
   {
     "tipo": "questao",
+    "id": "85c917b5-b471-4bc3-922a-13a721452e3b",
+    "capitulo": "Engenharia de aplicação",
+    "tema": "Reúso dos artefatos de teste de domínio",
     "titulo": "Pedras angulares do reúso de testes",
     "questao": "Quais são as duas “pedras angulares” para o reúso estruturado dos artefatos de teste de domínio no teste de aplicação?",
     "alternativa_a": "A matriz BCG e o roteiro de produto.",
@@ -1913,13 +2231,17 @@
     "resposta_correta": "d"
   },
   {
-    "tipo": "materia",
-    "tema": "Engenharia de aplicação",
-    "subtema": "Testes relacionados à variabilidade: ausência de variante e dependência da aplicação",
+    "tipo": "conteudo",
+    "id": "06660eb6-69d6-404d-a92d-ea55c112f523",
+    "capitulo": "Engenharia de aplicação",
+    "tema": "Testes relacionados à variabilidade: ausência de variante e dependência da aplicação",
     "texto": "O teste da aplicação deve validar se o aplicativo está conforme as referências de teste do domínio, verificando a exatidão da vinculação da variabilidade e da configuração. Deve-se checar se: (1) o aplicativo tem variantes vinculadas que NÃO deveriam fazer parte dele; (2) variantes que DEVERIAM ser vinculadas foram OMITIDAS; (3) o aplicativo foi configurado VIOLANDO dependências de restrição e/ou de variabilidade. Consequências: uma variante vinculada por engano pode ser impraticável para o cliente ou consumir recursos e afetar o desempenho; uma variante omitida deixa a funcionalidade/qualidade ausente; se uma dependência “REQUER” é violada (falta a variante ou o PV exigido), os componentes que exigem essa variante podem não funcionar corretamente; se uma dependência “EXCLUI” é violada (entra uma variante em conflito), os conflitos podem gerar erros. Dois tipos de testes detectam esses defeitos: TESTE DE AUSÊNCIA DE VARIANTE — garante que o aplicativo NÃO inclua variantes que não foram definidas para ele, verificando que apenas as selecionadas foram incorporadas; para saber se uma variante está presente, o teste pode chamar uma função fornecida por ela e observar a reação do aplicativo. Afeta TODOS os níveis: código dentro de um componente (unidade), componentes inteiros (integração) e características principais do sistema (sistema). TESTE DE DEPENDÊNCIA DA APLICAÇÃO (do aplicativo) — verifica se o aplicativo respeita as dependências de restrição e de variabilidade dos modelos de domínio e da aplicação, detectando configurações de variantes não permitidas. Subtarefas: verificar se a PRESENÇA de variantes viola alguma restrição (exemplo: dependências “exclui”) e verificar se a AUSÊNCIA de variantes viola alguma restrição (exemplo: variabilidade “obrigatória”)."
   },
   {
     "tipo": "questao",
+    "id": "9d37a2a1-ab65-4d05-a6ce-fc2777ba3c18",
+    "capitulo": "Engenharia de aplicação",
+    "tema": "Testes relacionados à variabilidade: ausência de variante e dependência da aplicação",
     "titulo": "Testes para defeitos de vinculação",
     "questao": "Um aplicativo de clínica foi entregue com a variante “telemedicina”, que o cliente não contratou, e sem a variante “prontuário eletrônico”, que é obrigatória sempre que o PV “atendimento” está presente. Quais testes detectariam, respectivamente, esses dois problemas?",
     "alternativa_a": "Teste de dependência de domínio e teste de ausência de aplicação.",
@@ -1937,13 +2259,17 @@
     "resposta_correta": "e"
   },
   {
-    "tipo": "materia",
-    "tema": "Engenharia de aplicação",
-    "subtema": "Testando a variabilidade em diferentes níveis",
+    "tipo": "conteudo",
+    "id": "d2b8ebb5-0bfa-486d-86a8-cb0591630083",
+    "capitulo": "Engenharia de aplicação",
+    "tema": "Testando a variabilidade em diferentes níveis",
     "texto": "TESTE DE UNIDADE DA APLICAÇÃO: objetivo de validar COMPONENTES INDIVIDUAIS em relação às especificações do componente. Os engenheiros de teste de APLICAÇÃO reutilizam os casos de teste de unidade de DOMÍNIO para a funcionalidade comum. É preciso REPETIR os testes de unidade mesmo para funcionalidades comuns, porque a configuração específica do aplicativo pode influenciar os resultados: partes comuns podem falhar por uma combinação específica de variantes ou por modificações da aplicação. Exemplo: um plug-in de sensor de porta suporta até oito sensores; no domínio ele foi testado com várias configurações e aprovado, mas os testes são reexecutados na aplicação porque ainda não se sabe se ele se comporta bem com a configuração específica de sensores daquele aplicativo. TESTE DE INTEGRAÇÃO DA APLICAÇÃO: objetivo de validar as INTERAÇÕES entre os componentes — comuns, variantes vinculadas de componentes variáveis e componentes específicos. Casos já executados no domínio podem ter de ser REEXECUTADOS para validar as interações no contexto específico do aplicativo. As entradas do teste de integração são componentes que PASSARAM no teste de unidade da aplicação. TESTE DE SISTEMA DA APLICAÇÃO: busca validar se o aplicativo atende à ESPECIFICAÇÃO DE REQUISITOS DA APLICAÇÃO; idealmente todos os requisitos são testados. A MAIORIA dos casos de teste de sistema deve ser feita aqui, por causa da ausência de variantes específicas na engenharia de domínio e da configurabilidade dos artefatos de domínio. Com a ESR, reutilizam-se artefatos de teste de sistema de domínio predefinidos, vinculando as variantes do modelo de variabilidade do aplicativo. Pegadinhas: “validar interações” é integração (não sistema); “atender à especificação de requisitos” é sistema (não integração); quem reutiliza os casos de unidade são os engenheiros de teste de APLICAÇÃO (reutilizando os de domínio, e não o contrário)."
   },
   {
     "tipo": "questao",
+    "id": "74fe24cd-6a68-4a7b-9c4f-e24230fe6d10",
+    "capitulo": "Engenharia de aplicação",
+    "tema": "Testando a variabilidade em diferentes níveis",
     "titulo": "Objetivos dos níveis de teste da aplicação",
     "questao": "Em relação ao teste da variabilidade em diferentes níveis no teste de aplicação, assinale a alternativa correta.",
     "alternativa_a": "O objetivo do teste de sistema da aplicação é validar as interações entre os componentes.",
@@ -1961,13 +2287,17 @@
     "resposta_correta": "f"
   },
   {
-    "tipo": "materia",
-    "tema": "Engenharia de aplicação",
-    "subtema": "Cobertura e atividades do teste de aplicação",
+    "tipo": "conteudo",
+    "id": "1059bc1a-5113-44c7-8cdb-b02b41be49f4",
+    "capitulo": "Engenharia de aplicação",
+    "tema": "Cobertura e atividades do teste de aplicação",
     "texto": "COBERTURA: os testes de sistema do aplicativo se baseiam numa classificação dos requisitos da aplicação em quatro categorias: (1) ARTEFATOS DE REQUISITOS COMUNS REUTILIZADOS — requisitos de domínio comuns reutilizados; (2) REQUISITOS VARIÁVEIS REUTILIZADOS — requisitos de domínio reutilizados com variabilidade limitada (vinculada); (3) REQUISITOS ADAPTADOS — reutilizados do domínio com adaptações específicas do aplicativo; (4) NOVOS REQUISITOS — específicos do aplicativo, não derivados do domínio. Tipos de teste correspondentes: TESTE DE COMUNALIDADE DA APLICAÇÃO — cobre as partes comuns, garantindo que os requisitos comuns sejam testados no contexto da aplicação; mesmo um componente comum sem mudanças pode falhar com a seleção específica de variantes (variáveis ou heranças podem causar falhas), por isso os casos de domínio para requisitos comuns são REEXECUTADOS. TESTE DE VARIANTE DA APLICAÇÃO — verifica se TODAS as variantes selecionadas fazem parte do aplicativo e se se comportam corretamente; seus artefatos podem ser reutilizados do domínio, vinculando as variantes conforme o modelo do aplicativo. TESTES ESPECÍFICOS DO APLICATIVO: TESTE DE MODIFICAÇÃO — cobre os requisitos ADAPTADOS; não é possível reutilizar os artefatos de domínio SEM adaptá-los. TESTE DE EXTENSÃO — cobre os requisitos desenvolvidos recentemente para o aplicativo (NOVOS); os artefatos devem ser criados DO ZERO. ATIVIDADES do teste de aplicação: (1) PLANEJAMENTO — cria-se um plano para aquele aplicativo; o plano DIFERE de aplicativo para aplicativo (algumas variantes já testadas, novos requisitos) e o esforço também; a estimativa pode usar um esquema comum definido pelo teste de domínio, pois estratégia e ferramentas já foram definidas na engenharia de domínio. (2) ESPECIFICAÇÃO — criam-se casos lógicos, detalhados e cenários; o esforço depende do grau de reúso: para testes de COMUNALIDADE, casos lógicos E detalhados do domínio são reutilizados; para testes de VARIANTE (e em parte para os específicos), reutilizam-se os casos LÓGICOS e os DETALHADOS são desenvolvidos pelos engenheiros de aplicação; testes ESPECÍFICOS são feitos do zero (lógicos e detalhados) ou adaptando artefatos de domínio. (3) EXECUÇÃO — executam-se os casos, registram-se os resultados, determinam-se as classes de erro e relatam-se os defeitos aos outros subprocessos."
   },
   {
     "tipo": "questao",
+    "id": "6fe6960f-62da-4955-851d-01b7948d9d8e",
+    "capitulo": "Engenharia de aplicação",
+    "tema": "Cobertura e atividades do teste de aplicação",
     "titulo": "Classificando o tipo de teste da aplicação",
     "questao": "Um aplicativo da LPS recebeu um requisito de “emissão de nota fiscal para exportação”, que não existe em nenhum requisito de domínio e foi criado só para esse cliente. Que tipo de teste cobre esse requisito e como seus artefatos de teste são obtidos?",
     "alternativa_a": "Teste de extensão do aplicativo, com artefatos de teste criados do zero.",
@@ -1986,6 +2316,9 @@
   },
   {
     "tipo": "questao",
+    "id": "c5f15581-be4a-4e52-ac2d-792dd303ef65",
+    "capitulo": "Engenharia de aplicação",
+    "tema": "Cobertura e atividades do teste de aplicação",
     "titulo": "Reúso na especificação do teste de aplicação",
     "questao": "Na atividade de especificação do teste de aplicação, como fica o reúso dos casos de teste de domínio nos testes de VARIANTE da aplicação?",
     "alternativa_a": "Reutilizam-se os casos lógicos e os detalhados, sem nenhum trabalho adicional.",
