@@ -48,8 +48,9 @@
 .resumo-acoes h2 { font-size: 16px; margin-bottom: 4px; }
 .resumo-acoes p { color: var(--mid); font-size: 14px; margin-bottom: 12px; }
 
-/* Refazer a matéria */
-.refazer { padding: 16px; }
+/* Refazer a matéria, exportar/importar */
+.refazer, .transferir { padding: 16px; }
+.inicio-rodape { display: flex; flex-wrap: wrap; justify-content: center; gap: 4px 16px; margin-top: 24px; font-size: 14px; }
 .refazer-botoes { display: flex; flex-wrap: wrap; gap: 8px; }
 .refazer-confirma { background: var(--bad-bg); border-radius: var(--radius-sm); padding: 12px; margin-top: 4px; }
 .refazer-confirma p { color: var(--text); }
