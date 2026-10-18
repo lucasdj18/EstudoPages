@@ -26,22 +26,25 @@ arquivo ao índice `Estudos/estudos.json` (o GitHub Pages não deixa a página l
 
 ### Formato do JSON de estudo
 
-Uma lista que começa com o item `info` (nome e sigla da matéria, que aparecem no card) e segue com os textos e as
-questões, na ordem em que devem ser estudados:
+Cada arquivo é uma **matéria**, dividida em **capítulos** (as subdisciplinas) e **temas** (o assunto de cada
+conteúdo). A lista começa com o item `info` (nome e sigla da matéria, que aparecem no card) e segue com os
+conteúdos e as questões, na ordem em que devem ser estudados:
 
 ```json
 [
   { "tipo": "info", "materia": "Linhas de Produtos de Software", "sigla": "LPS" },
-  { "tipo": "materia", "tema": "…", "subtema": "…", "texto": "…" },
-  { "tipo": "questao", "titulo": "…", "questao": "…",
+  { "tipo": "conteudo", "id": "<UUID>", "capitulo": "…", "tema": "…", "texto": "…" },
+  { "tipo": "questao", "id": "<UUID>", "capitulo": "…", "tema": "…", "titulo": "…", "questao": "…",
     "alternativa_a": "…", "obs_a": "Errada: …",
     "alternativa_b": "…", "obs_b": "Correta: …",
     "resposta_correta": "b" }
 ]
 ```
 
-As alternativas vão de `a` a `f` (as que existirem), cada uma com a sua `obs`, e só uma é a correta. Sem o item
-`info`, o card usa o nome do arquivo e as iniciais.
+- Todo conteúdo e toda questão têm um `id` único (UUID) e trazem `capitulo` e `tema`.
+- As alternativas vão de `a` a `f` (as que existirem), cada uma com a sua `obs`, e só uma é a correta.
+- Sem o item `info`, o card usa o nome do arquivo e as iniciais.
+- O formato antigo (`"tipo": "materia"` com `tema`/`subtema`) não é mais aceito.
 
 ## Respostas
 
