@@ -1,0 +1,12 @@
+# Materiais originais (PDFs) de cada matéria
+Base/
+
+# Planejamento e fluxo de trabalho (ficam só na máquina)
+issues.json
+issues.html
+issues.css
+workflow.md
+
+# Testes e ferramentas (cópia de segurança em repositório próprio, privado)
+testes/
+ferramentas/
