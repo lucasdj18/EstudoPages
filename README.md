@@ -49,5 +49,4 @@ conteúdos e as questões, na ordem em que devem ser estudados:
 ## Respostas
 
 Ficam no `localStorage` do navegador, uma chave por matéria (`estudopages:<arquivo>`). No resumo da matéria dá
-para exportar as respostas como `.json`, importar de volta (por exemplo, em outro aparelho) e refazer a matéria
-do zero.
+para refazer a matéria do zero. Nada é enviado nem baixado: as respostas ficam só neste navegador.

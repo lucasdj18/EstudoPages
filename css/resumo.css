@@ -58,10 +58,9 @@
 .resumo-acoes h3 { font-size: 15px; margin-bottom: 4px; }
 .resumo-acoes p { color: var(--mid); font-size: 14px; margin-bottom: 12px; }
 
-/* Refazer a matéria, exportar/importar (dentro de Opções da matéria) */
+/* Refazer a matéria (dentro de Opções da matéria) */
 .opcao { padding: 16px 0; border-bottom: 1px solid var(--border); }
 .opcao:last-child { border-bottom: 0; padding-bottom: 0; }
-.inicio-rodape { display: flex; flex-wrap: wrap; justify-content: center; gap: 4px 16px; margin-top: 24px; font-size: 14px; }
 .refazer-botoes { display: flex; flex-wrap: wrap; gap: 8px; }
 .refazer-confirma { background: var(--bad-bg); border-radius: var(--radius-sm); padding: 12px; margin-top: 4px; }
 .refazer-confirma p { color: var(--text); }

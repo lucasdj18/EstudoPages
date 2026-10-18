@@ -55,6 +55,11 @@
     EP.progresso.responder(at.m.arquivo, at.item, selecionada.letra);
     selecionada = null;
     EP.estudo.render(at.m, String(at.item.pos + 1));
+    // M7: respondeu a última questão pendente do capítulo → parabéns (amarelo, com 1 a 4 emojis sorteados)
+    const r = EP.progresso.ler(at.m.arquivo).respostas;
+    if (at.m.questoes.filter(q => q.capitulo === at.item.capitulo).every(q => r[q.id])) {
+      EP.toast(`Parabéns! ${at.item.capitulo} completo ${EP.festa()}`, { tipo: 'parabens' });
+    }
     document.querySelector('.veredito')?.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
     document.getElementById('principal')?.focus({ preventScroll: true });
   }

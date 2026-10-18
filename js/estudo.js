@@ -26,6 +26,9 @@
     bad: '<path d="M6.5 6.5l11 11M17.5 6.5l-11 11"/>',
   };
   const ROTULOS = { doc: ['conteúdo', 'conteúdos'], q: ['não respondida', 'não respondidas'], ok: ['certa', 'certas'], bad: ['errada', 'erradas'] };
+  // Uma pílula: k = doc | q | ok | bad (também usada pela ajuda)
+  const pilula = (k, n) => `<span class="pilula p-${k}" role="img" aria-label="${n} ${ROTULOS[k][n === 1 ? 0 : 1]}"><svg viewBox="0 0 24 24" aria-hidden="true">${ICONES[k]}</svg><span aria-hidden="true">${n}</span></span>`;
+  EP.pilula = pilula;
   function pilulas(m, cap, tema, comDoc) {
     const r = EP.progresso.ler(m.arquivo).respostas;
     const itens = visiveis(m, cap, tema);
@@ -35,8 +38,7 @@
       const resp = r[q.id];
       if (!resp) n.q++; else if (resp.escolhida === q.certa) n.ok++; else n.bad++;
     }
-    return `<span class="pilulas">${Object.keys(n).filter(k => n[k] > 0).map(k =>
-      `<span class="pilula p-${k}" role="img" aria-label="${n[k]} ${ROTULOS[k][n[k] === 1 ? 0 : 1]}"><svg viewBox="0 0 24 24" aria-hidden="true">${ICONES[k]}</svg><span aria-hidden="true">${n[k]}</span></span>`).join('')}</span>`;
+    return `<span class="pilulas">${Object.keys(n).filter(k => n[k] > 0).map(k => pilula(k, n[k])).join('')}</span>`;
   }
 
   // Filtro único (f6.4): botão que abre uma lista com "Todos", cada capítulo (negrito) e os seus temas (recuados)
@@ -127,7 +129,11 @@
     let b = tipos[item.tipo]?.principal?.(m, item);
     if (!b) {
       b = tudoRespondido(m) ? { rotulo: 'Ver resumo', acao: 'ver-resumo' } : { rotulo: 'Próximo →', acao: 'proximo-pendente' };
-      if (b.acao === 'proximo-pendente' && (cap || tema) && proximoPendente(m, lista, item)) b.filtro = tema || cap;
+      // M6: tema completo com o capítulo ainda pendente → o botão já mostra o capítulo, para onde o filtro vai subir
+      if (b.acao === 'proximo-pendente' && (cap || tema)) {
+        if (proximoPendente(m, lista, item)) b.filtro = tema || cap;
+        else if (tema && proximoPendente(m, visiveis(m, cap, ''), item)) b.filtro = cap;
+      }
     }
     // Espaços entre as partes: no flex não aparecem (vale o gap), mas o texto lido fica "<filtro> : Próximo →"
     const nome = b.filtro ? `<span class="principal-filtro">${esc(b.filtro)}</span> <span aria-hidden="true">:</span> ` : '';
@@ -135,31 +141,39 @@
       b.filtro ? ` aria-label="${esc(b.filtro)}: ${esc(b.rotulo)}" title="${esc(b.filtro)}: ${esc(b.rotulo)}"` : ''}>${nome}<span>${esc(b.rotulo)}</span></button>`;
   }
 
-  // ← e → (M5): item a item no filtro, nunca desativam. No limite do filtro passam ao item vizinho da matéria
-  // (o filtro sai); no começo/fim da matéria dão a volta
+  const avisoOk = msg => EP.toast(msg, { tipo: 'ok' });
+
+  // ← e → (M5/M6): item a item no filtro, nunca desativam. No limite do tema, seguem no capítulo (o filtro sobe para
+  // ele); no limite do capítulo, passam ao item vizinho da matéria (o filtro sai); no começo/fim da matéria dão a volta
   function ir(delta) {
     if (!atual) return;
     const { m, item, lista, cap, tema } = atual;
     let prox = lista[lista.indexOf(item) + delta];
+    if (!prox && tema) {
+      const doCap = visiveis(m, cap, '');
+      prox = doCap[doCap.indexOf(item) + delta];
+      if (prox) { EP.progresso.filtrar(m.arquivo, cap, ''); avisoOk('Saiu do tema: filtro no capítulo'); }
+    }
     if (!prox) {
       const n = m.itens.length;
       prox = m.itens[(item.pos + delta + n) % n];
-      if ((cap || tema) && !lista.includes(prox)) { EP.progresso.filtrar(m.arquivo, '', ''); EP.toast('Saiu do filtro: filtro removido'); }
+      if (cap || tema) { EP.progresso.filtrar(m.arquivo, '', ''); avisoOk('Saiu do capítulo: filtro removido'); }
     }
     EP.ir(`${m.chave}/${prox.pos + 1}`);
   }
 
-  // Próximo pendente: primeiro dentro do filtro; se o filtro já está todo respondido, na matéria (e o filtro sai)
+  // Próximo pendente (M6): no filtro; tema completo → sobe para o capítulo; capítulo completo → matéria (filtro sai)
   function irParaPendente() {
     if (!atual) return;
     const { m, item, lista, cap, tema } = atual;
     let destino = proximoPendente(m, lista, item);
+    if (!destino && tema) {
+      destino = proximoPendente(m, visiveis(m, cap, ''), item);
+      if (destino) { EP.progresso.filtrar(m.arquivo, cap, ''); avisoOk(`${tema} completo: filtro no capítulo`); }
+    }
     if (!destino && (cap || tema)) {
       destino = proximoPendente(m, m.itens, item);
-      if (destino) {
-        EP.progresso.filtrar(m.arquivo, '', '');
-        EP.toast(`${tema || cap} completo: filtro removido`, { tipo: 'ok', centro: true });
-      }
+      if (destino) { EP.progresso.filtrar(m.arquivo, '', ''); avisoOk(`${cap} completo: filtro removido`); }
     }
     if (destino) EP.ir(`${m.chave}/${destino.pos + 1}`); else EP.ir(`${m.chave}/resumo`);
   }

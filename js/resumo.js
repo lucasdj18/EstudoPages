@@ -1,5 +1,5 @@
 /* Resumo da matéria: placar geral, acertos e erros por tema, a lista do que errei e o que falta responder.
-   EP.resumo.extras: funções (m) → html acrescentadas no fim (refazer, exportar/importar). */
+   EP.resumo.extras: funções (m) → html acrescentadas no card Opções da matéria (refazer). */
 (() => {
   const { esc, plural } = EP;
   const pct = (n, total) => (total ? Math.round((n / total) * 100) : 0);
@@ -28,6 +28,7 @@
       </header>
       <main class="pagina resumo">
         <section class="placar card-base">
+          <button type="button" class="ajuda-btn" data-acao="ajuda" aria-label="Ajuda: como usar" title="Ajuda" aria-haspopup="dialog">?</button>
           <div class="placar-pct"><b>${c.respondidas ? pct(c.acertos, c.respondidas) + '%' : '—'}</b><span>de acerto${c.respondidas ? ` nas ${plural(c.respondidas, 'respondida', 'respondidas')}` : ''}</span></div>
           <div class="progresso" role="img" aria-label="${c.acertos} acertos e ${c.erros} erros em ${c.total} questões">
             <i class="ok" style="width:${largura(c.acertos, c.total)}"></i><i class="bad" style="width:${largura(c.erros, c.total)}"></i></div>
