@@ -39,11 +39,7 @@
         ${lista.length ? '<p class="dica">Escolha a matéria para estudar.</p>' : ''}
         ${EP.progresso.disponivel ? '' : '<p class="aviso">Este navegador não deixa gravar dados: dá para estudar, mas as respostas se perdem ao fechar a página.</p>'}
         ${lista.length ? `<div class="cards">${lista.map(card).join('')}</div>`
-          : '<section class="mensagem"><h1>Nenhuma matéria ainda</h1><p>O índice <code>Estudos/estudos.json</code> está vazio. Gere uma matéria com o Claude42.</p></section>'}
-        <div id="inicio-rodape"></div>
-      </main>`);
-    EP.inicio.depois?.();
-  }
+          : '<section class="mensagem"><h1>Nenhuma matéria ainda</h1><p>O índice <code>Estudos/estudos.json</code> está vazio. Gere uma matéria com o Claude42.</p></section>'}      </main>`);  }
 
   // "Tentar de novo" (M1): relê só o arquivo da matéria e redesenha a tela inicial
   EP.acoes['tentar-de-novo'] = async el => {

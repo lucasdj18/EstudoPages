@@ -1,5 +1,5 @@
 /* Resumo da matéria: placar geral, acertos e erros por tema, a lista do que errei e o que falta responder.
-   EP.resumo.extras: funções (m) → html acrescentadas no fim (refazer, exportar/importar). */
+   EP.resumo.extras: funções (m) → html acrescentadas no card Opções da matéria (refazer). */
 (() => {
   const { esc, plural } = EP;
   const pct = (n, total) => (total ? Math.round((n / total) * 100) : 0);

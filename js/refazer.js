@@ -5,12 +5,11 @@
     return `
       <div class="refazer opcao" data-materia="${EP.esc(m.chave)}">
         <h3>Refazer a matéria</h3>
-        <p>Apaga ${n ? `as ${EP.plural(n, 'resposta', 'respostas')}` : 'o progresso'} desta matéria e começa do zero.${EP.arquivo ? ' Exporte antes se quiser guardar o histórico.' : ''}</p>
+        <p>Apaga ${n ? `as ${EP.plural(n, 'resposta', 'respostas')}` : 'o progresso'} desta matéria e começa do zero.</p>
         <div class="refazer-botoes"><button class="btn perigo" data-acao="refazer">Refazer a matéria</button></div>
         <div class="refazer-confirma" hidden>
           <p><b>Apagar ${n ? EP.plural(n, 'resposta', 'respostas') : 'o progresso'}?</b> Não dá para desfazer.</p>
           <div class="refazer-botoes">
-            ${EP.arquivo ? '<button class="btn" data-acao="exportar-materia">Exportar antes</button>' : ''}
             <button class="btn perigo" data-acao="refazer-sim">Apagar e refazer</button>
             <button class="btn" data-acao="refazer-nao">Cancelar</button>
           </div>
