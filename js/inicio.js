@@ -19,7 +19,7 @@
       <a class="card${c.comecou ? '' : ' novo'}" href="#${encodeURIComponent(m.chave)}/${pos}" data-materia="${esc(m.chave)}">
         <div class="card-topo"><span class="sigla">${esc(m.sigla)}</span>
           <div><h2>${esc(m.materia)}</h2>
-            <div class="card-meta">${plural(m.temas.length, 'tema', 'temas')} · ${plural(m.nTextos, 'texto', 'textos')} · ${plural(c.total, 'questão', 'questões')}</div></div></div>
+            <div class="card-meta">${plural(m.capitulos.length, 'capítulo', 'capítulos')} · ${plural(m.nTextos, 'texto', 'textos')} · ${plural(c.total, 'questão', 'questões')}</div></div></div>
         <div class="progresso" role="img" aria-label="${c.acertos} acertos e ${c.erros} erros em ${c.total} questões">
           <i class="ok" style="width:${pct(c.acertos, c.total)}"></i><i class="bad" style="width:${pct(c.erros, c.total)}"></i></div>
         <div class="card-numeros">

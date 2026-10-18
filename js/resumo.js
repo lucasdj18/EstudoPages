@@ -13,8 +13,8 @@
     const resp = q => p.respostas[q.id];
     const erradas = m.questoes.filter(q => resp(q) && resp(q).escolhida !== q.certa);
     const faltam = m.questoes.filter(q => !resp(q));
-    const temas = m.temas.map(t => {
-      const qs = m.questoes.filter(q => q.tema === t);
+    const capitulos = m.capitulos.map(t => {
+      const qs = m.questoes.filter(q => q.capitulo === t);
       const r = qs.filter(resp), a = r.filter(q => resp(q).escolhida === q.certa);
       return { t, total: qs.length, respondidas: r.length, acertos: a.length, erros: r.length - a.length };
     }).filter(x => x.total);
@@ -39,9 +39,9 @@
           </dl>
         </section>
 
-        ${temas.length > 1 ? recolhivel('temas', 'Por tema', temas.length, `
-          <ul class="temas">${temas.map(x => `
-            <li class="tema" data-tema="${esc(x.t)}">
+        ${capitulos.length > 1 ? recolhivel('capitulos', 'Por capítulo', capitulos.length, `
+          <ul class="temas">${capitulos.map(x => `
+            <li class="tema" data-capitulo="${esc(x.t)}">
               <div class="tema-linha"><span class="tema-nome">${esc(x.t)}</span>
                 <span class="tema-num">${x.respondidas ? `${x.acertos}/${x.respondidas} · ${pct(x.acertos, x.respondidas)}%` : 'não começado'}</span></div>
               <div class="progresso"><i class="ok" style="width:${largura(x.acertos, x.total)}"></i><i class="bad" style="width:${largura(x.erros, x.total)}"></i></div>
@@ -53,7 +53,7 @@
             const r = resp(q), e = alt(q, r.escolhida), certa = alt(q, q.certa);
             return `
             <li class="errada" data-id="${esc(q.id)}">
-              <div class="rotulo">${esc(q.tema)} · questão ${q.num}</div>
+              <div class="rotulo">${esc(q.capitulo)} · ${esc(q.tema)} · questão ${q.num}</div>
               ${q.titulo ? `<h3>${esc(q.titulo)}</h3>` : ''}
               <p class="enunciado">${esc(q.questao)}</p>
               <div class="obs bad"><span class="obs-rotulo">✗ Sua resposta: ${e.l.toUpperCase()}</span> <span class="obs-alt">${esc(e.texto)}</span> ${e.obs ? `<span class="obs-txt">${esc(e.obs)}</span>` : ''}</div>
@@ -63,13 +63,13 @@
           }).join('')}</ol>` : `<p class="vazio">${c.respondidas ? 'Nenhum erro até agora. 🎉' : 'Você ainda não respondeu nenhuma questão desta matéria.'}</p>`)}
 
         ${faltam.length ? recolhivel('faltam', 'Faltam responder', faltam.length,
-          `<ol class="faltam">${faltam.map(q => `<li><a href="${irQuestao(m, q)}">${esc(q.titulo || q.questao)}</a> <small>${esc(q.tema)}</small></li>`).join('')}</ol>`) : ''}
+          `<ol class="faltam">${faltam.map(q => `<li><a href="${irQuestao(m, q)}">${esc(q.titulo || q.questao)}</a> <small>${esc(q.capitulo)} · ${esc(q.tema)}</small></li>`).join('')}</ol>`) : ''}
 
         ${EP.resumo.extras.length ? recolhivel('opcoes', 'Opções da matéria', null, `<div class="resumo-acoes">${EP.resumo.extras.map(fn => fn(m)).join('')}</div>`) : ''}
       </main>`, `Resumo · ${m.sigla}`);
-    // M2: "Por tema" nasce aberto, mas fecha se ocupar mais da metade da altura da tela
-    const porTema = document.querySelector('[data-secao="temas"]');
-    if (porTema && porTema.offsetHeight > innerHeight * 0.5) porTema.open = false;
+    // M2: "Por capítulo" nasce aberto, mas fecha se ocupar mais da metade da altura da tela
+    const porCapitulo = document.querySelector('[data-secao="capitulos"]');
+    if (porCapitulo && porCapitulo.offsetHeight > innerHeight * 0.5) porCapitulo.open = false;
     scrollTo(0, 0);
   }
 
