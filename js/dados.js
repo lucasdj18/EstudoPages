@@ -9,8 +9,8 @@
   // O formato antigo ("materia" com tema/subtema) é recusado.
   function normalizar(lista) {
     if (!Array.isArray(lista)) return { itens: [], info: {}, erros: ['o arquivo não é uma lista de itens'] };
-    const itens = [], erros = [], vistos = new Map();
-    let capitulo = '', tema = '', nQuestao = 0, info = {};
+    const itens = [], erros = [], vistos = new Map(), temasVistos = new Set();
+    let capitulo = '', tema = '', nQuestao = 0, info = {}, doConteudo = null;
     lista.forEach((it, i) => {
       const n = `item ${i + 1}`;
       if (!it || typeof it !== 'object') { erros.push(`${n}: não é um objeto`); return; }
@@ -19,6 +19,14 @@
         if (!str(it.tema)) erros.push(`${n}: sem tema`);
         capitulo = str(it.capitulo) || capitulo;
         tema = str(it.tema) || tema;
+      }
+      // D9: o tema é único por conteúdo e a questão tem o capítulo e o tema do conteúdo a que pertence
+      if (it.tipo === 'conteudo') {
+        if (temasVistos.has(tema)) erros.push(`${n}: tema "${tema}" repetido em outro conteúdo (numere em romano: I, II…)`);
+        temasVistos.add(tema);
+        doConteudo = { capitulo, tema };
+      } else if (it.tipo === 'questao' && doConteudo && (capitulo !== doConteudo.capitulo || tema !== doConteudo.tema)) {
+        erros.push(`${n}: questão com capítulo/tema diferente do conteúdo a que pertence`);
       }
       if (it.tipo === 'info') {
         if (i) erros.push(`${n}: o item "info" só pode ser o primeiro`);
