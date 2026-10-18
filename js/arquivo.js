@@ -78,8 +78,8 @@
 
   // No resumo: exportar esta matéria / importar
   EP.resumo.extras.unshift(() => `
-    <div class="transferir card-base">
-      <h2>Guardar ou levar as respostas</h2>
+    <div class="transferir opcao">
+      <h3>Guardar ou levar as respostas</h3>
       <p>Exporte para guardar um arquivo com as respostas desta matéria, ou importe um arquivo exportado (por exemplo, de outro aparelho).</p>
       <div class="refazer-botoes"><button class="btn" data-acao="exportar-materia">Exportar respostas</button><button class="btn" data-acao="importar">Importar respostas</button></div>
     </div>`);
