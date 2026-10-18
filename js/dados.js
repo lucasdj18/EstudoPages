@@ -74,19 +74,25 @@
       let chave = (arquivo.replace(/\.json$/i, '') || 'materia-' + (k + 1)).replace(/[^\w-]+/g, '-');
       while (chaves.has(chave)) chave += '-' + (k + 1);
       chaves.add(chave);
-      const m = { arquivo, materia: '', sigla: '', chave, itens: [], erros: [], info: {} };
-      if (!arquivo) m.erros = ['a linha do índice não tem o nome do arquivo'];
-      else {
-        try { Object.assign(m, normalizar(await lerJSON(new URL(arquivo, base), arquivo))); } catch (err) { m.erros = [err.message]; }
-      }
-      m.materia = m.info.materia || str(linha.materia) || arquivo.replace(/(_estudo)?\.json$/i, '') || `Matéria ${k + 1}`;
-      m.sigla = (m.info.sigla || str(linha.sigla) || EP.iniciais(m.materia)).toUpperCase().slice(0, 4);
-      m.questoes = m.itens.filter(i => i.tipo === 'questao');
-      m.nTextos = m.itens.length - m.questoes.length;
-      m.temas = [...new Set(m.itens.map(i => i.tema).filter(Boolean))];
-      return m;
+      return lerMateria({ arquivo, chave, linha, base, ordem: k });
     }));
   }
 
-  EP.dados = { carregar, normalizar };
+  // Lê (ou relê, no "Tentar de novo") o JSON de uma matéria e preenche os dados dela
+  async function lerMateria(m) {
+    const { arquivo, linha, base, ordem } = m;
+    Object.assign(m, { materia: '', sigla: '', itens: [], erros: [], info: {} });
+    if (!arquivo) m.erros = ['a linha do índice não tem o nome do arquivo'];
+    else {
+      try { Object.assign(m, normalizar(await lerJSON(new URL(arquivo, base), arquivo))); } catch (err) { m.erros = [err.message]; }
+    }
+    m.materia = m.info.materia || str(linha.materia) || arquivo.replace(/(_estudo)?\.json$/i, '') || `Matéria ${ordem + 1}`;
+    m.sigla = (m.info.sigla || str(linha.sigla) || EP.iniciais(m.materia)).toUpperCase().slice(0, 4);
+    m.questoes = m.itens.filter(i => i.tipo === 'questao');
+    m.nTextos = m.itens.length - m.questoes.length;
+    m.temas = [...new Set(m.itens.map(i => i.tema).filter(Boolean))];
+    return m;
+  }
+
+  EP.dados = { carregar, lerMateria, normalizar };
 })();

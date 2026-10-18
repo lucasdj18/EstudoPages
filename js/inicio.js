@@ -10,7 +10,7 @@
         <div class="card-topo"><span class="sigla">${esc(m.sigla)}</span>
           <div><h2>${esc(m.materia)}</h2><div class="card-meta">Não foi possível abrir ${esc(m.arquivo || 'esta matéria')}</div></div></div>
         <ul class="erros">${m.erros.slice(0, 3).map(e => `<li>${esc(e)}</li>`).join('')}${m.erros.length > 3 ? `<li>… e mais ${m.erros.length - 3}</li>` : ''}</ul>
-        <div class="card-cta"><button class="btn" data-acao="recarregar">Tentar de novo</button></div>
+        <div class="card-cta"><button class="btn" data-acao="tentar-de-novo" data-materia="${esc(m.chave)}">Tentar de novo</button></div>
       </article>`;
     }
     const c = EP.progresso.contagem(m);
@@ -45,7 +45,16 @@
     EP.inicio.depois?.();
   }
 
-  EP.acoes.recarregar = () => location.reload();
+  // "Tentar de novo" (M1): relê só o arquivo da matéria e redesenha a tela inicial
+  EP.acoes['tentar-de-novo'] = async el => {
+    const m = EP.materia(el.dataset.materia);
+    if (!m) return;
+    el.disabled = true;
+    el.textContent = 'Carregando…';
+    await EP.dados.lerMateria(m);
+    render();
+    EP.toast(m.erros.length ? `${m.materia}: ainda com problema` : `${m.materia} carregada`);
+  };
 
   EP.inicio = { render };
 })();
