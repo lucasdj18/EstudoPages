@@ -7,6 +7,6 @@ issues.html
 issues.css
 workflow.md
 
-# Testes e ferramentas (cópia de segurança em repositório próprio, privado)
+# Testes e ferramentas (ficam só na máquina)
 testes/
 ferramentas/

@@ -52,12 +52,10 @@
           </ul>
         </section>` : ''}
 
-        <section class="secao">
-          <h2>O que eu errei <span class="conta">${erradas.length}</span></h2>
-          ${erradas.length ? `<ol class="erradas">${erradas.map(q => {
+        ${recolhivel('erros', 'O que eu errei', erradas.length, erradas.length ? `<ol class="erradas">${erradas.map(q => {
             const r = resp(q), e = alt(q, r.escolhida), certa = alt(q, q.certa);
             return `
-            <li class="errada card-base" data-id="${esc(q.id)}">
+            <li class="errada" data-id="${esc(q.id)}">
               <div class="rotulo">${esc(q.tema)} · questão ${q.num}</div>
               ${q.titulo ? `<h3>${esc(q.titulo)}</h3>` : ''}
               <p class="enunciado">${esc(q.questao)}</p>
@@ -65,21 +63,22 @@
               <div class="obs ok"><span class="obs-rotulo">✓ Correta: ${certa.l.toUpperCase()}</span> <span class="obs-alt">${esc(certa.texto)}</span> ${certa.obs ? `<span class="obs-txt">${esc(certa.obs)}</span>` : ''}</div>
               <a class="link" href="${irQuestao(m, q)}">Abrir a questão</a>
             </li>`;
-          }).join('')}</ol>` : `<p class="vazio">${c.respondidas ? 'Nenhum erro até agora. 🎉' : 'Você ainda não respondeu nenhuma questão desta matéria.'}</p>`}
-        </section>
+          }).join('')}</ol>` : `<p class="vazio">${c.respondidas ? 'Nenhum erro até agora. 🎉' : 'Você ainda não respondeu nenhuma questão desta matéria.'}</p>`)}
 
-        ${faltam.length ? `
-        <section class="secao">
-          <details class="faltam card-base"${c.respondidas ? '' : ' open'}>
-            <summary>Faltam responder <span class="conta">${faltam.length}</span></summary>
-            <ol>${faltam.map(q => `<li><a href="${irQuestao(m, q)}">${esc(q.titulo || q.questao)}</a> <small>${esc(q.tema)}</small></li>`).join('')}</ol>
-          </details>
-        </section>` : ''}
+        ${faltam.length ? recolhivel('faltam', 'Faltam responder', faltam.length,
+          `<ol class="faltam">${faltam.map(q => `<li><a href="${irQuestao(m, q)}">${esc(q.titulo || q.questao)}</a> <small>${esc(q.tema)}</small></li>`).join('')}</ol>`) : ''}
 
-        <section class="secao resumo-acoes">${EP.resumo.extras.map(fn => fn(m)).join('')}</section>
+        ${EP.resumo.extras.length ? recolhivel('opcoes', 'Opções da matéria', null, `<div class="resumo-acoes">${EP.resumo.extras.map(fn => fn(m)).join('')}</div>`) : ''}
       </main>`, `Resumo · ${m.sigla}`);
     scrollTo(0, 0);
   }
+
+  // Card recolhível (D6): fechado por padrão, com o número no cabeçalho
+  const recolhivel = (secao, titulo, n, corpo) => `
+    <details class="recolhivel card-base" data-secao="${secao}">
+      <summary><span class="recolhivel-titulo">${titulo}</span>${n == null ? '' : ` <span class="conta">${n}</span>`}<span class="seta" aria-hidden="true"></span></summary>
+      <div class="recolhivel-corpo">${corpo}</div>
+    </details>`;
 
   EP.resumo = { render, extras: [] };
 })();

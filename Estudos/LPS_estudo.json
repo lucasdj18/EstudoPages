@@ -1,5 +1,10 @@
 [
   {
+    "tipo": "info",
+    "materia": "Linhas de Produtos de Software",
+    "sigla": "LPS"
+  },
+  {
     "tipo": "materia",
     "tema": "Apresentação da disciplina",
     "subtema": "Mapa geral do conteúdo de Linhas de Produtos de Software",

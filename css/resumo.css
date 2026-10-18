@@ -29,8 +29,21 @@
 .tema-num { font-size: 13px; color: var(--mid); white-space: nowrap; }
 .tema-det { font-size: 12px; color: var(--mid); margin-top: 6px; }
 
-.erradas { list-style: none; display: grid; gap: 12px; }
-.errada { padding: 16px; }
+/* Cards recolhíveis (D6): O que eu errei, Faltam responder, Opções da matéria */
+.recolhivel { margin-top: 12px; }
+.recolhivel + .recolhivel { margin-top: 12px; }
+.secao + .recolhivel { margin-top: 24px; }
+.recolhivel summary { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 8px; min-height: 56px; padding: 12px 16px; font-weight: 700; font-size: 16px; }
+.recolhivel summary::-webkit-details-marker { display: none; }
+.recolhivel .seta { margin-left: auto; width: 10px; height: 10px; border-right: 2px solid var(--mid); border-bottom: 2px solid var(--mid); transform: rotate(45deg); transition: transform .15s; margin-right: 4px; margin-top: -4px; }
+.recolhivel[open] .seta { transform: rotate(-135deg); margin-top: 4px; }
+.recolhivel[open] summary { border-bottom: 1px solid var(--border); }
+.recolhivel-corpo { padding: 4px 16px 16px; }
+.recolhivel-corpo > .vazio { padding-top: 12px; }
+
+.erradas { list-style: none; }
+.errada { padding: 16px 0; border-bottom: 1px solid var(--border); }
+.errada:last-child { border-bottom: 0; padding-bottom: 0; }
 .errada h3 { font-size: 16px; margin: 4px 0 6px; }
 .errada .enunciado { font-size: 15px; margin-bottom: 10px; }
 .errada .obs { margin: 10px 0 0; }
@@ -38,18 +51,15 @@
 .obs-txt { display: block; color: var(--mid); }
 .errada .link { display: inline-block; margin-top: 8px; padding-left: 0; }
 
-.faltam { padding: 4px 16px; }
-.faltam summary { cursor: pointer; font-weight: 700; padding: 12px 0; display: flex; align-items: center; gap: 8px; min-height: 44px; }
-.faltam ol { margin: 0 0 12px 20px; display: grid; gap: 6px; font-size: 14px; }
+.faltam { margin: 12px 0 0 20px; display: grid; gap: 8px; font-size: 14px; }
 .faltam small { color: var(--mid); }
 
-.resumo-acoes { display: grid; gap: 12px; }
-.resumo-acoes:empty { display: none; }
-.resumo-acoes h2 { font-size: 16px; margin-bottom: 4px; }
+.resumo-acoes h3 { font-size: 15px; margin-bottom: 4px; }
 .resumo-acoes p { color: var(--mid); font-size: 14px; margin-bottom: 12px; }
 
-/* Refazer a matéria, exportar/importar */
-.refazer, .transferir { padding: 16px; }
+/* Refazer a matéria, exportar/importar (dentro de Opções da matéria) */
+.opcao { padding: 16px 0; border-bottom: 1px solid var(--border); }
+.opcao:last-child { border-bottom: 0; padding-bottom: 0; }
 .inicio-rodape { display: flex; flex-wrap: wrap; justify-content: center; gap: 4px 16px; margin-top: 24px; font-size: 14px; }
 .refazer-botoes { display: flex; flex-wrap: wrap; gap: 8px; }
 .refazer-confirma { background: var(--bad-bg); border-radius: var(--radius-sm); padding: 12px; margin-top: 4px; }

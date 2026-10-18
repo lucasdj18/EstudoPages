@@ -3,8 +3,8 @@
   EP.resumo.extras.push(m => {
     const n = EP.progresso.contagem(m).respondidas;
     return `
-      <div class="refazer card-base" data-materia="${EP.esc(m.chave)}">
-        <h2>Refazer a matéria</h2>
+      <div class="refazer opcao" data-materia="${EP.esc(m.chave)}">
+        <h3>Refazer a matéria</h3>
         <p>Apaga ${n ? `as ${EP.plural(n, 'resposta', 'respostas')}` : 'o progresso'} desta matéria e começa do zero.${EP.arquivo ? ' Exporte antes se quiser guardar o histórico.' : ''}</p>
         <div class="refazer-botoes"><button class="btn perigo" data-acao="refazer">Refazer a matéria</button></div>
         <div class="refazer-confirma" hidden>
