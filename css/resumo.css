@@ -21,7 +21,8 @@
 .conta { font-size: 12px; font-weight: 700; background: var(--surface2); color: var(--mid); border-radius: 99px; padding: 2px 9px; }
 .vazio { color: var(--mid); }
 
-.temas { list-style: none; padding: 4px 16px; }
+.temas { list-style: none; }
+.placar + .recolhivel { margin-top: 24px; }
 .tema { padding: 12px 0; border-bottom: 1px solid var(--border); }
 .tema:last-child { border-bottom: 0; }
 .tema-linha { display: flex; gap: 12px; align-items: baseline; justify-content: space-between; margin-bottom: 8px; }
