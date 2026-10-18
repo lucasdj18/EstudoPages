@@ -1,8 +1,8 @@
 /* Tela de estudo: topo, faixa de progresso e filtro, conteúdo e barra de ações fixa no rodapé. */
 .estudo-topo { gap: 12px; }
 .estudo-topo > .icone:first-child { text-decoration: none; }
-.topo-titulo { min-width: 0; line-height: 1.2; }
-.topo-titulo b { font-size: 15px; font-weight: 600; }
+.topo-titulo { min-width: 0; flex: 1; line-height: 1.2; }
+.topo-titulo b { display: block; font-size: 15px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .topo-titulo small { display: block; color: var(--mid); font-size: 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 
 .estudo-faixa { max-width: var(--largura); margin: 0 auto; padding: 0 16px 8px; position: relative; }

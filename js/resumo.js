@@ -66,7 +66,7 @@
           `<ol class="faltam">${faltam.map(q => `<li><a href="${irQuestao(m, q)}">${esc(q.titulo || q.questao)}</a> <small>${esc(q.capitulo)} · ${esc(q.tema)}</small></li>`).join('')}</ol>`) : ''}
 
         ${EP.resumo.extras.length ? recolhivel('opcoes', 'Opções da matéria', null, `<div class="resumo-acoes">${EP.resumo.extras.map(fn => fn(m)).join('')}</div>`) : ''}
-      </main>`, `Resumo · ${m.sigla}`);
+      </main>`, `Resumo · ${m.materia}`);
     // M2: "Por capítulo" nasce aberto, mas fecha se ocupar mais da metade da altura da tela
     const porCapitulo = document.querySelector('[data-secao="capitulos"]');
     if (porCapitulo && porCapitulo.offsetHeight > innerHeight * 0.5) porCapitulo.open = false;

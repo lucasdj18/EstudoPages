@@ -61,7 +61,7 @@
     EP.render(`
       <header class="topo estudo-topo">
         <a class="icone" href="#" aria-label="Voltar às matérias" title="Voltar às matérias">←</a>
-        <div class="topo-titulo"><b>${esc(m.sigla)}</b><small>Item ${n} de ${m.itens.length}${local}</small></div>
+        <div class="topo-titulo"><b title="${esc(m.materia)}">${esc(m.materia)}</b><small>Item ${n} de ${m.itens.length}${local}</small></div>
         <div class="topo-acoes">${EP.resumo ? `<a class="icone" href="#${encodeURIComponent(m.chave)}/resumo" aria-label="Resumo da matéria" title="Resumo da matéria">☰</a>` : ''}${EP.tema.botao()}</div>
       </header>
       <div class="estudo-faixa">
@@ -77,7 +77,7 @@
       <nav class="rodape-acoes" aria-label="Navegação"><div class="rodape-in">
         <button class="btn icone-btn" data-acao="anterior" aria-label="Anterior" title="Anterior (←)"${k > 0 ? '' : ' disabled'}>←</button>
         <span id="principal"></span>
-      </div></nav>`, `${m.sigla} · item ${n}`);
+      </div></nav>`, `${m.materia} · item ${n}`);
     desenharPrincipal();
     if (mudouDeItem) scrollTo(0, 0);
   }
