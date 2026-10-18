@@ -1,0 +1,25 @@
+/* Tela de estudo: topo, faixa de progresso e filtro, conteúdo e barra de ações fixa no rodapé. */
+.estudo-topo { gap: 12px; }
+.estudo-topo > .icone:first-child { text-decoration: none; }
+.topo-titulo { min-width: 0; line-height: 1.2; }
+.topo-titulo b { font-size: 15px; font-weight: 600; }
+.topo-titulo small { display: block; color: var(--mid); font-size: 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+.estudo-faixa { max-width: var(--largura); margin: 0 auto; padding: 0 16px 8px; }
+.filtro { display: flex; align-items: center; gap: 10px; margin-top: 12px; font-size: 13px; color: var(--mid); }
+.filtro select { flex: 1; min-width: 0; min-height: 44px; padding: 8px 12px; border-radius: var(--radius-sm); border: 1px solid var(--border);
+  background: var(--surface); color: var(--text); font-size: 14px; }
+.filtro-pos { font-size: 12px; color: var(--mid); margin-top: 6px; }
+
+.estudo { padding-top: 12px; padding-bottom: 120px; }
+.rotulo { font-size: 12px; font-weight: 600; letter-spacing: .4px; text-transform: uppercase; color: var(--accent); }
+.estudo h1 { font-size: 21px; line-height: 1.25; font-weight: 700; margin: 6px 0 12px; }
+
+/* Texto da matéria */
+.texto p { font-size: 17px; line-height: 1.7; margin-bottom: 14px; max-width: 68ch; }
+
+/* Barra de ações (fixa no rodapé) */
+.rodape-acoes { position: fixed; left: 0; right: 0; bottom: 0; z-index: 10; background: var(--bg); border-top: 1px solid var(--border); }
+.rodape-in { max-width: var(--largura); margin: 0 auto; display: flex; gap: 8px; padding: 12px 16px; padding-bottom: max(12px, env(safe-area-inset-bottom)); }
+.rodape-in .btn { flex: 1; }
+.rodape-in .icone-btn { flex: 0 0 48px; padding: 0; font-size: 18px; }
