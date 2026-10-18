@@ -39,18 +39,15 @@
           </dl>
         </section>
 
-        ${temas.length > 1 ? `
-        <section class="secao">
-          <h2>Por tema</h2>
-          <ul class="temas card-base">${temas.map(x => `
+        ${temas.length > 1 ? recolhivel('temas', 'Por tema', temas.length, `
+          <ul class="temas">${temas.map(x => `
             <li class="tema" data-tema="${esc(x.t)}">
               <div class="tema-linha"><span class="tema-nome">${esc(x.t)}</span>
                 <span class="tema-num">${x.respondidas ? `${x.acertos}/${x.respondidas} · ${pct(x.acertos, x.respondidas)}%` : 'não começado'}</span></div>
               <div class="progresso"><i class="ok" style="width:${largura(x.acertos, x.total)}"></i><i class="bad" style="width:${largura(x.erros, x.total)}"></i></div>
               <div class="tema-det">✓ ${x.acertos} · ✗ ${x.erros} · ${x.total - x.respondidas} sem responder de ${x.total}</div>
             </li>`).join('')}
-          </ul>
-        </section>` : ''}
+          </ul>`, true) : ''}
 
         ${recolhivel('erros', 'O que eu errei', erradas.length, erradas.length ? `<ol class="erradas">${erradas.map(q => {
             const r = resp(q), e = alt(q, r.escolhida), certa = alt(q, q.certa);
@@ -70,12 +67,15 @@
 
         ${EP.resumo.extras.length ? recolhivel('opcoes', 'Opções da matéria', null, `<div class="resumo-acoes">${EP.resumo.extras.map(fn => fn(m)).join('')}</div>`) : ''}
       </main>`, `Resumo · ${m.sigla}`);
+    // M2: "Por tema" nasce aberto, mas fecha se ocupar mais da metade da altura da tela
+    const porTema = document.querySelector('[data-secao="temas"]');
+    if (porTema && porTema.offsetHeight > innerHeight * 0.5) porTema.open = false;
     scrollTo(0, 0);
   }
 
-  // Card recolhível (D6): fechado por padrão, com o número no cabeçalho
-  const recolhivel = (secao, titulo, n, corpo) => `
-    <details class="recolhivel card-base" data-secao="${secao}">
+  // Card recolhível (D6): fechado por padrão (aberto = true para nascer aberto), com o número no cabeçalho
+  const recolhivel = (secao, titulo, n, corpo, aberto = false) => `
+    <details class="recolhivel card-base" data-secao="${secao}"${aberto ? ' open' : ''}>
       <summary><span class="recolhivel-titulo">${titulo}</span>${n == null ? '' : ` <span class="conta">${n}</span>`}<span class="seta" aria-hidden="true"></span></summary>
       <div class="recolhivel-corpo">${corpo}</div>
     </details>`;
