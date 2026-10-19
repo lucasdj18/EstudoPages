@@ -2,9 +2,7 @@
 Base/
 
 # Planejamento e fluxo de trabalho (ficam só na máquina)
-issues.json
-issues.html
-issues.css
+issues/
 workflow.md
 
 # Testes e ferramentas (ficam só na máquina)
